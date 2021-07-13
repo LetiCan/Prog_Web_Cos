@@ -1,5 +1,5 @@
 <?php
-require_once 'libs/Smarty.class.php';
+require_once ('lib/Smarty.class.php');
 class View extends Smarty
 {
     public function __construct() 
