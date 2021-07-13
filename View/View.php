@@ -1,0 +1,26 @@
+<?php
+require_once 'libs/Smarty.class.php';
+class View extends Smarty
+{
+    public function __construct() 
+    {
+        parent::__construct();
+        $this->setTemplateDir('tmpl/templates');   
+        $this->setCompileDir('tmpl/templates_c');
+        $this->setCacheDir('tmpl/cache');
+        $this->setConfigDir('tmpl/configs');
+    }
+    
+    
+    public function caricaindex($tmpl)
+    {
+        $this->display($tmpl);
+    }
+    
+    public function caricaTemplate($placeholder,$dt,$tmpl)
+    {
+        $this->assign($placeholder , $dt); 
+        $this->display($tmpl);
+    }
+    
+}
