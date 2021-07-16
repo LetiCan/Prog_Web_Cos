@@ -3,6 +3,8 @@
 		<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
 	</nav>
 </div>
+<hr>
+<br><br>
 <div  class="container-fluid" id="rg">
     <br><br>
     <fieldset>
@@ -62,5 +64,7 @@
 		</p>
 <form>
 <br>
+<hr>
+<br><br>
 <a href="index.php">home</a>
 </div>
