@@ -51,7 +51,7 @@ function content_60e580ffd28258_88315092 (Smarty_Internal_Template $_smarty_tpl)
 					
 			    <ul class="navbar-nav mr-auto" id="links">
                                         <li class="nav-item">
-						<a class="navbar-brand" href="#"><img class="img-fluid" src="C:\Users\Maria Grazia\Downloads\logo def.png" alt="logo"></a>
+						<a class="navbar-brand" href="#"><img class="img-fluid" src="logo def.png" alt="logo"></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Home</a>
