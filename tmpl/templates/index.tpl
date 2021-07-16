@@ -20,7 +20,7 @@
 					
 			    <ul class="navbar-nav mr-auto" id="links">
                                         <li class="nav-item">
-						<a class="navbar-brand" href="#">Logo</a>
+                                            <a class="navbar-brand" href="#"><img src="img/logo def.png"></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Home</a>
