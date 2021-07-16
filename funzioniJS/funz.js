@@ -8,12 +8,12 @@ function Rgst()
     });*/
     $(document).ready(function(){
 	$("#reg").click(function(){
-	$("#home").load("tmpl/templates/Reg.html #rg");
+	$("#home").load("tmpl/templates/Registrazione.tpl #rg");
 	});
 	});
     $(document).ready(function(){
 	$("#reg").click(function(){
-	$("#intestazione").load("tmpl/templates/Reg.html #header");
+	$("#intestazione").load("tmpl/templates/Registrazione.tpl #header");
 	});
 	});  
 }
