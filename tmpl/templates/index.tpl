@@ -79,7 +79,7 @@
 		</div>
 </header>
 <div class="container-fluid" id="home">
-<div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
 		  <!-- Indicators -->
 		  <ul class="carousel-indicators">
@@ -109,7 +109,7 @@
 			<span class="carousel-control-next-icon"></span>
 		  </a>
 
-</div>
+    </div>
 	<br><br>
 	<table width='100%' >
 	<tr>
@@ -119,7 +119,9 @@
 	<td><button id="adm" type="button" class="btn btn-primary" onclick="fun1();">Admin</button></td>
 	</tr>
 	</table>
-</div>           
+</div>   
+    
+    
 <footer>   
 	<div class="footer" id="informazioni" >
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom ">
