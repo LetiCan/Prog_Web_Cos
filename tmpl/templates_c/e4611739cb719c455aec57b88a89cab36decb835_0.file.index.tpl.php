@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-16 16:19:37
+/* Smarty version 3.1.39, created on 2021-07-27 13:03:38
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60f195790335c8_15191646',
+  'unifunc' => 'content_60ffe80a480c31_90964221',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1626445172,
+      1 => 1626447356,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60f195790335c8_15191646 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60ffe80a480c31_90964221 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -110,7 +110,7 @@ function content_60f195790335c8_15191646 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 </header>
 <div class="container-fluid" id="home">
-<div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="demo" class="carousel slide" data-ride="carousel">
 
 		  <!-- Indicators -->
 		  <ul class="carousel-indicators">
@@ -140,7 +140,7 @@ function content_60f195790335c8_15191646 (Smarty_Internal_Template $_smarty_tpl)
 			<span class="carousel-control-next-icon"></span>
 		  </a>
 
-</div>
+    </div>
 	<br><br>
 	<table width='100%' >
 	<tr>
@@ -150,7 +150,9 @@ function content_60f195790335c8_15191646 (Smarty_Internal_Template $_smarty_tpl)
 	<td><button id="adm" type="button" class="btn btn-primary" onclick="fun1();">Admin</button></td>
 	</tr>
 	</table>
-</div>           
+</div>   
+    
+    
 <footer>   
 	<div class="footer" id="informazioni" >
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom ">
