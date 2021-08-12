@@ -1,6 +1,6 @@
 <?php
 require_once 'Foundation/Gestione/Gpreleva.php';
-require_once 'Foundation/Futente.php';
+//require_once 'Foundation/Futente.php';
 require_once 'Foundation/Fconndb.php';
 class Clogin
 {
