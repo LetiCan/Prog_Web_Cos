@@ -1,5 +1,5 @@
 <?php
-
+require_once 'Fconndb.php';
 class Futente extends Fconndb
 {
     public function __construct() 
@@ -12,3 +12,4 @@ class Futente extends Fconndb
     
     
 }
+?>
