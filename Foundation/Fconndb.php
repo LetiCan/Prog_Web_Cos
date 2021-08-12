@@ -1,6 +1,6 @@
 <?php
 require_once 'classi/Utente.php';
-class Impostazioni
+class Fconndb
 {
     private $db;
     private $qury_result;
@@ -38,7 +38,7 @@ class Impostazioni
     public function preleva_user($u,$p)
     {
         $this->connessione();
-        $q=" SELECT * FROM ". $this->tabella." WHERE user= :us  AND password= :ps";
+        $q=" SELECT * FROM ". $this->tabella." WHERE username= :us  AND pwd= :ps";
         $this->query_result=$this->db->prepare($q);
         $this->query_result->bindParam(':us',$u);
         $this->query_result->bindParam(':ps',$p);
