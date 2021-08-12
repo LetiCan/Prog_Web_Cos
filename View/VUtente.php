@@ -24,6 +24,7 @@ class VUtente extends View
         {
             echo 'niet';
         }*/
+    }
     
 }
 ?>
