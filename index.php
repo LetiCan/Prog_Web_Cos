@@ -1,6 +1,6 @@
  <?php 
 require_once 'Foundation/Gestione/Gpreleva.php';
-require 'Controllo/Chome.php';
+require_once 'Controllo/Chome.php';
 $cix = Gpreleva::getIstanza('Chome');
 $cix->home();
 /* $v=new View();
