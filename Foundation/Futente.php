@@ -1,4 +1,5 @@
 <?php
+require_once 'Gestione/Gpreleva.php';
 require_once 'Fconndb.php';
 class Futente extends Fconndb
 {
