@@ -32,7 +32,7 @@ class Impostazioni
         {
             echo "Errore: " . $e->getMessage();
         }   
-        return true;
+        //return true;
     }
  
     public function preleva_user($u,$p)
