@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-27 13:03:38
+/* Smarty version 3.1.39, created on 2021-08-12 12:42:28
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60ffe80a480c31_90964221',
+  'unifunc' => 'content_6114fb14f25ec4_33434643',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1626447356,
+      1 => 1628764945,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60ffe80a480c31_90964221 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6114fb14f25ec4_33434643 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +70,7 @@ function content_60ffe80a480c31_90964221 (Smarty_Internal_Template $_smarty_tpl)
                                         
                                             <div class="dropdown" id="log">
                                                 
-                                                <form method="POST" class="dropdown-menu" action="">
+                                                <form method="POST" class="dropdown-menu" action="index.php">
                                                         <table class="dropdown-item">
                                                             <tr>
                                                                 <fieldset>
