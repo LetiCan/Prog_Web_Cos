@@ -1,21 +1,23 @@
 <?php
-require 'View/VUtente.php';
+require_once 'View/VUtente.php';
+require_once 'View/Vhome.php';
 require_once 'Foundation/Gestione/Gpreleva.php';
 require_once 'Clogin.php';
 class Chome
 {
 
-    private $layout;
-    public function home()
+    /*public function home()
     {
         $this->layout= Gpreleva::getIstanza('VUtente');
         $this->layout->caricaindex('index.tpl');
 
-    }
+    }*/
     public function imp()
     {
+       $h= Gpreleva::getIstanza('Vhome');
+       $h->home();
        $ur= Gpreleva::getIstanza('Clogin'); 
-       $vl= Gpreleva::getIstanza('VUtente.php');
+       $vl= Gpreleva::getIstanza('VUtente');
        if($vl->getUser() == "" && $vl->getPwd() == "" ) 
        {
            echo 'pippo';
