@@ -1,15 +1,17 @@
 <?php
-
+require_once 'Foundation/Gestione/Gpreleva.php';
+require_once 'Foundation/Futente.php';
+require_once 'Foundation/Fconndb.php';
 class Clogin
 {
     private $username;
     private $password;
     
-    public function autenticazione()
+    public function autenticazione($u,$p)
     {
-        $gses =new Gsessione();
-        
+
         $Fu = new Futente();
-        $u='';
+        $u=$Fu->preleva_user($u,$p);
+        return $ut->get_nome();
     }
 }
