@@ -1,10 +1,28 @@
 <?php
+require 'View.php';
 class VUtente extends View 
 {
-    private $paginarichiesta;
-    
-    public function getpaginarichiesta()
+    public function getPwd()
     {
-         return $this->paginarichiesta;
+        
+        if(isset($_REQUEST['password']))
+        {
+            return $_REQUEST['password'];
+        }
+        /*else
+        {
+           echo 'niet';
+        }*/
     }
+    public function getUser()
+    {
+        if(isset($_REQUEST['utente']))
+        {
+            return $_REQUEST['utente'];
+        }
+       /* else
+        {
+            echo 'niet';
+        }*/
+    
 }
