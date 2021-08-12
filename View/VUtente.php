@@ -5,9 +5,9 @@ class VUtente extends View
     public function getPwd()
     {
         
-        if(isset($_REQUEST['password']))
+        if(isset($_REQUEST['psw']))
         {
-            return $_REQUEST['password'];
+            return $_REQUEST['psw'];
         }
         /*else
         {
