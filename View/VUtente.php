@@ -16,9 +16,9 @@ class VUtente extends View
     }
     public function getUser()
     {
-        if(isset($_REQUEST['utente']))
+        if(isset($_REQUEST['user']))
         {
-            return $_REQUEST['utente'];
+            return $_REQUEST['user'];
         }
        /* else
         {
