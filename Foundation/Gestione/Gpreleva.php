@@ -4,9 +4,7 @@ class Gpreleva
     private static $istanza=array();
     
     private function __construct() 
-    {
-        
-    }
+    {}    
     
    public static function getIstanza($i)
    {
