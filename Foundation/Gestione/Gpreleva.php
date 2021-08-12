@@ -17,3 +17,4 @@ class Gpreleva
         return self::$istanza[$i];
    }
 }
+?>
