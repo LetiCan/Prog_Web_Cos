@@ -1,6 +1,6 @@
 <?php
 require_once 'Foundation/Gestione/Gpreleva.php';
-//require_once 'Foundation/Futente.php';
+require_once 'Foundation/Futente.php';
 require_once 'Foundation/Fconndb.php';
 class Clogin
 {
@@ -12,6 +12,7 @@ class Clogin
 
         $Fu = new Futente();
         $u=$Fu->preleva_user($u,$p);
-        return $ut->get_nome();
+        return $u->get_nome();
     }
 }
+?>
