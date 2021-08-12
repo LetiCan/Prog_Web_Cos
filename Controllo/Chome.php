@@ -6,18 +6,11 @@ require_once 'Clogin.php';
 class Chome
 {
 
-    /*public function home()
-    {
-        $this->layout= Gpreleva::getIstanza('VUtente');
-        $this->layout->caricaindex('index.tpl');
-
-    }*/
     public function imp()
     {
-       $h= Gpreleva::getIstanza('Vhome');
-       $h->home();
        $ur= Gpreleva::getIstanza('Clogin'); 
        $vl= Gpreleva::getIstanza('VUtente');
+       $vl->caricaindex();
        if($vl->getUser() == "" && $vl->getPwd() == "" ) 
        {
            echo 'pippo';
