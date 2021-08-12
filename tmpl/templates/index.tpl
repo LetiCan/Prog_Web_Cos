@@ -39,7 +39,7 @@
                                         
                                             <div class="dropdown" id="log">
                                                 
-                                                <form method="POST" class="dropdown-menu" action="">
+                                                <form method="POST" class="dropdown-menu" action="index.php">
                                                         <table class="dropdown-item">
                                                             <tr>
                                                                 <fieldset>
