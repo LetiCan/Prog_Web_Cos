@@ -1,30 +1,30 @@
 <?php
 require 'View/VUtente.php';
 require_once 'Foundation/Gestione/Gpreleva.php';
-require 'Clogin.php';
+require_once 'Clogin.php';
 class Chome
 {
 
     private $layout;
     public function home()
     {
-        $this->layout= USingleton::getIstanza('View.php');
+        $this->layout= Gpreleva::getIstanza('VUtente');
         $this->layout->caricaindex('index.tpl');
 
     }
     public function imp()
     {
-       $ur= USingleton::getIstanza('Clogin'); 
-       $vl= USingleton::getIstanza('VUtente.php');
+       $ur= Gpreleva::getIstanza('Clogin'); 
+       $vl= Gpreleva::getIstanza('VUtente.php');
        if($vl->getUser() == "" && $vl->getPwd() == "" ) 
        {
            echo 'pippo';
            
 
        }
-       elseif($ur->autentica($vl->getUser(),$vl->getPwd()) !== null )
+       elseif($ur->autenticazione($vl->getUser(),$vl->getPwd()) !== null )
        {
-           $arr=$ur->autentica($vl->getUser(),$vl->getPwd());
+           $arr=$ur->autenticazione($vl->getUser(),$vl->getPwd());
            $vl->caricaTemplate('username',$arr,'Admin.tpl');
        }
       
