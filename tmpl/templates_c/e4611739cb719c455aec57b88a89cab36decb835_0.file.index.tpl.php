@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-12 12:42:28
+/* Smarty version 3.1.39, created on 2021-08-13 11:37:09
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6114fb14f25ec4_33434643',
+  'unifunc' => 'content_61163d45b3b9e1_63214559',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1628764945,
+      1 => 1628847427,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6114fb14f25ec4_33434643 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61163d45b3b9e1_63214559 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,7 +147,6 @@ function content_6114fb14f25ec4_33434643 (Smarty_Internal_Template $_smarty_tpl)
 	<td><button id="rp" type="button" class="btn btn-primary">Richiedi Passaporto</button></td>
 	<td><button id="dm" type="button" class="btn btn-primary" >Prenota Tampone</button></td>
 	<td><button id="reg" type="button" class="btn btn-primary" onclick="Rgst();">Registrati</button></td>
-	<td><button id="adm" type="button" class="btn btn-primary" onclick="fun1();">Admin</button></td>
 	</tr>
 	</table>
 </div>   
