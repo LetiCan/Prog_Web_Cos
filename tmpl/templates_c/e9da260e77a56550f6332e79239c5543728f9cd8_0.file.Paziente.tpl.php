@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-13 11:54:24
+/* Smarty version 3.1.39, created on 2021-08-13 15:57:40
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_611641503bd437_75846987',
+  'unifunc' => 'content_61167a544803f9_17137717',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1628848450,
+      1 => 1628863052,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_611641503bd437_75846987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61167a544803f9_17137717 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -40,11 +40,11 @@ function content_611641503bd437_75846987 (Smarty_Internal_Template $_smarty_tpl)
 >
 </head>
 
-<body>
+<body  class="container-fluid">
 <div id="header">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
 		<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-		<a class="nav-link" href="#infopa" data-toggle="collapse"> <?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+		<a class="nav-link" href="#infopa" data-toggle="collapse" style="color: white;"> <?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 </a>
 
 	</nav>
@@ -59,15 +59,14 @@ function content_611641503bd437_75846987 (Smarty_Internal_Template $_smarty_tpl)
 	<td><button id="storico" type="button" class="btn btn-primary">Storico delle prenotazioni</button></td>
 	<td><button id="approva" type="button" class="btn btn-primary" >Richiesta Passaporto</button></td>
 	<td><button id="comunica" type="button" class="btn btn-primary" onclick="">Prenotazione Tampone</button></td>
-        <td><button id="comunica" type="button" class="btn btn-primary" onclick="">Caricamento dosi</button></td>
+    <td><button id="comunica" type="button" class="btn btn-primary" onclick="">Caricamento dosi</button></td>
 	</tr>
 	</table>
         
         
  
 
-<br>
-<a href="index.php">home</a>
+
 </div>
 
 <!-- informazioini del pazinete -->
@@ -102,5 +101,8 @@ function content_611641503bd437_75846987 (Smarty_Internal_Template $_smarty_tpl)
         </tr> 
     </table>
 </div>
+
+<br>
+<a href="index.php">home</a>
 </body><?php }
 }
