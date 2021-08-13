@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-13 11:55:39
+/* Smarty version 3.1.39, created on 2021-08-13 15:55:20
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6116419bbb6c12_59657934',
+  'unifunc' => 'content_611679c8c26812_43279689',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba1a7ab36b72d109818d34990670601cde63e7cd' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Admin.tpl',
-      1 => 1628848526,
+      1 => 1628862915,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6116419bbb6c12_59657934 (Smarty_Internal_Template $_smarty_tpl) {
+function content_611679c8c26812_43279689 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -44,7 +44,7 @@ function content_6116419bbb6c12_59657934 (Smarty_Internal_Template $_smarty_tpl)
 <div id="header">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
 		<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-		<a class="nav-link" href="#"><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+		<a style="color: white;" ><?php echo $_smarty_tpl->tpl_vars['username']->value;?>
 </a>
 	</nav>
 </div>
