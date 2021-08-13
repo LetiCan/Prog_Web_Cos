@@ -116,7 +116,6 @@
 	<td><button id="rp" type="button" class="btn btn-primary">Richiedi Passaporto</button></td>
 	<td><button id="dm" type="button" class="btn btn-primary" >Prenota Tampone</button></td>
 	<td><button id="reg" type="button" class="btn btn-primary" onclick="Rgst();">Registrati</button></td>
-	<td><button id="adm" type="button" class="btn btn-primary" onclick="fun1();">Admin</button></td>
 	</tr>
 	</table>
 </div>   
