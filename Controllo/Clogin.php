@@ -12,7 +12,7 @@ class Clogin
 
         $Fu = new Futente();
         $u=$Fu->preleva_user($u,$p);
-        return $u->get_nome();
+        return $u;
     }
 }
 ?>
