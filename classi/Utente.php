@@ -31,7 +31,18 @@ class Utente
 		$this->std2 = $s2;
 	}
 	
-        public function get_id()
+	public function UtenteAmm($id,$user,$pass,$nome,$cognome,$tp)
+	{
+		$this->id_ut=$id;
+		$this->username = $user;
+		$this->password = $pass;
+		$this->nome = $nome;
+		$this->cognome = $cognome;
+		$this->tipo=$tp;
+
+	}
+
+    public function get_id()
 	{
 		return $this->id_ut;
 	}
