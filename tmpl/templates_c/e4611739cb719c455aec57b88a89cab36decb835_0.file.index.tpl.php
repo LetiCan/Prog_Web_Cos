@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-16 11:50:36
+/* Smarty version 3.1.39, created on 2021-08-16 16:16:18
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_611a34ecd5bf95_29687882',
+  'unifunc' => 'content_611a73320664f5_19204842',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1629107360,
+      1 => 1629123374,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_611a34ecd5bf95_29687882 (Smarty_Internal_Template $_smarty_tpl) {
+function content_611a73320664f5_19204842 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
-  <link href="stilepagine/stile1.css" rel="stylesheet" type="text/css">
+  <link href="./stilepagine/stile1.css" rel="stylesheet" type="text/css">
   <link href="stilepagine/stile_header.css" rel="stylesheet" type="text/css">
   <link href="stilepagine/stile_footer.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
