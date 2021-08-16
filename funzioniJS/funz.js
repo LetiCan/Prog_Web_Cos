@@ -93,7 +93,7 @@ function checkLogin()
         if( document.getElementById("psw").value === "" ){
     		alert(" Impossibile inviare i dati");
         	return false;
-        }   
+        }  
 		return true;    
 }
 
@@ -107,3 +107,8 @@ function controllocheckbox()
                 });
             });
 }
+
+function openForm()
+ {
+    document.getElementById("log").style.display = "block";
+ }
