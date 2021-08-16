@@ -14,51 +14,37 @@
     </legend>
     </fieldset>
 <form method="POST" action="">
-	<table width="100%">
-		<tbody>
-			<tr>
-				<td><label for="nome">Nome:</label></td>
-				<td><input type="text" name="nome" id="nome" placeholder="Nome" ></td>
-			</tr>
-			<tr>
-			<td><label for="cognome">Cognome:</label></td>
-				<td><input type="text" name="cognome"  id="cognome" placeholder="Cognome"></td>
-			</tr>
-			<tr>
-			<td><label for="datanascita">Data di Nascita:</label></td>
-				<td><input type="date" name="datanascita" id="dtn"  ></td>
-			</tr>
-			<tr>
-			<td><label for="ldn">Luogo di Nascita:</label></td>
-				<td><input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita"></td>
-			</tr>
-			<tr>
-				<td><label for="cdf">Codice fiscale:</label></td>
-				<td><input type="text" name="cdf" id="cdf" placeholder="cdf" maxlength="16"></td>
-			</tr>
-			<tr>
-				<td><label for="sesso">Sesso:</label></td>
-				<td>
-                                    <input type="checkbox" name="sesso" id="sesso" value="M" onclick="controllocheckbox()">
-					<label for="M">M</label>
-					<input type="checkbox" name="sesso" id="sesso" value="F" onclick="controllocheckbox()" >
-					<label for="M">F</label>
-				</td>
-			</tr>
-			<tr>
-					<td><label for="email">email</label></td>
-					<td><input type="email" name="email" id="em" placeholder="inserisci email"></td>
-			</tr>
-			<tr>
-					<td><label for="uesr">Username</label></td>
-					<td><input type="text" id="user" name="username" placeholder="username"></td>
-			</tr>
-			<tr>
-					<td><label for="psw">Password</label></td>
-					<td><input type="password" id="pwd" name="pwd" placeholder="password" ></td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="form-group">
+ 	  <label for="nome">Nome:</label>
+	  <input type="text" name="nome" id="nome" placeholder="Nome" >
+
+	  <label for="cognome">ognome:</label>
+	  <input type="text" name="cognome" id="cognome" placeholder="cognome" >
+
+	  <label for="datanascita">Data di Nascita:</label>
+	  <input type="date" name="datanascita" id="dtn" >
+
+	  <label for="cdf">Codice fiscale:</label>
+	  <input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16">
+
+	  <label for="ldn">Luogo di Nascita:</label>
+	  <input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita">
+
+	  <label for="sesso">Sesso:</label>
+	  <input type="checkbox" name="sesso" id="sesso" value="M" onclick="controllocheckbox()">
+	  <label for="M">M</label>
+	  <input type="checkbox" name="sesso" id="sesso" value="F" onclick="controllocheckbox()" >
+	  <label for="F">F</label>
+
+	  <label for="email">email</label>
+	  <input type="email" name="email" id="em" placeholder="inserisci email">
+
+	  <label for="uesr">Username</label>
+	  <input type="text" id="user" name="username" placeholder="username">
+
+	  <label for="psw">Password</label>
+	  <input type="password" id="pwd" name="pwd" placeholder="password" >
+	</div>
 		<p id="validazione">
 			<input type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
 			<input type="reset" value="Ripristina" name="rpr" onclick="">
