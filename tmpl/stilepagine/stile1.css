@@ -20,15 +20,24 @@
   color: black;
 }
 */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 .container {
   padding: 16px;
+  height: auto;
 }
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
+  position: relative; 
   z-index: 1; /* Sit on top */
   left: 0;
-  top: 0;
+  top: 100px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
