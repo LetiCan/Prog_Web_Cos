@@ -2,7 +2,7 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
-  <link href="stilepagine/stile1.css" rel="stylesheet" type="text/css">
+  <link href="./stilepagine/stile1.css" rel="stylesheet" type="text/css">
   <link href="stilepagine/stile_header.css" rel="stylesheet" type="text/css">
   <link href="stilepagine/stile_footer.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
