@@ -13,7 +13,7 @@ class Clogin
         
         $Fu = new Futente();
         $u=$Fu->preleva_user($u,$p);
-        if(!isset($u))
+        if(isset($u))
         {
             $sessione = Gpreleva::getIstanza('Gsessione');
             $sessione->impSessione('id_utente',$u->get_id());
