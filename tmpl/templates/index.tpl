@@ -31,39 +31,12 @@
 					</li>
 				</ul>
 				<ul class="navbar-nav ">
-					<li class="nav-item dropleft ">							
-						<a class="nav-link dropdown-toggle"  data-toggle="dropdown"> Login </a>				
-						<div class="dropdown" id="log">						
-							<form method="POST" class="dropdown-menu" action="index.php">
-								<table class="dropdown-item">
-									<tr>
-										<fieldset>
-											<legend>Accedi</legend>
-										</fieldset>
-									</tr>
-									<tr>
-										<td>
-											<input type="text" id="user" name="user" placeholder="Username">
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="password" id="psw" name="psw" placeholder="Password">
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="submit" value="Accedi" onclick="checkLogin();">
-											<a href="">Password dimenticata</a>
-										</td>
-									</tr>
-								</table> 
-							</form>
-						</div>					
+					<li class="nav-item ">							
+						<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
 					</li>
 				</ul> 
 			</nav>
-		</div>
+		</div>		
 	</header>
 	<div class="container-fluid" id="home">
 		<div id="demo" class="carousel slide" data-ride="carousel">
@@ -96,6 +69,21 @@
 				<span class="carousel-control-next-icon"></span>
 			</a>
 		</div>
+
+		<div class="modal" id="log">						
+			<form method="POST" class="modal-content" action="index.php">
+				<div class="container">
+					<label for="username"><b>Username</b></label>
+					<input type="text" placeholder="Username" id="user" name="user" >
+
+					<label for="password"><b>Password</b></label>
+					<input type="password" placeholder="Password"  id="psw" name="psw" >
+
+					<input type="submit" onclick="checkLogin();">Accedi</input>
+				</div>		
+			</form>
+		</div>
+
 		<div  class="collapse" id="inf">
 			<ul style='list-style-type:none;'>
 				<li>info</li>
@@ -122,5 +110,16 @@
 			</nav>
 		</div>        
 	</footer>
+	<script>
+		// Get the modal
+		var modal = document.getElementById('log');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
 </body>
 </html>
