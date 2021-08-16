@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-13 16:27:27
+/* Smarty version 3.1.39, created on 2021-08-16 11:50:36
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6116814fc8a9d0_04444077',
+  'unifunc' => 'content_611a34ecd5bf95_29687882',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1628864845,
+      1 => 1629107360,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6116814fc8a9d0_04444077 (Smarty_Internal_Template $_smarty_tpl) {
+function content_611a34ecd5bf95_29687882 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,39 +62,12 @@ function content_6116814fc8a9d0_04444077 (Smarty_Internal_Template $_smarty_tpl)
 					</li>
 				</ul>
 				<ul class="navbar-nav ">
-					<li class="nav-item dropleft ">							
-						<a class="nav-link dropdown-toggle"  data-toggle="dropdown"> Login </a>				
-						<div class="dropdown" id="log">						
-							<form method="POST" class="dropdown-menu" action="index.php">
-								<table class="dropdown-item">
-									<tr>
-										<fieldset>
-											<legend>Accedi</legend>
-										</fieldset>
-									</tr>
-									<tr>
-										<td>
-											<input type="text" id="user" name="user" placeholder="Username">
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="password" id="psw" name="psw" placeholder="Password">
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="submit" value="Accedi" onclick="checkLogin();">
-											<a href="">Password dimenticata</a>
-										</td>
-									</tr>
-								</table> 
-							</form>
-						</div>					
+					<li class="nav-item ">							
+						<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
 					</li>
 				</ul> 
 			</nav>
-		</div>
+		</div>		
 	</header>
 	<div class="container-fluid" id="home">
 		<div id="demo" class="carousel slide" data-ride="carousel">
@@ -127,6 +100,21 @@ function content_6116814fc8a9d0_04444077 (Smarty_Internal_Template $_smarty_tpl)
 				<span class="carousel-control-next-icon"></span>
 			</a>
 		</div>
+
+		<div class="modal" id="log">						
+			<form method="POST" class="modal-content" action="index.php">
+				<div class="container">
+					<label for="username"><b>Username</b></label>
+					<input type="text" placeholder="Username" id="user" name="user" >
+
+					<label for="password"><b>Password</b></label>
+					<input type="password" placeholder="Password"  id="psw" name="psw" >
+
+					<input type="submit" onclick="checkLogin();">Accedi</input>
+				</div>		
+			</form>
+		</div>
+
 		<div  class="collapse" id="inf">
 			<ul style='list-style-type:none;'>
 				<li>info</li>
@@ -153,6 +141,19 @@ function content_6116814fc8a9d0_04444077 (Smarty_Internal_Template $_smarty_tpl)
 			</nav>
 		</div>        
 	</footer>
+	<?php echo '<script'; ?>
+>
+		// Get the modal
+		var modal = document.getElementById('log');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	<?php echo '</script'; ?>
+>
 </body>
 </html>
 <?php }
