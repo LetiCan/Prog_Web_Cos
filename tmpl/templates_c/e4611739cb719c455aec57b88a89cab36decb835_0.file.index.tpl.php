@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-16 16:16:18
+/* Smarty version 3.1.39, created on 2021-08-17 09:28:33
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_611a73320664f5_19204842',
+  'unifunc' => 'content_611b6521515688_06988143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1629123374,
+      1 => 1629185309,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_611a73320664f5_19204842 (Smarty_Internal_Template $_smarty_tpl) {
+function content_611b6521515688_06988143 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,32 +43,32 @@ function content_611a73320664f5_19204842 (Smarty_Internal_Template $_smarty_tpl)
  src="funzioniJs/funz.js"><?php echo '</script'; ?>
 >
 </head>
+<header>  
+	<div class="header" id="intestazione" >
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top" >						
+			<ul class="navbar-nav mr-auto" id="links">
+				<li class="nav-item">
+					<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Chi siamo</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#inf" data-toggle="collapse"> Info Prenotazioni</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ">
+				<li class="nav-item ">							
+					<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
+				</li>
+			</ul> 
+		</nav>
+	</div>		
+</header>
 <body class="container-fluid" id="box">
-	<header>  
-		<div class="header" id="intestazione" >
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top" >						
-				<ul class="navbar-nav mr-auto" id="links">
-					<li class="nav-item">
-						<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Chi siamo</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#inf" data-toggle="collapse"> Info Prenotazioni</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav ">
-					<li class="nav-item ">							
-						<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
-					</li>
-				</ul> 
-			</nav>
-		</div>		
-	</header>
 	<div class="container-fluid" id="home">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -132,6 +132,7 @@ function content_611a73320664f5_19204842 (Smarty_Internal_Template $_smarty_tpl)
 			</table>
 		</div>
 	</div>   
+</body>
 	<footer>   
 		<div class="footer" id="informazioni" >
 			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom ">
@@ -154,7 +155,7 @@ function content_611a73320664f5_19204842 (Smarty_Internal_Template $_smarty_tpl)
 		}
 	<?php echo '</script'; ?>
 >
-</body>
+
 </html>
 <?php }
 }
