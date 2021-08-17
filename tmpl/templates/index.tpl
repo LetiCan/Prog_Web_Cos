@@ -12,32 +12,32 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="funzioniJs/funz.js"></script>
 </head>
+<header>  
+	<div class="header" id="intestazione" >
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top" >						
+			<ul class="navbar-nav mr-auto" id="links">
+				<li class="nav-item">
+					<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Chi siamo</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#inf" data-toggle="collapse"> Info Prenotazioni</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ">
+				<li class="nav-item ">							
+					<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
+				</li>
+			</ul> 
+		</nav>
+	</div>		
+</header>
 <body class="container-fluid" id="box">
-	<header>  
-		<div class="header" id="intestazione" >
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top" >						
-				<ul class="navbar-nav mr-auto" id="links">
-					<li class="nav-item">
-						<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Chi siamo</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#inf" data-toggle="collapse"> Info Prenotazioni</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav ">
-					<li class="nav-item ">							
-						<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
-					</li>
-				</ul> 
-			</nav>
-		</div>		
-	</header>
 	<div class="container-fluid" id="home">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -101,6 +101,7 @@
 			</table>
 		</div>
 	</div>   
+</body>
 	<footer>   
 		<div class="footer" id="informazioni" >
 			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom ">
@@ -121,5 +122,5 @@
 			}
 		}
 	</script>
-</body>
+
 </html>
