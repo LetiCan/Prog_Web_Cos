@@ -61,12 +61,19 @@ class Fconndb
 
         }
         $utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
+       // $this->connclose();
         return $utente;
         //$utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
         
         
         //echo $id." ".$user." ".$pws." ".$nome;
         //return $row;  
+    }
+
+    public  function InserisciDati($dati)
+    {
+        
+
     }
     public function connclose() 
     {
