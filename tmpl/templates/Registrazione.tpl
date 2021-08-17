@@ -13,22 +13,22 @@
         Inserisci i tuoi dati
     </legend>
     </fieldset>
-<form method="POST" action="">
+<form method="POST" action="index.php">
 	<div class="form-group">
  	  <label for="nome">Nome:</label>
 	  <input type="text" name="nome" id="nome" placeholder="Nome" >
 
-	  <label for="cognome">ognome:</label>
+	  <label for="cognome">cognome:</label>
 	  <input type="text" name="cognome" id="cognome" placeholder="cognome" >
 
 	  <label for="datanascita">Data di Nascita:</label>
 	  <input type="date" name="datanascita" id="dtn" >
 
-	  <label for="cdf">Codice fiscale:</label>
-	  <input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16">
-
 	  <label for="ldn">Luogo di Nascita:</label>
 	  <input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita">
+
+	  <label for="cdf">Codice fiscale:</label>
+	  <input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16">
 
 	  <label for="sesso">Sesso:</label>
 	  <input type="checkbox" name="sesso" id="sesso" value="M" onclick="controllocheckbox()">
