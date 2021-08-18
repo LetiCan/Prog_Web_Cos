@@ -72,7 +72,7 @@ class Fconndb
 
     public  function InserisciDati($dati)
     {
-        
+          
 
     }
     public function connclose() 
