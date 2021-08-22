@@ -27,6 +27,10 @@ class Chome
            }
            
        }
+       else
+       {
+            $ur->InsUtente();
+       }
       
       
 
