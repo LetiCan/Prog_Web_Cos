@@ -9,6 +9,7 @@ class Futente extends Fconndb
         $this->tabella='utente';
         $this->chiave='id_utente';
         $this->classe='Utente';
+        $this->autoincremento=true;
         Gpreleva::getIstanza('Fconndb');
     }
     
