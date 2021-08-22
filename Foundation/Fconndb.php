@@ -33,13 +33,14 @@ class Fconndb
             echo "Errore: " . $e->getMessage();
         }   
         //return true;
+        return $this->db;
     }
  
     public function preleva_user($u,$p)
     {
-        $this->connessione();
+        $sdb=$this->connessione();
         $q=" SELECT * FROM ". $this->tabella." WHERE username= :us  AND pwd= :ps";
-        $this->query_result=$this->db->prepare($q);
+        $this->query_result=$sdb->prepare($q);
         $this->query_result->bindParam(':us',$u);
         $this->query_result->bindParam(':ps',$p);
         $this->query_result->execute();
