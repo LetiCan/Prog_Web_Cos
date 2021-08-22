@@ -36,8 +36,9 @@
 	  <input type="checkbox" name="sesso" id="sesso" value="F" onclick="controllocheckbox()" >
 	  <label for="F">F</label>
 
-	  <label for="email">email</label>
-	  <input type="email" name="email" id="em" placeholder="inserisci email">
+	 <!-- <label for="email">email</label>
+	  <input type="email" name="email" id="em" placeholder="inserisci email"> 
+	  -->
 
 	  <label for="uesr">Username</label>
 	  <input type="text" id="user" name="username" placeholder="username">
