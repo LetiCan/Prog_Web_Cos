@@ -79,7 +79,7 @@
 					<label for="password"><b>Password</b></label>
 					<input type="password" placeholder="Password"  id="psw" name="psw" >
 
-					<input type="submit" onclick="checkLogin();">Accedi</input>
+					<input type="submit" value="Accedi" onclick="checkLogin();"></input>
 				</div>		
 			</form>
 		</div>
