@@ -40,7 +40,8 @@ class Clogin
         }
         else
         {
-            $Fu->InserisciDati($dreg);
+            $Fu->InserisciDatiReg($dreg);
+            $this->messaggio='Avvenuta Registrazione';
         }
     }
 }
