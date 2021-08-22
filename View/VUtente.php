@@ -30,7 +30,7 @@ class VUtente extends View
     public function DatiReg()
     {
         $a=array();
-        $d=array('nome','cognome','datanascita','ldn','cdf','sesso','email','username','pwd');
+        $d=array('nome','cognome','datanascita','ldn','cdf','sesso','username','pwd');
         foreach($d as $dto)
         {
             if(isseet($_REQUEST[$dto]))
