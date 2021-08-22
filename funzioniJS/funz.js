@@ -65,11 +65,11 @@ function checkRegistrazione()
                         alert(" Impossibile inviare i dati");
                         return false;
         }
-        if( document.getElementById("em").value === "" )
+       /* if( document.getElementById("em").value === "" )
         {
                                 alert(" Impossibile inviare i dati");
                                 return false;
-        }
+        }*/
         if( document.getElementById("user").value === "" )
         {
                                 alert(" Impossibile inviare i dati");
