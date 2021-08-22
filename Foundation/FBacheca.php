@@ -9,7 +9,6 @@ class FBacheca extends Fconndb
         $this->classe='Bacheca';
         $this->autoincremento=true;
         Gpreleva::getIstanza('Fconndb');
-		//commentonosenseprovakkk
     }
     
 }
