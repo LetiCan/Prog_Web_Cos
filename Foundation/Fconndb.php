@@ -62,7 +62,7 @@ class Fconndb
 
         }
         $utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
-       // $this->connclose();
+       // $sdb->connclose();
         return $utente;
         //$utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
         
@@ -71,8 +71,25 @@ class Fconndb
         //return $row;  
     }
 
-    public  function InserisciDati($dati)
+    public  function InserisciDatiReg($dati)
     {
+        $sdb=$this->connessione();
+        $q="INSERT INTO ".$this->tabella."( tipo, username, pwd, nome, cognome, data_nascita, luogo_nascita, sesso, codice_fisclae)".
+            "VALUES(:tp,:us,:ps,:nm,:cgn,:dtn,:ln,:sex,:cdf)";
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':tp',2);
+        $this->query_result->bindParam(':us',$dati['username']);
+        $this->query_result->bindParam(':ps',$dati['pwd']);
+        $this->query_result->bindParam(':nm',$dati['nome']);
+        $this->query_result->bindParam(':cgn',$dati['cognome']);
+        $this->query_result->bindParam(':dtn',$dati['datanascita']);
+        $this->query_result->bindParam(':ln',$dati['ldn']);
+        $this->query_result->bindParam(':sex',$dati['sesso']);
+        $this->query_result->bindParam(':cdf',$dati['cdf']);
+        $this->query_result->execute();
+
+        $sdb->connclose();
+
           
 
     }
