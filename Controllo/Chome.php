@@ -10,9 +10,10 @@ class Chome
     {
        $ur= Gpreleva::getIstanza('Clogin'); 
        $vl= Gpreleva::getIstanza('VUtente');
+       $vl->caricaindex(); 
        if($vl->getUser() == "" && $vl->getPwd() == "" ) 
        {
-            $vl->caricaindex();  
+         
        }
        elseif($ur->autenticazione($vl->getUser(),$vl->getPwd()) !== null )
        {
@@ -27,13 +28,7 @@ class Chome
            }
            
        }
-       else
-       {
-            $ur->InsUtente();
-       }
       
-      
-
     }
 }
 ?>
