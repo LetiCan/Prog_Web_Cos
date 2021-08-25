@@ -8,7 +8,7 @@ function Rgst()
     });*/
     $(document).ready(function(){
 	$("#reg").click(function(){
-	$("#home").load("tmpl/templates/Registrazione.tpl #rg");
+	$("#box").load("tmpl/templates/Registrazione.tpl #rg");
 	});
 	});
     $(document).ready(function(){
