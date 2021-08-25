@@ -74,10 +74,10 @@ class Fconndb
     public  function InserisciDatiReg($dati)
     {
         $sdb=$this->connessione();
-        $q="INSERT INTO ".$this->tabella."( tipo, username, pwd, nome, cognome, data_nascita, luogo_nascita, sesso, codice_fisclae)".
-            "VALUES(:tp,:us,:ps,:nm,:cgn,:dtn,:ln,:sex,:cdf)";
+        $n=2;
+        $q="INSERT INTO ".$this->tabella."( tipo, username, pwd, nome, cognome, data_nascita, luogo_nascita, sesso, codice_fiscale)".
+            "VALUES(".$n.",:us,:ps,:nm,:cgn,:dtn,:ln,:sex,:cdf)";
         $this->query_result=$sdb->prepare($q);
-        $this->query_result->bindParam(':tp',2);
         $this->query_result->bindParam(':us',$dati['username']);
         $this->query_result->bindParam(':ps',$dati['pwd']);
         $this->query_result->bindParam(':nm',$dati['nome']);
@@ -88,11 +88,9 @@ class Fconndb
         $this->query_result->bindParam(':cdf',$dati['cdf']);
         $this->query_result->execute();
 
-        $sdb->connclose();
-
-          
-
+        //$sdb->connclose();
     }
+
     public function connclose() 
     {
        $this->db=null;
