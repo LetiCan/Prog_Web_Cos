@@ -6,7 +6,7 @@
 <br><br>
 <hr>
 <br><br>
-<div  class="container-fluid" id="rg">
+<div  class="container" id="rg">
     <br><br>
     <fieldset>
      <legend>
@@ -24,6 +24,7 @@
 	  <label for="datanascita">Data di Nascita:</label>
 	  <input type="date" name="datanascita" id="dtn" >
 
+	  <br>
 	  <label for="ldn">Luogo di Nascita:</label>
 	  <input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita">
 
@@ -41,14 +42,13 @@
 
 	  <label for="psw">Password:</label>
 	  <input type="password" id="pwd" name="pwd" placeholder="password" >
-	</div>
-		<p id="validazione">
+
+	  <p id="validazione">
 			<input type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
 			<input type="reset" value="Ripristina" name="rpr" onclick="">
-		</p>
+	  </p>
+	</div>		
 <form>
-<br>
-<hr>
-<br><br>
 <a href="index.php">home</a>
+<hr>
 </div>
