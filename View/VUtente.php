@@ -30,12 +30,15 @@ class VUtente extends View
     public function DatiReg()
     {
         $a=array();
-        $d=array('nome','cognome','datanascita','ldn','cdf','sesso','username','pwd');
-        foreach($d as $dto)
+        if(isset($_REQUEST['nome'],$_REQUEST['cognome'],$_REQUEST['datanascita'],$_REQUEST['ldn'],$_REQUEST['cdf'],$_REQUEST['sesso'],$_REQUEST['username'],$_REQUEST['pwd']))
         {
-            if(isseet($_REQUEST[$dto]))
+            $d=array($_REQUEST['nome'],$_REQUEST['cognome'],$_REQUEST['datanascita'],$_REQUEST['ldn'],$_REQUEST['cdf'],$_REQUEST['sesso'],$_REQUEST['username'],$_REQUEST['pwd']);
+            foreach($d as $dto)
             {
-                $a[$dto]=$_REQUEST[$dto];
+                if(isset($_REQUEST[$dto]))
+                {
+                    $a[$dto]=$_REQUEST[$dto];
+                }
             }
         }
         return $a;
