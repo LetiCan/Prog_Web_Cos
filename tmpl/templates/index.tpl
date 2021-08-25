@@ -2,7 +2,7 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
-  <link href="./stilepagine/stile1.css" rel="stylesheet" type="text/css">
+  <link href="stilepagine/stile1.css" rel="stylesheet" type="text/css">
   <link href="stilepagine/stile_header.css" rel="stylesheet" type="text/css">
   <link href="stilepagine/stile_footer.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -104,7 +104,7 @@
 </body>
 	<footer>   
 		<div class="footer" id="informazioni" >
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom ">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
 				<div  id="info">
 					<p>@copyright by..... </p>
 				<div>
