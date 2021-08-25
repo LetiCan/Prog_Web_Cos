@@ -19,7 +19,11 @@ class Clogin
         {
             $sessione = Gpreleva::getIstanza('Gsessione');
             $sessione->impSessione('id_utente',$u->get_id());
-            return $u;
+            if($sessione->VerificaSessione('id_utente')!== false)
+            {
+                return $u;
+            }
+            
         }
         else
         {
@@ -31,18 +35,20 @@ class Clogin
     public function InsUtente()
     {
         $vu=Gpreleva::getIstanza('VUtente');
-        $dreg=$vu->DatiReg();
         $Fu= new Futente();
-        $ut=$Fu->preleva_user($dreg['username'],$dreg['pwd']);
-        if(iseet($ut))
-        {
-            $this->messaggio='Utente Esistente';
+        $dreg=$vu->DatiReg();
+        if(isset($dreg))
+        { 
+
+            $Fu->InserisciDatiReg($dreg);
+            $this->messaggio='Avvenuta Registrazione';             
         }
         else
         {
-            $Fu->InserisciDatiReg($dreg);
-            $this->messaggio='Avvenuta Registrazione';
+            $this->messaggio='Registrazione fallita';
+                      
         }
+        return $this->messaggio;
     }
 }
 ?>
