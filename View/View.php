@@ -26,6 +26,11 @@ class View extends Smarty
     {
         $this->display($tmp);
     }
+    public function caricadati($placeholder,$dt)
+    {
+        $this->assign($placeholder , $dt); 
+    }
+
     
 }
 ?>
