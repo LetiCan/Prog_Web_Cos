@@ -2,13 +2,16 @@
 require 'View.php';
 class VUtente extends View 
 {
+    private $us;
+    private $pw;
     public function getPwd()
     {
         
-        if(isset($_REQUEST['psw']))
+        if(isset($_POST['psw']))
         {
-            return $_REQUEST['psw'];
+            $this->pw=$_POST['psw']; 
         }
+        return $this->pw;
         /*else
         {
            echo 'niet';
@@ -16,10 +19,11 @@ class VUtente extends View
     }
     public function getUser()
     {
-        if(isset($_REQUEST['user']))
+        if(isset($_POST['user']))
         {
-            return $_REQUEST['user'];
+            $this->us=$_POST['user'];
         }
+        return $this->us;
        /* else
         {
             echo 'niet';
@@ -27,21 +31,5 @@ class VUtente extends View
     }
     
 
-    public function DatiReg()
-    {
-        $a=array();
-        if(isset($_REQUEST['nome'],$_REQUEST['cognome'],$_REQUEST['datanascita'],$_REQUEST['ldn'],$_REQUEST['cdf'],$_REQUEST['sesso'],$_REQUEST['username'],$_REQUEST['pwd']))
-        {
-            $d=array($_REQUEST['nome'],$_REQUEST['cognome'],$_REQUEST['datanascita'],$_REQUEST['ldn'],$_REQUEST['cdf'],$_REQUEST['sesso'],$_REQUEST['username'],$_REQUEST['pwd']);
-            foreach($d as $dto)
-            {
-                if(isset($_REQUEST[$dto]))
-                {
-                    $a[$dto]=$_REQUEST[$dto];
-                }
-            }
-        }
-        return $a;
-    }
 }
 ?>
