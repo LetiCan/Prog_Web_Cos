@@ -6,9 +6,6 @@
 	</div>
 <br><br>
 <hr>
-<br><br>
-
-    <br><br>
     <fieldset>
      <legend>
         Inserisci i tuoi dati
