@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-13 15:57:40
+/* Smarty version 3.1.39, created on 2021-08-27 18:08:19
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61167a544803f9_17137717',
+  'unifunc' => 'content_61290df3f16562_70947201',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1628863052,
+      1 => 1630080288,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61167a544803f9_17137717 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61290df3f16562_70947201 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -44,9 +44,8 @@ function content_61167a544803f9_17137717 (Smarty_Internal_Template $_smarty_tpl)
 <div id="header">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
 		<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-		<a class="nav-link" href="#infopa" data-toggle="collapse" style="color: white;"> <?php echo $_smarty_tpl->tpl_vars['username']->value;?>
+		<a class="nav-link" href="#infopa" data-toggle="collapse" style="color: white;"> <?php echo $_smarty_tpl->tpl_vars['P']->value['username'];?>
 </a>
-
 	</nav>
 </div>
 
@@ -57,16 +56,11 @@ function content_61167a544803f9_17137717 (Smarty_Internal_Template $_smarty_tpl)
 	<table width='100%' >
 	<tr>
 	<td><button id="storico" type="button" class="btn btn-primary">Storico delle prenotazioni</button></td>
-	<td><button id="approva" type="button" class="btn btn-primary" >Richiesta Passaporto</button></td>
-	<td><button id="comunica" type="button" class="btn btn-primary" onclick="">Prenotazione Tampone</button></td>
-    <td><button id="comunica" type="button" class="btn btn-primary" onclick="">Caricamento dosi</button></td>
+	<td><button id="richiestaP" type="button" class="btn btn-primary" >Richiesta Passaporto</button></td>
+	<td><button id="PrenT" type="button" class="btn btn-primary" onclick="">Prenotazione Tampone</button></td>
+    <td><button id="caricaD" type="button" class="btn btn-primary" onclick="">Caricamento dosi</button></td>
 	</tr>
 	</table>
-        
-        
- 
-
-
 </div>
 
 <!-- informazioini del pazinete -->
@@ -77,7 +71,7 @@ function content_61167a544803f9_17137717 (Smarty_Internal_Template $_smarty_tpl)
                 <label>Nome:</label>  
             </td>
             <td>
-                <?php echo $_smarty_tpl->tpl_vars['nome']->value;?>
+                <?php echo $_smarty_tpl->tpl_vars['P']->value['nome'];?>
 
             </td>                
         </tr>
@@ -86,7 +80,7 @@ function content_61167a544803f9_17137717 (Smarty_Internal_Template $_smarty_tpl)
                 <label>Cognome:</label>  
             </td>
             <td>
-                <?php echo $_smarty_tpl->tpl_vars['cognome']->value;?>
+                <?php echo $_smarty_tpl->tpl_vars['P']->value['cognome'];?>
 
             </td>  
         </tr>
@@ -95,7 +89,7 @@ function content_61167a544803f9_17137717 (Smarty_Internal_Template $_smarty_tpl)
                 <label>Codice fiscale:</label>  
             </td>
             <td>
-                <?php echo $_smarty_tpl->tpl_vars['cod_fisc']->value;?>
+                <?php echo $_smarty_tpl->tpl_vars['P']->value['cod_fisc'];?>
 
             </td>  
         </tr> 
