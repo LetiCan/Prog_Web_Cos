@@ -64,11 +64,6 @@ class Fconndb
         $utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
        // $sdb->connclose();
         return $utente;
-        //$utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
-        
-        
-        //echo $id." ".$user." ".$pws." ".$nome;
-        //return $row;  
     }
 
     public  function InserisciDatiReg($dati)
@@ -87,8 +82,7 @@ class Fconndb
         $this->query_result->bindParam(':sex',$dati['sesso']);
         $this->query_result->bindParam(':cdf',$dati['cdf']);
         $this->query_result->execute();
-
-        //$sdb->connclose();
+        $sdb->connclose();
     }
 
     public function connclose() 
