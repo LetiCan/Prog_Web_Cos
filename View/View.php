@@ -22,12 +22,10 @@ class View extends Smarty
         $this->assign($placeholder , $dt); 
         $this->display($tmpl);
     }
-
-   /* public function caricaDati($placeholder,$dt)
+    public function showTmp($tmp)
     {
-        $this->assign($placeholder , $dt);
-
-    }*/
+        $this->display($tmp);
+    }
     
 }
 ?>
