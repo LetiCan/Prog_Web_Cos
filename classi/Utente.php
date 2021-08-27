@@ -14,7 +14,6 @@ class Utente
 	private $std1;
 	private $std2;
 	
-	
 	public function __construct($id,$us,$pwd,$nm,$cgn,$dtn,$lgn,$sex,$cdf,$tp,$s1,$s2)
 	{
 		$this->id_ut=$id;
@@ -31,17 +30,6 @@ class Utente
 		$this->std2 = $s2;
 	}
 	
-	public function UtenteAmm($id,$user,$pass,$nome,$cognome,$tp)
-	{
-		$this->id_ut=$id;
-		$this->username = $user;
-		$this->password = $pass;
-		$this->nome = $nome;
-		$this->cognome = $cognome;
-		$this->tipo=$tp;
-
-	}
-
     public function get_id()
 	{
 		return $this->id_ut;
@@ -87,14 +75,14 @@ class Utente
 	{
 		return $this->luogon;
 	}
-        public function set_std1()
-        {
-            $this->std1=true;
-        }
-        public function set_std2()
-        {
-            $this->std2=true;
-        }
+	public function set_std1()
+	{
+		$this->std1=true;
+	}
+	public function set_std2()
+	{
+		$this->std2=true;
+	}
         /*public function Registrazione($db)
 	{
 		//controllo dello user
