@@ -15,8 +15,7 @@
 <div id="header">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
 		<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-		<a class="nav-link" href="#infopa" data-toggle="collapse" style="color: white;"> {$username}</a>
-
+		<a class="nav-link" href="#infopa" data-toggle="collapse" style="color: white;"> {$P.username}</a>
 	</nav>
 </div>
 
@@ -27,16 +26,11 @@
 	<table width='100%' >
 	<tr>
 	<td><button id="storico" type="button" class="btn btn-primary">Storico delle prenotazioni</button></td>
-	<td><button id="approva" type="button" class="btn btn-primary" >Richiesta Passaporto</button></td>
-	<td><button id="comunica" type="button" class="btn btn-primary" onclick="">Prenotazione Tampone</button></td>
-    <td><button id="comunica" type="button" class="btn btn-primary" onclick="">Caricamento dosi</button></td>
+	<td><button id="richiestaP" type="button" class="btn btn-primary" >Richiesta Passaporto</button></td>
+	<td><button id="PrenT" type="button" class="btn btn-primary" onclick="">Prenotazione Tampone</button></td>
+    <td><button id="caricaD" type="button" class="btn btn-primary" onclick="">Caricamento dosi</button></td>
 	</tr>
 	</table>
-        
-        
- 
-
-
 </div>
 
 <!-- informazioini del pazinete -->
@@ -47,7 +41,7 @@
                 <label>Nome:</label>  
             </td>
             <td>
-                {$nome}
+                {$P.nome}
             </td>                
         </tr>
         <tr>
@@ -55,7 +49,7 @@
                 <label>Cognome:</label>  
             </td>
             <td>
-                {$cognome}
+                {$P.cognome}
             </td>  
         </tr>
          <tr>
@@ -63,7 +57,7 @@
                 <label>Codice fiscale:</label>  
             </td>
             <td>
-                {$cod_fisc}
+                {$P.cod_fisc}
             </td>  
         </tr> 
     </table>
