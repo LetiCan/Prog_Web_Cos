@@ -1,12 +1,13 @@
-<div id="header">
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
-		<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-	</nav>
-</div>
+<div  class="container" id="rg">
+	<div id="header">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
+			<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
+		</nav>
+	</div>
 <br><br>
 <hr>
 <br><br>
-<div  class="container" id="rg">
+
     <br><br>
     <fieldset>
      <legend>
@@ -44,7 +45,7 @@
 	  <input type="password" id="pwd" name="pwd" placeholder="password" >
 
 	  <p id="validazione">
-			<input type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
+			<input class="btn btn-primary" type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
 			<input type="reset" value="Ripristina" name="rpr" onclick="">
 	  </p>
 	</div>		
