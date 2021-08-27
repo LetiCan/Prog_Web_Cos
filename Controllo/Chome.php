@@ -22,14 +22,15 @@ class Chome
             {   
                 if($arr->get_tipo()==1)
                 {
-                    $vl->caricaTemplate('username',$arr->get_nome(),'Admin.tpl'); 
+                    $vl->caricaTemplate('username',$arr->get_username(),'Admin.tpl'); 
                 }
                 else
                 {
-                    $vl->caricaTemplate('username',$arr->get_nome(),'Paziente.tpl');
+                    $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf());
+                    $vl->caricaTemplate('P',$dati,'Paziente.tpl');
                 }         
             }
-            elseif($vh->Registrazione())
+            elseif($vh->Registrazione()!== null)
             {
                 echo 'fico';
                  $ur->InsUtente();
