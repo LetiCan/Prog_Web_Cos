@@ -3,18 +3,17 @@ require_once 'View.php';
 class Vhome extends View
 {
     private $layout_reg;
+    private $array_dati;
 
     public function Registrazione()
     {
       $this->layout_reg=$this->showTmp('Registrazione.tpl');
       if(isset($this->layout_reg))  
       {
-          return true;
+          $this->array_dati=$this->DatiReg();
       }
-      else{
-          return false;
-      }
-     
+      return $this->array_dati;
+
     }
     public function DatiReg()
     {
