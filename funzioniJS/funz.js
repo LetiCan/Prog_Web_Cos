@@ -11,11 +11,11 @@ function Rgst()
 	$("#box").load("tmpl/templates/Registrazione.tpl #rg");
 	});
 	});
-    $(document).ready(function(){
+   /* $(document).ready(function(){
 	$("#reg").click(function(){
 	$("#intestazione").load("tmpl/templates/Registrazione.tpl #header");
 	});
-	});  
+	});  */
 }
 
 function fun1()
