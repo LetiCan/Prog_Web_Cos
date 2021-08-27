@@ -4,6 +4,7 @@ require_once 'Foundation/Gestione/Gsessione.php';
 require_once 'Foundation/Futente.php';
 require_once 'Foundation/Fconndb.php';
 require_once 'View/VUtente.php';
+require_once 'View/Vhome.php';
 class Clogin
 {
     private $username;
@@ -34,21 +35,20 @@ class Clogin
 
     public function InsUtente()
     {
-        $vu=Gpreleva::getIstanza('VUtente');
+        $vu=Gpreleva::getIstanza('Vhome');
         $Fu= new Futente();
         $dreg=$vu->DatiReg();
         if(isset($dreg))
         { 
 
             $Fu->InserisciDatiReg($dreg);
-            $this->messaggio='Avvenuta Registrazione';             
+            echo 'Avvenuta Registrazione';             
         }
         else
         {
-            $this->messaggio='Registrazione fallita';
+            echo 'Registrazione fallita';
                       
         }
-        return $this->messaggio;
     }
 }
 ?>
