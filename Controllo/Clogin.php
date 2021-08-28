@@ -37,18 +37,26 @@ class Clogin
     {
         $vu=Gpreleva::getIstanza('Vhome');
         $Fu= new Futente();
+        $a=$Fu->UtentiReg();
         $dreg=$vu->DatiReg();
-        if(isset($dreg))
-        { 
-
-            $Fu->InserisciDatiReg($dreg);
-            echo 'Avvenuta Registrazione';             
-        }
-        else
+        for($i=0;$i<sizeof($a);$i++)
         {
-            echo 'Registrazione fallita';
-                      
+            if(strcmp($a[$i]->get_username(),$dreg['username']) !== 0 )
+            {
+                if($dreg!== null)
+                { 
+
+                    $Fu->InserisciDatiReg($dreg);
+                    echo 'Avvenuta Registrazione';             
+                }
+            }
+            else
+            {
+                echo 'Registrazione fallita. Usename già in uso';
+                        
+            }
         }
+        
     }
 }
 ?>
