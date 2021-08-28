@@ -2,24 +2,29 @@
 require_once 'View.php';
 class Vhome extends View
 {
-    private $layout_reg;
-    private $array_dati;
 
     public function Registrazione()
     {
-      $this->layout_reg=$this->showTmp('Registrazione.tpl');
-      if(isset($this->layout_reg))  
+      if(isset($_POST['rgs']))
       {
-          $this->array_dati=$this->DatiReg();
+          return $_POST['rgs'];
       }
-      return $this->array_dati;
-
+      return false;
     }
+
+
     public function DatiReg()
     {
         if(isset($_POST['nome'],$_POST['cognome'],$_POST['datanascita'],$_POST['ldn'],$_POST['cdf'],$_POST['sesso'],$_POST['username'],$_POST['pwd']))
         {
-            $d=array($_POST['nome'],$_POST['cognome'],$_POST['datanascita'],$_POST['ldn'],$_POST['cdf'],$_POST['sesso'],$_POST['username'],$_POST['pwd']);
+            $d=array('nome'=>$_POST['nome'],
+            'cognome'=>$_POST['cognome'],
+            'datanascita'=>$_POST['datanascita'],
+            'ldn'=>$_POST['ldn'],
+            'cdf'=>$_POST['cdf'],
+            'sesso'=>$_POST['sesso'],
+            'username'=>$_POST['username'],
+            'pwd'=>$_POST['pwd']);
          /* foreach($d as $dto)
             {
                 if(isset($_POST[$dto]))
