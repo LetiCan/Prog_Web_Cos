@@ -66,13 +66,43 @@ class Fconndb
         return $utente;
     }
 
+    public function UtentiReg()
+    {
+        $sdb=$this->connessione();
+        $n=2;
+        $q=" SELECT * FROM ". $this->tabella." WHERE tipo=:tp";
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':tp',$n);
+        $this->query_result->execute();
+        while($row=$this->query_result->fetch())
+        {
+            $id=$row['id_utente'];
+            $user=$row['username'];
+            $pws=$row['pwd'];
+            $nome=$row['nome'];
+            $cognome=$row['cognome'];
+            $dtn=$row['data_nascita'];
+            $ln=$row['luogo_nascita'];
+            $s=$row['sesso'];
+            $cf=$row['codice_fiscale'];
+            $tp=$row['tipo'];
+            $std1=$row['std1'];
+            $std2=$row['std2'];
+            $utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
+            $array_ut=array($utente);
+        }
+        return $array_ut;
+        
+    }
+
     public  function InserisciDatiReg($dati)
     {
         $sdb=$this->connessione();
         $n=2;
         $q="INSERT INTO ".$this->tabella."( tipo, username, pwd, nome, cognome, data_nascita, luogo_nascita, sesso, codice_fiscale)".
-            "VALUES(".$n.",:us,:ps,:nm,:cgn,:dtn,:ln,:sex,:cdf)";
+            "VALUES(:tp,:us,:ps,:nm,:cgn,:dtn,:ln,:sex,:cdf)";
         $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':tp',$n);
         $this->query_result->bindParam(':us',$dati['username']);
         $this->query_result->bindParam(':ps',$dati['pwd']);
         $this->query_result->bindParam(':nm',$dati['nome']);
@@ -82,7 +112,7 @@ class Fconndb
         $this->query_result->bindParam(':sex',$dati['sesso']);
         $this->query_result->bindParam(':cdf',$dati['cdf']);
         $this->query_result->execute();
-        $sdb->connclose();
+        $sdb=$this->connclose();
     }
 
     public function connclose() 
