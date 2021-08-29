@@ -25,14 +25,6 @@ class Vhome extends View
             'sesso'=>$_POST['sesso'],
             'username'=>$_POST['username'],
             'pwd'=>$_POST['pwd']);
-         /* foreach($d as $dto)
-            {
-                if(isset($_POST[$dto]))
-                {
-                    $a[$dto]=$_POST[$dto];
-                }
-            }*/
-            
         }
         return $d;
         
