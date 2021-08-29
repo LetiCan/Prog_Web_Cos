@@ -10,10 +10,10 @@ class Chome
     {
         $vh= Gpreleva::getIstanza('Vhome');     
         $ur= Gpreleva::getIstanza('Clogin'); 
-        $vl= Gpreleva::getIstanza('VUtente'); 
-        $vl->caricaindex();
-        if($vl->getUser() == "" && $vl->getPwd() == "")
+        $vl= Gpreleva::getIstanza('VUtente');       
+        if((strcmp($vl->getUser(),"") == 0) || (strcmp($vl->getPwd(),"") == 0))
         {
+            $vl->caricaindex();
             if($vh->Registrazione())
             {
                     
@@ -35,6 +35,7 @@ class Chome
             }         
         }
     }
+    
 
   /*  public function smista() {
         $view=USingleton::getInstance('VHome');
