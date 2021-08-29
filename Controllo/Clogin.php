@@ -13,15 +13,15 @@ class Clogin
     
     public function autenticazione($u,$p)
     {
-        
         $Fu = new Futente();
-        $u=$Fu->preleva_user($u,$p);
+        $u=$Fu->preleva_user($u,$p);             
         if(isset($u))
-        {
-            $sessione = Gpreleva::getIstanza('Gsessione');
-            $sessione->impSessione('id_utente',$u->get_id());
-            if($sessione->VerificaSessione('id_utente')!== false)
+        {    
+            $sessione = Gpreleva::getIstanza('Gsessione');     
+            //$sessione->UnsetSessione($u->get_id());  
+            if($sessione->VerificaSessione('id_utente') == false)
             {
+                $sessione->impSessione('id_utente',$u->get_id());
                 return $u;
             }
             
@@ -29,6 +29,7 @@ class Clogin
         else
         {
             $this->messaggio= 'credenziali sbagliate';
+            return $this->messaggio; 
         }
         
     }
