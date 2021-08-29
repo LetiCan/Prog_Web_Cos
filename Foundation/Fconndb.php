@@ -115,6 +115,7 @@ class Fconndb
         $sdb=$this->connclose();
     }
 
+
     public function connclose() 
     {
        $this->db=null;
