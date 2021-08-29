@@ -74,7 +74,7 @@
 			<form method="POST" class="modal-content" action="index.php">
 				<div class="container">
 					<label for="username"><b>Username</b></label>
-					<input type="text" placeholder="Username" id="user" name="user"  value="">
+					<input type="text" placeholder="Username" id="user" name="user" value="" >
 
 					<label for="password"><b>Password</b></label>
 					<input type="password" placeholder="Password"  id="psw" name="psw" value="">
