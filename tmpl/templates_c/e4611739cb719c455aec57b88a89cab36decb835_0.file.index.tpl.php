@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-29 18:11:04
+/* Smarty version 3.1.39, created on 2021-08-30 19:02:09
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612bb198485020_00116217',
+  'unifunc' => 'content_612d0f1140af08_37646480',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1630253459,
+      1 => 1630342925,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612bb198485020_00116217 (Smarty_Internal_Template $_smarty_tpl) {
+function content_612d0f1140af08_37646480 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,9 +43,10 @@ function content_612bb198485020_00116217 (Smarty_Internal_Template $_smarty_tpl)
  src="funzioniJs/funz.js"><?php echo '</script'; ?>
 >
 </head>
+<body class="container-fluid" id="box">
 <header>  
 	<div class="header" id="intestazione" >
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top" >						
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between " >						
 			<ul class="navbar-nav mr-auto" id="links">
 				<li class="nav-item">
 					<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
@@ -68,7 +69,7 @@ function content_612bb198485020_00116217 (Smarty_Internal_Template $_smarty_tpl)
 		</nav>
 	</div>		
 </header>
-<body class="container-fluid" id="box">
+
 	<div class="container-fluid" id="home">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -110,7 +111,7 @@ function content_612bb198485020_00116217 (Smarty_Internal_Template $_smarty_tpl)
 					<label for="password"><b>Password</b></label>
 					<input type="password" placeholder="Password"  id="psw" name="psw" value="">
 
-					<input type="submit" value="Accedi" onclick="checkLogin();"></input>
+					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
 				</div>		
 			</form>
 		</div>
@@ -135,7 +136,7 @@ function content_612bb198485020_00116217 (Smarty_Internal_Template $_smarty_tpl)
 </body>
 	<footer>   
 		<div class="footer" id="informazioni" >
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
 				<div  id="info">
 					<p>@copyright by..... </p>
 				<div>
