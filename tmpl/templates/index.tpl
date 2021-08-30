@@ -12,9 +12,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="funzioniJs/funz.js"></script>
 </head>
+<body class="container-fluid" id="box">
 <header>  
 	<div class="header" id="intestazione" >
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top" >						
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between " >						
 			<ul class="navbar-nav mr-auto" id="links">
 				<li class="nav-item">
 					<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
@@ -37,7 +38,7 @@
 		</nav>
 	</div>		
 </header>
-<body class="container-fluid" id="box">
+
 	<div class="container-fluid" id="home">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -79,7 +80,7 @@
 					<label for="password"><b>Password</b></label>
 					<input type="password" placeholder="Password"  id="psw" name="psw" value="">
 
-					<input type="submit" value="Accedi" onclick="checkLogin();"></input>
+					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
 				</div>		
 			</form>
 		</div>
@@ -104,7 +105,7 @@
 </body>
 	<footer>   
 		<div class="footer" id="informazioni" >
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
 				<div  id="info">
 					<p>@copyright by..... </p>
 				<div>
