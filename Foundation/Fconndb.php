@@ -70,6 +70,7 @@ class Fconndb
     {
         $sdb=$this->connessione();
         $n=2;
+        $i=0;
         $q=" SELECT * FROM ". $this->tabella." WHERE tipo=:tp";
         $this->query_result=$sdb->prepare($q);
         $this->query_result->bindParam(':tp',$n);
@@ -89,7 +90,8 @@ class Fconndb
             $std1=$row['std1'];
             $std2=$row['std2'];
             $utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
-            $array_ut=array($utente);
+            $array_ut[$i]=$utente;
+            $i++;
         }
         return $array_ut;
         
