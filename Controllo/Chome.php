@@ -26,7 +26,9 @@ class Chome
             $arr=$ur->autenticazione($vl->getUser(),$vl->getPwd());
             if($arr->get_tipo()==1)
             {
-                $vl->caricaTemplate('username',$arr->get_username(),'Admin.tpl'); 
+                
+                $A=array('username'=>$arr->get_username(),$this->infop());
+                $vl->caricaTemplate('A',$A,'Admin.tpl'); 
             }
             else
             {
@@ -36,6 +38,22 @@ class Chome
         }
     }
     
+    public function infop()
+    {
+        $ur= Gpreleva::getIstanza('Clogin'); 
+        $tmp=$ur->StoricoPaz();
+        for($i=0;$i<sizeof($tmp);$i++)
+        {
+            $info=array('id'=>$tmp[$i]->get_id(),
+                        'nome'=>$tmp[$i]->get_nome(),
+                        'cognome'=>$tmp[$i]->get_cognome(),
+                        'datan'=>$tmp[$i]->get_datans(),
+                        'ldn'=>$tmp[$i]->get_luogons(),
+                        'cdf'=>$tmp[$i]->get_cdf(),
+                        'tf'=>" ");
+        }
+        return $info;
+    }
 
   /*  public function smista() {
         $view=USingleton::getInstance('VHome');
