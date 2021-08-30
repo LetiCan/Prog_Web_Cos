@@ -19,18 +19,22 @@
 	</nav>
 </div>
 
+
 <div  class="container-fluid" id="paz">
 
     
 	<br><br>
 	<table width='100%' >
 	<tr>
-	<td><button id="storico" type="button" class="btn btn-primary">Storico delle prenotazioni</button></td>
-	<td><button id="richiestaP" type="button" class="btn btn-primary" >Richiesta Passaporto</button></td>
-	<td><button id="PrenT" type="button" class="btn btn-primary" onclick="">Prenotazione Tampone</button></td>
-    <td><button id="caricaD" type="button" class="btn btn-primary" onclick="">Caricamento dosi</button></td>
+	<td><button id="storico" type="button" class="btn btn-primary"><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/StoricoPrenotazioni.html">Storico delle prenotazioni</button></td>
+	<td><button id="approva" type="button" class="btn btn-primary" onclick="" ><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/PrenotazioneTampone.html">Prenotazione Tampone</button></td>
+	<td><button id="comunica" type="button" class="btn btn-primary" onclick=""><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/RichiestaPassaporto.html">Richiesta Passaporto</button></td>
+    <td><button id="comunica" type="button" class="btn btn-primary" onclick=""><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/caricamentoDose.html">Caricamento dosi</button></td>
 	</tr>
 	</table>
+ 
+<br>
+<a href="index.php">home</a>
 </div>
 
 <!-- informazioini del pazinete -->
