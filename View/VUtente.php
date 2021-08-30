@@ -12,11 +12,8 @@ class VUtente extends View
             $this->pw=$_POST['psw']; 
         }
         return $this->pw;
-        /*else
-        {
-           echo 'niet';
-        }*/
     }
+
     public function getUser()
     {
         if(isset($_POST['user']))
@@ -24,10 +21,16 @@ class VUtente extends View
             $this->us=$_POST['user'];
         }
         return $this->us;
-       /* else
-        {
-            echo 'niet';
-        }*/
+    }
+
+    
+    public function Login()
+    {
+      if(isset($_POST['lg']))
+      {
+          return $_POST['lg'];
+      }
+      return false;
     }
     
 
