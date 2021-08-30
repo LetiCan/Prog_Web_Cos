@@ -18,10 +18,10 @@ class Clogin
         if(isset($u))
         {    
             $sessione = Gpreleva::getIstanza('Gsessione');     
-            //$sessione->UnsetSessione($u->get_id());  
-            if($sessione->VerificaSessione('id_utente') == false)
+            $sessione->impSessione('id_utente',$u->get_id()); 
+            if($sessione->VerificaSessione('id_utente') !== false)
             {
-                $sessione->impSessione('id_utente',$u->get_id());
+                
                 return $u;
             }
             
@@ -40,24 +40,31 @@ class Clogin
         $Fu= new Futente();
         $a=$Fu->UtentiReg();
         $dreg=$vu->DatiReg();
-        for($i=0;$i<sizeof($a);$i++)
+        $conta=0;      
+        if($dreg !== null )
         {
-            if(strcmp($a[$i]->get_username(),$dreg['username']) !== 0 )
+            if(isset($a))
             {
-                if($dreg!== null)
-                { 
+                for($i=0;$i<sizeof($a);$i++)
+                {
+                    if(strcmp($dreg['username'],$a[$i]->get_username()) == 0 )
+                    { 
+                        $conta++;  
+                    } 
 
+                }
+                if($conta > 0)
+                {
+                    echo 'Registrazione fallita. Usename già in uso';
+
+                }
+                else{
                     $Fu->InserisciDatiReg($dreg);
-                    echo 'Avvenuta Registrazione';             
+                    echo 'Avvenuta Registrazione';
+                   
                 }
             }
-            else
-            {
-                echo 'Registrazione fallita. Usename già in uso';
-                        
-            }
         }
-        
     }
 
     public function StoricoPaz()
