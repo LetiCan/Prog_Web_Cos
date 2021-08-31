@@ -10,6 +10,7 @@ class Clogin
     private $username;
     private $password;
     private $messaggio;
+    private $sessione;
     
     public function autenticazione($u,$p)
     {
@@ -17,9 +18,9 @@ class Clogin
         $u=$Fu->preleva_user($u,$p);             
         if(isset($u))
         {    
-            $sessione = Gpreleva::getIstanza('Gsessione');     
-            $sessione->impSessione('id_utente',$u->get_id()); 
-            if($sessione->VerificaSessione('id_utente') !== false)
+            $this->sessione = Gpreleva::getIstanza('Gsessione');     
+            $this->sessione->impSessione('id_utente',$u->get_id()); 
+            if($this->sessione->VerificaSessione('id_utente') !== false)
             {
                 
                 return $u;
@@ -72,6 +73,11 @@ class Clogin
         $Fu= new Futente();
         $a=$Fu->UtentiReg();
         return $a;
+    }
+
+    public function getSessione()
+    {
+        return $this->sessione;
     }
 }
 ?>
