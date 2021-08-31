@@ -25,16 +25,22 @@ class Chome
         {   
             $arr=$ur->autenticazione($vl->getUser(),$vl->getPwd());
             if($arr->get_tipo() == 1)
-            {
-               
-                //$a['username']=$arr->get_username();
+            { 
                 $vl->caricaTemplate('info',$this->infop(),'Admin.tpl');
+                if($vl->Logout())
+                {
+                    $ur->getSessione()->UnsetSessione('id_utente');
+                }
                 
             }
             else
             {
                 $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf());
                 $vl->caricaTemplate('P',$dati,'Paziente.tpl');
+                if($vl->Logout())
+                {
+                    $ur->getSessione()->UnsetSessione('id_utente');
+                }
             }         
         }
     }
