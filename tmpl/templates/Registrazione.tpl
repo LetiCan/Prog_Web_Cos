@@ -14,20 +14,20 @@
 <form method="POST" action="index.php">
 	<div class="form-group">
  	  <label for="nome">Nome:</label>
-	  <input type="text" name="nome" id="nome" placeholder="Nome" >
+	  <input type="text" name="nome" id="nome" placeholder="Nome" ><br>
 
 	  <label for="cognome">cognome:</label>
-	  <input type="text" name="cognome" id="cognome" placeholder="cognome" >
+	  <input type="text" name="cognome" id="cognome" placeholder="cognome" ><br>
 
 	  <label for="datanascita">Data di Nascita:</label>
-	  <input type="date" name="datanascita" id="dtn" >
+	  <input type="date" name="datanascita" id="dtn" ><br>
 
-	  <br>
+	  
 	  <label for="ldn">Luogo di Nascita:</label>
-	  <input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita">
+	  <input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita"><br>
 
 	  <label for="cdf">Codice fiscale:</label>
-	  <input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16">
+	  <input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16"><br>
 
 	  <label for="sesso">Sesso:</label>
 	  <input type="checkbox" name="sesso" id="sesso" value="M" onclick="controllocheckbox()">
@@ -36,10 +36,10 @@
 	  <label for="F">F</label>
 	  <br>
 	  <label for="uesr">Username:</label>
-	  <input type="text" id="user" name="username" placeholder="username">
+	  <input type="text" id="user" name="username" placeholder="username"><br>
 
 	  <label for="psw">Password:</label>
-	  <input type="password" id="pwd" name="pwd" placeholder="password" >
+	  <input type="password" id="pwd" name="pwd" placeholder="password" ><br>
 
 	  <p id="validazione">
 			<input class="btn btn-primary" type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
