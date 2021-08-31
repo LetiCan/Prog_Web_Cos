@@ -21,15 +21,11 @@ function Rgst()
 function fun1()
 {
 	$(document).ready(function(){
-	$("#adm").click(function(){
-	$("#home").load("tmpl/templates/Admin.tpl #amm");
+	$("#storico").click(function(){
+	$("#paz").load("tmpl/templates/StoricoPrenotazioni.tpl #storicopre");
 	});
 	});
-        $(document).ready(function(){
-	$("#adm").click(function(){
-	$("#intestazione").load("tmpl/templates/Admin.tpl #header");
-	});
-	});
+
 }
 
 function checkRegistrazione()
