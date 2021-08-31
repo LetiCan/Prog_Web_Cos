@@ -9,11 +9,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="funzioniJs/funz.js"></script>
 </head>
 
 <body  class="container-fluid">
 <div id="header">
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center " >
 		<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
 		<a class="nav-link" href="#infopa" data-toggle="collapse" style="color: white;"> {$P.username}</a>
 	</nav>
@@ -26,19 +27,19 @@
 	<br><br>
 	<table width='100%' >
 	<tr>
-	<td><button id="storico" type="button" class="btn btn-primary"><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/StoricoPrenotazioni.html">Storico delle prenotazioni</button></td>
-	<td><button id="approva" type="button" class="btn btn-primary" onclick="" ><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/PrenotazioneTampone.html">Prenotazione Tampone</button></td>
-	<td><button id="comunica" type="button" class="btn btn-primary" onclick=""><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/RichiestaPassaporto.html">Richiesta Passaporto</button></td>
-    <td><button id="comunica" type="button" class="btn btn-primary" onclick=""><a href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/caricamentoDose.html">Caricamento dosi</button></td>
+	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
+	<td><button id="pre"  class="btn btn-primary" onclick="" >Prenotazione Tampone</button></td>
+	<td><button id="pass"  class="btn btn-primary" onclick="">Richiesta Passaporto</button></td>
+    <td><button id="dosi"  class="btn btn-primary" onclick="">Caricamento dosi</button></td>
 	</tr>
 	</table>
  
 <br>
-<a href="index.php">home</a>
 </div>
 
 <!-- informazioini del pazinete -->
 <div class="collapse" id='infopa'>
+    <p><h3><b>Anagrafica</b></h3></p>
     <table>
         <tr>
             <td>
@@ -68,5 +69,7 @@
 </div>
 
 <br>
-<a href="index.php">home</a>
+<form method="POST" action="index.php">
+    <input type="submit" name="lgo" value="Logout"></input>
+</form>
 </body>
