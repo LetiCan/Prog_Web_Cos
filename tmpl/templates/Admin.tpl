@@ -15,25 +15,21 @@
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center " >
 			<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
 		</nav>
-
-		<form class="form-inline">
-			<input type="text" placeholder="Cerca Paziente" >
-			<button id="comunica" type="submit" class="btn btn-success mb-2" >cerca</button>
-		</form>
-
-
+	<p >
+		<b><h3>Lista Pazienti</h3></b>
+	</p>
 	<table cols=8 width='100%'>
 	{foreach $info as $a }
 		{if $a@first}
 			<tr>
-			<td>ID</td>
-			<td>Nome</td>
-			<td>Cognome</td>
-			<td>Data di nascita</td>
-			<td>Luogo di nascita</td>
-			<td>Codice Fiscale</td>
-			<td>Tamponi effettuati</td>
-			<td>Approvazione Passaporto</td>
+			<td><b>ID</b></td>
+			<td><b>Nome</b></td>
+			<td><b>Cognome</b></td>
+			<td><b>Data di nascita</b></td>
+			<td><b>Luogo di nascita</b></td>
+			<td><b>Codice Fiscale</b></td>
+			<td><b>Tamponi effettuati</b></td>
+			<td><b>Approvazione Passaporto</b></td>
 			</tr>
 		{/if}
 		<tr>
@@ -44,11 +40,15 @@
 		<td>{$a.ldn}</td>
 		<td>{$a.cdf}</td>
 		<td>{$a.tf}</td>
-		<td><button id="approva" type="button" class="btn btn-primary" onclick="">Approvato </button></td>
+		<td><button id="approva"  class="btn btn-primary" onclick="">Approvato </button></td>
 		</tr>
 	{/foreach}
 	</table>
-	<a href="index.php" > home </a>
+
+	<form method="POST" action="index.php">
+		<input type="submit" name="lgo" value="Logout"></input>
+	</form>
+	
 </div>
 
 
