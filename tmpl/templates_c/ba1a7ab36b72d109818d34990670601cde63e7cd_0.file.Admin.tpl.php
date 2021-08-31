@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-30 18:57:34
+/* Smarty version 3.1.39, created on 2021-08-31 18:19:01
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612d0dfe519e32_28671772',
+  'unifunc' => 'content_612e56750970c5_22076459',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba1a7ab36b72d109818d34990670601cde63e7cd' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Admin.tpl',
-      1 => 1630342639,
+      1 => 1630421710,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612d0dfe519e32_28671772 (Smarty_Internal_Template $_smarty_tpl) {
+function content_612e56750970c5_22076459 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -44,13 +44,9 @@ function content_612d0dfe519e32_28671772 (Smarty_Internal_Template $_smarty_tpl)
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center " >
 			<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
 		</nav>
-
-		<form class="form-inline">
-			<input type="text" placeholder="Cerca Paziente" >
-			<button id="comunica" type="submit" class="btn btn-success mb-2" >cerca</button>
-		</form>
-
-
+	<p >
+		<b><h3>Lista Pazienti</h3></b>
+	</p>
 	<table cols=8 width='100%'>
 	<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['info']->value, 'a');
@@ -64,14 +60,14 @@ $__foreach_a_0_saved = $_smarty_tpl->tpl_vars['a'];
 ?>
 		<?php if ($_smarty_tpl->tpl_vars['a']->first) {?>
 			<tr>
-			<td>ID</td>
-			<td>Nome</td>
-			<td>Cognome</td>
-			<td>Data di nascita</td>
-			<td>Luogo di nascita</td>
-			<td>Codice Fiscale</td>
-			<td>Tamponi effettuati</td>
-			<td>Approvazione Passaporto</td>
+			<td><b>ID</b></td>
+			<td><b>Nome</b></td>
+			<td><b>Cognome</b></td>
+			<td><b>Data di nascita</b></td>
+			<td><b>Luogo di nascita</b></td>
+			<td><b>Codice Fiscale</b></td>
+			<td><b>Tamponi effettuati</b></td>
+			<td><b>Approvazione Passaporto</b></td>
 			</tr>
 		<?php }?>
 		<tr>
@@ -89,14 +85,18 @@ $__foreach_a_0_saved = $_smarty_tpl->tpl_vars['a'];
 </td>
 		<td><?php echo $_smarty_tpl->tpl_vars['a']->value['tf'];?>
 </td>
-		<td><button id="approva" type="button" class="btn btn-primary" onclick="">Approvato </button></td>
+		<td><button id="approva"  class="btn btn-primary" onclick="">Approvato </button></td>
 		</tr>
 	<?php
 $_smarty_tpl->tpl_vars['a'] = $__foreach_a_0_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	</table>
-	<a href="index.php" > home </a>
+
+	<form method="POST" action="index.php">
+		<input type="submit" name="lgo" value="Logout"></input>
+	</form>
+	
 </div>
 
 
