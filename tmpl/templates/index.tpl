@@ -74,11 +74,11 @@
 		<div class="modal" id="log">						
 			<form method="POST" class="modal-content" action="index.php">
 				<div class="container">
-					<label for="username"><b>Username</b></label>
-					<input type="text" placeholder="Username" id="user" name="user" value="" >
+					<label for="username"><b>Username</b></label><br>
+					<input type="text" placeholder="Username" id="user" name="user" value="" ><br>
 
-					<label for="password"><b>Password</b></label>
-					<input type="password" placeholder="Password"  id="psw" name="psw" value="">
+					<label for="password"><b>Password</b></label><br>
+					<input type="password" placeholder="Password"  id="psw" name="psw" value=""><br>
 
 					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
 				</div>		
