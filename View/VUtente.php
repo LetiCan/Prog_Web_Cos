@@ -33,6 +33,14 @@ class VUtente extends View
       return false;
     }
     
+    public function Logout()
+    {
+      if(isset($_POST['lgo']))
+      {
+          return $_POST['lgo'];
+      }
+      return false;
+    }
 
 }
 ?>
