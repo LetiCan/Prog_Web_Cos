@@ -23,7 +23,15 @@ class VUtente extends View
         return $this->us;
     }
 
-    
+    public function getPrenotazione()
+    {
+        if(isset($_POST['datapre']))
+        {
+            $d=$_POST['datapre'];
+        }
+        return $d;
+    }
+
     public function Login()
     {
       if(isset($_POST['lg']))
@@ -40,6 +48,15 @@ class VUtente extends View
           return $_POST['lgo'];
       }
       return false;
+    }
+
+    public function Pre()
+    { 
+        if(isset($_POST['invia']))
+        {
+            return $_POST['invia'];
+        }
+        return false;
     }
 
 }
