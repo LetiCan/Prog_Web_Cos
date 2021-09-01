@@ -35,8 +35,9 @@ class Chome
             }
             else
             {
-                $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf());
+                $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf(),'id'=>$arr->get_id());
                 $vl->caricaTemplate('P',$dati,'Paziente.tpl');
+                $ur->InviaPrenotazione($arr->get_id());
                 if($vl->Logout())
                 {
                     $ur->getSessione()->UnsetSessione('id_utente');
