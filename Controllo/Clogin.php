@@ -2,6 +2,7 @@
 require_once 'Foundation/Gestione/Gpreleva.php';
 require_once 'Foundation/Gestione/Gsessione.php';
 require_once 'Foundation/Futente.php';
+require_once 'Foundation/FPrenotazione.php';
 require_once 'Foundation/Fconndb.php';
 require_once 'View/VUtente.php';
 require_once 'View/Vhome.php';
@@ -66,6 +67,15 @@ class Clogin
                 }
             }
         }
+    }
+
+    public function InviaPrenotazione($idut)
+    {
+        $vu=Gpreleva::getIstanza('VUtente');
+        $Fp= new FPrenotazione();
+        $datip=array('datapre'=>$vu->getPrenotazione(),'id_utente'=>$idut);
+        $Fp->DatiPrenotazione($datip);
+
     }
 
     public function StoricoPaz()
