@@ -81,7 +81,7 @@
             <label>Data prenotazione:</label>
             <input type="date" name="datapre" ></input>
             <br>
-            <input type="submit" name="invia" value="invia"></invia>
+            <input type="submit" name="invia" value="invia"></input>
         </div>
         <input type="submit" name="lgo" value="Logout"></input>
     </form>
