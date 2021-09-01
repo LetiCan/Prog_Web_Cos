@@ -22,7 +22,7 @@ function fun1()
 {
 	$(document).ready(function(){
 	$("#storico").click(function(){
-	$("#paz").load("tmpl/templates/StoricoPrenotazioni.tpl #storicopre");
+	$("#content").load("tmpl/templates/StoricoPrenotazioni.tpl #storicopre");
 	});
 	});
 
