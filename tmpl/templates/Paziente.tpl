@@ -28,7 +28,7 @@
 	<table width='100%' >
 	<tr>
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
-	<td><button id="pre"  class="btn btn-primary" onclick="" >Prenotazione Tampone</button></td>
+	<td><button id="pren"  class="btn btn-primary" onclick="document.getElementById('pre').style.display='block'" >Prenotazione Tampone</button></td>
 	<td><button id="pass"  class="btn btn-primary" onclick="">Richiesta Passaporto</button></td>
     <td><button id="dosi"  class="btn btn-primary" onclick="">Caricamento dosi</button></td>
 	</tr>
@@ -37,6 +37,9 @@
 <br>
 </div>
 
+<div class="container-fluid" id="content">
+
+</div>
 <!-- informazioini del pazinete -->
 <div class="collapse" id='infopa'>
     <p><h3><b>Anagrafica</b></h3></p>
@@ -69,7 +72,29 @@
 </div>
 
 <br>
-<form method="POST" action="index.php">
-    <input type="submit" name="lgo" value="Logout"></input>
-</form>
+<div class="modal" id="pre">			
+    <form method="POST" class="modal-content" action="index.php">
+        <div class="container">
+            <label>Id Utente: {$P.id} </label>
+            
+            <br>
+            <label>Data prenotazione:</label>
+            <input type="date" name="datapre" ></input>
+            <br>
+            <input type="submit" name="invia" value="invia"></invia>
+        </div>
+        <input type="submit" name="lgo" value="Logout"></input>
+    </form>
+</div>
 </body>
+<script>
+		// Get the modal
+		var modal = document.getElementById('pre');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
