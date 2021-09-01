@@ -117,6 +117,18 @@ class Fconndb
         $sdb=$this->connclose();
     }
 
+    public function DatiPrenotazione($p)
+    {
+        $sdb=$this->connessione();
+        $q="INSERT INTO ".$this->tabella."(data_prenotazione,fk_utente)"."VALUES(:dp,:fku)"; 
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':dp',$p['datapre']);
+        $this->query_result->bindParam(':fku',$p['id_utente']);
+        $this->query_result->execute();
+        $sdb=$this->connclose();
+
+    }
+
 
     public function connclose() 
     {
