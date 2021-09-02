@@ -72,7 +72,7 @@ class Clogin
     public function InviaPrenotazione($idut)
     {
         $vu=Gpreleva::getIstanza('VUtente');
-        $Fp= new FPrenotazione();
+        $Fp = new FPrenotazione();
         $datip=array('datapre'=>$vu->getPrenotazione(),'id_utente'=>$idut);
         if(isset($datip))
         {
