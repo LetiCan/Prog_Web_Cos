@@ -104,13 +104,9 @@
 	</div>   
 </body>
 	<footer>   
-		<div class="footer" id="informazioni" >
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-				<div  id="info">
-					<p>@copyright by..... </p>
-				<div>
-			</nav>
-		</div>        
+		<div  id="info">
+			<p>@copyright by..... </p>
+		<div>       
 	</footer>
 	<script>
 		// Get the modal
