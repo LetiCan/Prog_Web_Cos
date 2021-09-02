@@ -27,9 +27,9 @@ class VUtente extends View
     {
         if(isset($_POST['datapre']))
         {
-            $d=$_POST['datapre'];
+            return $_POST['datapre'];
         }
-        return $d;
+        return false;
     }
 
     public function Login()
