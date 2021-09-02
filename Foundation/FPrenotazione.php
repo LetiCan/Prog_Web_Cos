@@ -1,6 +1,7 @@
 <?php
-
-class FPrenotzione extends Fconndb
+require_once 'Gestione/Gpreleva.php';
+require_once 'Fconndb.php';
+class FPrenotazione extends Fconndb
 {
     public function __construct()
     {
