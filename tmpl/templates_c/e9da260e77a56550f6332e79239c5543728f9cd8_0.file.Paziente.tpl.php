@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-01 11:18:27
+/* Smarty version 3.1.39, created on 2021-09-02 12:30:11
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612f4563c33644_19442082',
+  'unifunc' => 'content_6130a7b37016f6_99590798',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1630487889,
+      1 => 1630578590,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612f4563c33644_19442082 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6130a7b37016f6_99590798 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -111,17 +111,17 @@ function content_612f4563c33644_19442082 (Smarty_Internal_Template $_smarty_tpl)
     <form method="POST" class="modal-content" action="index.php">
         <div class="container">
             <label>Id Utente: <?php echo $_smarty_tpl->tpl_vars['P']->value['id'];?>
- </label>
-            
+ </label>           
             <br>
             <label>Data prenotazione:</label>
             <input type="date" name="datapre" ></input>
             <br>
             <input type="submit" name="invia" value="invia"></input>
         </div>
-        <input type="submit" name="lgo" value="Logout"></input>
+        
     </form>
 </div>
+<input type="submit" name="lgo" value="Logout"></input>
 </body>
 <?php echo '<script'; ?>
 >
