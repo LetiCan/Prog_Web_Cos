@@ -24,10 +24,10 @@
 					<a class="nav-link" href="#">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/ChiSiamo.html">Chi siamo</a>
+					<a class="nav-link" href="#">Chi siamo</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="file:///C:/Users/canta/public_html/ProgettoWeb/HTML/Contatti.html" data-toggle="collapse"> Contatti </a>
+					<a class="nav-link" href="#"> Contatti </a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ">
