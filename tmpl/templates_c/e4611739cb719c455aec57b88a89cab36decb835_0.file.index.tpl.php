@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-02 12:15:28
+/* Smarty version 3.1.39, created on 2021-09-05 21:00:44
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6130a440760734_07128806',
+  'unifunc' => 'content_613513dcddd564_48188400',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1630576404,
+      1 => 1630868381,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6130a440760734_07128806 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613513dcddd564_48188400 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +58,7 @@ function content_6130a440760734_07128806 (Smarty_Internal_Template $_smarty_tpl)
 					<a class="nav-link" href="#">Chi siamo</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#inf" data-toggle="collapse"> Info Prenotazioni</a>
+					<a class="nav-link" href="#"> Contatti </a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ">
@@ -154,5 +154,6 @@ function content_6130a440760734_07128806 (Smarty_Internal_Template $_smarty_tpl)
 >
 
 </html>
- <?php }
+ 
+<?php }
 }
