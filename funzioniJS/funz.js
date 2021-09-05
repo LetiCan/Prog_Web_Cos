@@ -8,28 +8,24 @@ function Rgst()
     });*/
     $(document).ready(function(){
 	$("#reg").click(function(){
-	$("#home").load("tmpl/templates/Registrazione.tpl #rg");
+	$("#box").load("tmpl/templates/Registrazione.tpl #rg");
 	});
 	});
-    $(document).ready(function(){
+   /* $(document).ready(function(){
 	$("#reg").click(function(){
 	$("#intestazione").load("tmpl/templates/Registrazione.tpl #header");
 	});
-	});  
+	});  */
 }
 
 function fun1()
 {
 	$(document).ready(function(){
-	$("#adm").click(function(){
-	$("#home").load("tmpl/templates/Admin.tpl #amm");
+	$("#storico").click(function(){
+	$("#content").load("tmpl/templates/StoricoPrenotazioni.tpl #storicopre");
 	});
 	});
-        $(document).ready(function(){
-	$("#adm").click(function(){
-	$("#intestazione").load("tmpl/templates/Admin.tpl #header");
-	});
-	});
+
 }
 
 function checkRegistrazione()
@@ -65,11 +61,11 @@ function checkRegistrazione()
                         alert(" Impossibile inviare i dati");
                         return false;
         }
-        if( document.getElementById("em").value === "" )
+       /* if( document.getElementById("em").value === "" )
         {
                                 alert(" Impossibile inviare i dati");
                                 return false;
-        }
+        }*/
         if( document.getElementById("user").value === "" )
         {
                                 alert(" Impossibile inviare i dati");
@@ -93,7 +89,7 @@ function checkLogin()
         if( document.getElementById("psw").value === "" ){
     		alert(" Impossibile inviare i dati");
         	return false;
-        }   
+        }  
 		return true;    
 }
 
@@ -107,3 +103,8 @@ function controllocheckbox()
                 });
             });
 }
+
+function openForm()
+ {
+    document.getElementById("log").style.display = "block";
+ }

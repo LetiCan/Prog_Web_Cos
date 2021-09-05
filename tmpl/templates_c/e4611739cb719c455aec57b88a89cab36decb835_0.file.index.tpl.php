@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-07-16 16:19:37
+/* Smarty version 3.1.39, created on 2021-09-02 12:15:28
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60f195790335c8_15191646',
+  'unifunc' => 'content_6130a440760734_07128806',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1626445172,
+      1 => 1630576404,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60f195790335c8_15191646 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6130a440760734_07128806 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,123 +45,114 @@ function content_60f195790335c8_15191646 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body class="container-fluid" id="box">
 <header>  
-    <div class="header" id="intestazione" >
-		
-			<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top" >
-					
-			    <ul class="navbar-nav mr-auto" id="links">
-                                        <li class="nav-item">
-                                            <a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Chi siamo</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#inf" data-toggle="collapse"> Info Prenotazioni</a>
-					</li>
-                            </ul>
-                            <ul class="navbar-nav ">
-                                    <li class="nav-item dropleft ">
-                                        
-                                        <a class="nav-link dropdown-toggle"  data-toggle="dropdown"> Login </a>
-                                        
-                                            <div class="dropdown" id="log">
-                                                
-                                                <form method="POST" class="dropdown-menu" action="">
-                                                        <table class="dropdown-item">
-                                                            <tr>
-                                                                <fieldset>
-                                                                    <legend>Accedi</legend>
-                                                                </fieldset>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input type="text" id="user" name="user" placeholder="Username">
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input type="password" id="psw" name="psw" placeholder="Password">
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <input type="submit" value="Accedi" onclick="checkLogin();">
-                                                                    <a href="">Password dimenticata</a>
-                                                                </td>
-                                                            </tr>
-                                                        </table> 
-                                                </form>
-                                                
-                                            </div>
-                                            
-                                    </li>
-                            </ul> 
-			</nav>
-			 <div  class="collapse" id="inf">
-			  <ul style='list-style-type:none;'>
+	<div class="header" id="intestazione" >
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between " >						
+			<ul class="navbar-nav mr-auto" id="links">
+				<li class="nav-item">
+					<a class="navbar-brand"><img src="img/Senza titolo-1.png" width="80px" heigth="25px" ></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Chi siamo</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#inf" data-toggle="collapse"> Info Prenotazioni</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav ">
+				<li class="nav-item ">							
+					<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
+				</li>
+			</ul> 
+		</nav>
+	</div>		
+</header>
+
+	<div class="container-fluid" id="home">
+		<div id="demo" class="carousel slide" data-ride="carousel">
+
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+			</ul>
+
+			<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+				<img class="img-fluid" src="img\Sfondo1_0.jpg" alt="pippo" width="100%" height="250px">
+				</div>
+				<div class="carousel-item">
+				<img class="img-fluid" src="img\vaccino1_0.jpg" alt="topolino" width="100%" height="250px">
+				</div>
+				<div class="carousel-item">
+				<img class="img-fluid" src="img\vaccino2_0.jpg" alt="paperino" width="100%" height="250px">
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
+		<div class="modal" id="log">						
+			<form method="POST" class="modal-content" action="index.php">
+				<div class="container">
+					<label for="username"><b>Username</b></label><br>
+					<input type="text" placeholder="Username" id="user" name="user" value="" ><br>
+
+					<label for="password"><b>Password</b></label><br>
+					<input type="password" placeholder="Password"  id="psw" name="psw" value=""><br>
+
+					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
+				</div>		
+			</form>
+		</div>
+
+		<div  class="collapse" id="inf">
+			<ul style='list-style-type:none;'>
 				<li>info</li>
 				<li>come prenotare un tampone?</li>
-			  </ul>
-			 </div>
+			</ul>
+		</div>  
+		<br><br>
+		<div>
+			<table width='100%' >
+				<tr>
+					<td><button id="rp" type="button" class="btn btn-primary">Richiedi Passaporto</button></td>
+					<td><button id="dm" type="button" class="btn btn-primary" >Prenota Tampone</button></td>
+					<td><button id="reg" type="button" class="btn btn-primary" onclick="Rgst();">Registrati</button></td>
+				</tr>
+			</table>
 		</div>
-</header>
-<div class="container-fluid" id="home">
-<div id="demo" class="carousel slide" data-ride="carousel">
-
-		  <!-- Indicators -->
-		  <ul class="carousel-indicators">
-			<li data-target="#demo" data-slide-to="0" class="active"></li>
-			<li data-target="#demo" data-slide-to="1"></li>
-			<li data-target="#demo" data-slide-to="2"></li>
-		  </ul>
-
-		  <!-- The slideshow -->
-		  <div class="carousel-inner">
-			<div class="carousel-item active">
-			  <img class="img-fluid" src="img\Sfondo1_0.jpg" alt="pippo" width="100%" height="250px">
-			</div>
-			<div class="carousel-item">
-			  <img class="img-fluid" src="img\vaccino1_0.jpg" alt="topolino" width="100%" height="250px">
-			</div>
-			<div class="carousel-item">
-			  <img class="img-fluid" src="img\vaccino2_0.jpg" alt="paperino" width="100%" height="250px">
-			</div>
-		  </div>
-
-		  <!-- Left and right controls -->
-		  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-			<span class="carousel-control-prev-icon"></span>
-		  </a>
-		  <a class="carousel-control-next" href="#demo" data-slide="next">
-			<span class="carousel-control-next-icon"></span>
-		  </a>
-
-</div>
-	<br><br>
-	<table width='100%' >
-	<tr>
-	<td><button id="rp" type="button" class="btn btn-primary">Richiedi Passaporto</button></td>
-	<td><button id="dm" type="button" class="btn btn-primary" >Prenota Tampone</button></td>
-	<td><button id="reg" type="button" class="btn btn-primary" onclick="Rgst();">Registrati</button></td>
-	<td><button id="adm" type="button" class="btn btn-primary" onclick="fun1();">Admin</button></td>
-	</tr>
-	</table>
-</div>           
-<footer>   
-	<div class="footer" id="informazioni" >
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom ">
-			<div  id="info">
-				<p>@copyright by..... </p>
-			<div>
-		</nav>
-	</div>        
-</footer>
-
+	</div>   
 </body>
+	<footer>   
+		<div  id="info">
+			<p>@copyright by..... </p>
+		<div>       
+	</footer>
+	<?php echo '<script'; ?>
+>
+		// Get the modal
+		var modal = document.getElementById('log');
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	<?php echo '</script'; ?>
+>
+
 </html>
-<?php }
+ <?php }
 }

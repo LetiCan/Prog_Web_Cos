@@ -12,9 +12,9 @@ class View extends Smarty
     }
     
     
-    public function caricaindex($tmpl)
+    public function caricaindex()
     {
-        $this->display($tmpl);
+        $this->display('index.tpl');
     }
     
     public function caricaTemplate($placeholder,$dt,$tmpl)
@@ -22,5 +22,15 @@ class View extends Smarty
         $this->assign($placeholder , $dt); 
         $this->display($tmpl);
     }
+    public function showTmp($tmp)
+    {
+        $this->display($tmp);
+    }
+    public function caricadati($placeholder,$dt)
+    {
+        $this->assign($placeholder , $dt); 
+    }
+
     
 }
+?>

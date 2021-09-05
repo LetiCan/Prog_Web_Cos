@@ -1,7 +1,7 @@
 <?php
 class Utente 
 {
-        private $id_ut;
+	private $id_ut;
 	private $username;
 	private $password;
 	private $nome;
@@ -11,13 +11,12 @@ class Utente
 	private $sesso;
 	private $cdf;
 	private $tipo;
-	private $std1=false;
-	private $std2=false;
+	private $std1;
+	private $std2;
 	
-	
-	public function __construct($id,$us,$pwd,$nm,$cgn,$dtn,$lgn,$sex,$cdf,$tp)
+	public function __construct($id,$us,$pwd,$nm,$cgn,$dtn,$lgn,$sex,$cdf,$tp,$s1,$s2)
 	{
-                $this->id_ut=$id;
+		$this->id_ut=$id;
 		$this->username = $us;
 		$this->password = $pwd;
 		$this->nome = $nm;
@@ -27,9 +26,11 @@ class Utente
 		$this->sesso = $sex;
 		$this->cdf = $cdf;
 		$this->tipo = $tp;
+		$this->std1 = $s1;
+		$this->std2 = $s2;
 	}
 	
-        public function get_id()
+    public function get_id()
 	{
 		return $this->id_ut;
 	}
@@ -74,14 +75,14 @@ class Utente
 	{
 		return $this->luogon;
 	}
-        public function set_std1()
-        {
-            $this->std1=true;
-        }
-        public function set_std2()
-        {
-            $this->std2=true;
-        }
+	public function set_std1()
+	{
+		$this->std1=true;
+	}
+	public function set_std2()
+	{
+		$this->std2=true;
+	}
         /*public function Registrazione($db)
 	{
 		//controllo dello user

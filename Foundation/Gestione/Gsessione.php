@@ -4,7 +4,7 @@ class Gsessione
     public function __construct() 
     {
         session_start();
-        debug($_SESSION);
+       // debug($_SESSION);
     }
     
     public function impSessione($c,$v)
@@ -27,3 +27,4 @@ class Gsessione
         }
     }
 }
+?>
