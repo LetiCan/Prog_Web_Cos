@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-06 08:52:26
+/* Smarty version 3.1.39, created on 2021-09-06 09:39:11
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6135baaa44feb6_41153854',
+  'unifunc' => 'content_6135c59fa3a7e3_51455577',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1630578660,
+      1 => 1630913946,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6135baaa44feb6_41153854 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6135c59fa3a7e3_51455577 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -60,9 +60,10 @@ function content_6135baaa44feb6_41153854 (Smarty_Internal_Template $_smarty_tpl)
 	<table width='100%' >
 	<tr>
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
-	<td><button id="pren"  class="btn btn-primary" onclick="document.getElementById('pre').style.display='block'" >Prenotazione Tampone</button></td>
+	<td><button id="pren"  class="btn btn-primary"  href="#pre" data-toggle="collapse"  >Prenotazione Tampone</button></td>
 	<td><button id="pass"  class="btn btn-primary" onclick="">Richiesta Passaporto</button></td>
     <td><button id="dosi"  class="btn btn-primary" onclick="">Caricamento dosi</button></td>
+    <td><button id="lgo" class="btn btn-primary" type="submit" name="lgo" >Logout</button>
 	</tr>
 	</table>
  
@@ -107,8 +108,8 @@ function content_6135baaa44feb6_41153854 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 
 <br>
-<div class="modal" id="pre">			
-    <form method="POST" class="modal-content" action="index.php">
+<div class="collapse" id="pre">			
+    <form method="POST" action="index.php">
         <div class="container">
             <label>Id Utente: <?php echo $_smarty_tpl->tpl_vars['P']->value['id'];?>
  </label>           
@@ -117,23 +118,9 @@ function content_6135baaa44feb6_41153854 (Smarty_Internal_Template $_smarty_tpl)
             <input type="date" name="datapre" ></input>
             <br>
             <input type="submit" name="invia" value="invia"></input>
-        </div>
-        
+        </div>   
     </form>
 </div>
-<button type="submit" name="lgo" value="Logout"></input>
-</body>
-<?php echo '<script'; ?>
->
-		// Get the modal
-		var modal = document.getElementById('pre');
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	<?php echo '</script'; ?>
-><?php }
+</body><?php }
 }
