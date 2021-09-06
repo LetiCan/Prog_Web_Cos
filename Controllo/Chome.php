@@ -11,14 +11,12 @@ class Chome
         $vh= Gpreleva::getIstanza('Vhome');     
         $ur= Gpreleva::getIstanza('Clogin'); 
         $vl= Gpreleva::getIstanza('VUtente');       
-        if((strcmp($vl->getUser(),"") == 0) || (strcmp($vl->getPwd(),"") == 0))
+        if((strcmp($vl->getUser(),"") == 0) && (strcmp($vl->getPwd(),"") == 0))
         {
             $vl->caricaindex();
             if($vh->Registrazione())
-            {
-                    
+            {                   
                 $ur->InsUtente();
-            
             }
         }    
         elseif($vl->Login())
@@ -26,28 +24,21 @@ class Chome
             $arr=$ur->autenticazione($vl->getUser(),$vl->getPwd());
             if($arr->get_tipo() == 1)
             { 
-                $vl->caricaTemplate('info',$this->infop(),'Admin.tpl');
-                if($vl->Logout())
-                {
-                    $ur->getSessione()->UnsetSessione('id_utente');
-                }
-                
+                $vl->caricaTemplate('info',$this->infop(),'Admin.tpl'); 
             }
             else
             {
                 $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf(),'id'=>$arr->get_id());
-                $vl->caricaTemplate('P',$dati,'Paziente.tpl');     
-                if($vl->Pre()!== false)
+                $vl->caricaTemplate('P',$dati,'Paziente.tpl'); 
+                if($vl->Pre())
                 {
-                    
                     $ur->InviaPrenotazione($arr->get_id());
+                }      
+            }
 
-                } 
-                if($vl->Logout())
-                {
-                    $ur->getSessione()->UnsetSessione('id_utente');
-
-                }       
+            if($vl->Logout())
+            {
+                $ur->getSessione()->UnsetSessione('id_utente');
             }         
         }
     }
