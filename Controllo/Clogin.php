@@ -74,8 +74,8 @@ class Clogin
         $vu=Gpreleva::getIstanza('VUtente');
         $Fp = new FPrenotazione();
         $temp=$vl->getPrenotazione();
-        $datip=array('datapre'=>$temp['datapre'],'id_utente'=>$idut);
-        if($datip !== null)
+        $datip=array('prov'=>$temp['prov'],'tamp'=>$temp['tamp'],'lab'=>$temp['lab'],'datapre'=>$temp['datapre'],'id_utente'=>$idut);
+        if(isset($datip))
         {
             $Fp->DatiPrenotazione($datip);
             echo 'Prenotazione riuscita';
