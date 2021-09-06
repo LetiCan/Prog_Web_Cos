@@ -24,10 +24,10 @@
 					<a class="nav-link" href="#">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Chi siamo</a>
+					<a class="nav-link" href="#"  data-toggle="collapse">Chi siamo</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"> Contatti </a>
+					<a class="nav-link" href="#contact"  data-toggle="collapse"> Contatti </a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ">
@@ -83,14 +83,7 @@
 					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
 				</div>		
 			</form>
-		</div>
-
-		<div  class="collapse" id="inf">
-			<ul style='list-style-type:none;'>
-				<li>info</li>
-				<li>come prenotare un tampone?</li>
-			</ul>
-		</div>  
+		</div>  		
 		<br><br>
 		<div>
 			<table width='100%' >
@@ -101,6 +94,33 @@
 				</tr>
 			</table>
 		</div>
+		 <div  class="collapse" id="contact">
+				<br><br>
+				<h1><p align= center><br>Contatti</p></h1>
+				
+				<h2><p align= center><br>Centro Operativo Sanitario</p></h2>
+				<p align= center>
+					Sede Amministrativa c/o Tecnopolo Tiburtino, Via Giacomo Peroni, 452 – 00131 Roma
+				<hr width=25% size=”1″ color=#888 align=”center“ />
+				
+				
+				<h3><p align= center>Dipartimento Marketing e Ufficio Stampa</p></h3>
+					<p align= center>marketing@cos.it</p>
+				
+				<hr width=25% size=”1″ color=#888 align=”center“ />
+				
+				<h3><p align= center>Segnalazioni Pazienti	</p></h3>
+				<p align= center> customercare@cos.it</p>
+				
+				<hr width=25% size=”1″ color=#888 align=”center“ />
+
+				<h3><p align= center>Sales (aziende e strutture sanitarie)	</p></h3>
+				<p align= center>Indirizzo dedicato al Nord Italia: Sales.nord@cos.it </p>
+				
+				<p align= center>Indirizzo dedicato al Centro Italia: Sales.centro@cos.it	</p>
+				
+				<p align= center>Indirizzo dedicato al Sud Italia: Sales.sud@cos.it	</p>
+			</div>
 	</div>   
 </body>
 	<footer>   
