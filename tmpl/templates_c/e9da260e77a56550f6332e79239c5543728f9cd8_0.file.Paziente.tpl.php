@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-06 18:23:57
+/* Smarty version 3.1.39, created on 2021-09-06 21:19:37
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6136409dccccb3_47088539',
+  'unifunc' => 'content_613669c9e18a39_86952921',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1630945418,
+      1 => 1630955974,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6136409dccccb3_47088539 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613669c9e18a39_86952921 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -111,11 +111,30 @@ function content_6136409dccccb3_47088539 (Smarty_Internal_Template $_smarty_tpl)
 <div class="collapse" id="pre">			
     <form method="POST" action="index.php">
         <div class="container">
-            <label>Id Utente: <?php echo $_smarty_tpl->tpl_vars['P']->value['id'];?>
+            <label for="userid">Id Utente: <?php echo $_smarty_tpl->tpl_vars['P']->value['id'];?>
  </label>           
             <br>
-            <label>Data prenotazione:</label>
-            <input type="date" name="datapre" ></input>
+            <label for="prov"> Povincia: </label>
+            <select name="prov" id="prov" onchange="aggiornaOpzioni()">
+                <option value="Pescara">Pescara </option>
+                <option value="Aquila"> Aquila </option>
+                <option value="Chieti"> Chieti </option>
+                <option value="Teramo"> Teramo </option>
+            </select>
+            <br>
+            <label for="lab"> Laboratori: </label>
+            <select name="lab" id="lab">
+
+            </select>
+            <br>
+            <label for="tipotmp" >Tipo Tampone: </label>
+            <select name="tamp" id="tamp">
+                <option value="testrapido">Tampone Rapido</option>
+                <option value="sierologico">Tampone Sierologico</option>
+            </select>
+            <br>
+            <label for="datapre" >Data prenotazione:</label>
+            <input type="date" name="datapre"></input>
             <br>
             <input type="submit" name="invia" value="invia"></input>
         </div>   
