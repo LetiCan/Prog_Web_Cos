@@ -28,9 +28,10 @@
 	<table width='100%' >
 	<tr>
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
-	<td><button id="pren"  class="btn btn-primary" onclick="document.getElementById('pre').style.display='block'" >Prenotazione Tampone</button></td>
+	<td><button id="pren"  class="btn btn-primary"  href="#pre" data-toggle="collapse"  >Prenotazione Tampone</button></td>
 	<td><button id="pass"  class="btn btn-primary" onclick="">Richiesta Passaporto</button></td>
     <td><button id="dosi"  class="btn btn-primary" onclick="">Caricamento dosi</button></td>
+    <td><button id="lgo" class="btn btn-primary" type="submit" name="lgo" >Logout</button>
 	</tr>
 	</table>
  
@@ -72,8 +73,8 @@
 </div>
 
 <br>
-<div class="modal" id="pre">			
-    <form method="POST" class="modal-content" action="index.php">
+<div class="collapse" id="pre">			
+    <form method="POST" action="index.php">
         <div class="container">
             <label>Id Utente: {$P.id} </label>           
             <br>
@@ -81,20 +82,8 @@
             <input type="date" name="datapre" ></input>
             <br>
             <input type="submit" name="invia" value="invia"></input>
-        </div>
-        
+        </div>   
     </form>
 </div>
-<button type="submit" name="lgo" value="Logout"></input>
-</body>
-<script>
-		// Get the modal
-		var modal = document.getElementById('pre');
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	</script>
+</body>
