@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-05 21:00:44
+/* Smarty version 3.1.39, created on 2021-09-06 09:06:51
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613513dcddd564_48188400',
+  'unifunc' => 'content_6135be0bde93c1_96894421',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1630868381,
+      1 => 1630912007,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613513dcddd564_48188400 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6135be0bde93c1_96894421 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,10 +55,10 @@ function content_613513dcddd564_48188400 (Smarty_Internal_Template $_smarty_tpl)
 					<a class="nav-link" href="#">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Chi siamo</a>
+					<a class="nav-link" href="#"  data-toggle="collapse">Chi siamo</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"> Contatti </a>
+					<a class="nav-link" href="#contact"  data-toggle="collapse"> Contatti </a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ">
@@ -114,14 +114,7 @@ function content_613513dcddd564_48188400 (Smarty_Internal_Template $_smarty_tpl)
 					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
 				</div>		
 			</form>
-		</div>
-
-		<div  class="collapse" id="inf">
-			<ul style='list-style-type:none;'>
-				<li>info</li>
-				<li>come prenotare un tampone?</li>
-			</ul>
-		</div>  
+		</div>  		
 		<br><br>
 		<div>
 			<table width='100%' >
@@ -132,6 +125,33 @@ function content_613513dcddd564_48188400 (Smarty_Internal_Template $_smarty_tpl)
 				</tr>
 			</table>
 		</div>
+		 <div  class="collapse" id="contact">
+				<br><br>
+				<h1><p align= center><br>Contatti</p></h1>
+				
+				<h2><p align= center><br>Centro Operativo Sanitario</p></h2>
+				<p align= center>
+					Sede Amministrativa c/o Tecnopolo Tiburtino, Via Giacomo Peroni, 452 – 00131 Roma
+				<hr width=25% size=”1″ color=#888 align=”center“ />
+				
+				
+				<h3><p align= center>Dipartimento Marketing e Ufficio Stampa</p></h3>
+					<p align= center>marketing@cos.it</p>
+				
+				<hr width=25% size=”1″ color=#888 align=”center“ />
+				
+				<h3><p align= center>Segnalazioni Pazienti	</p></h3>
+				<p align= center> customercare@cos.it</p>
+				
+				<hr width=25% size=”1″ color=#888 align=”center“ />
+
+				<h3><p align= center>Sales (aziende e strutture sanitarie)	</p></h3>
+				<p align= center>Indirizzo dedicato al Nord Italia: Sales.nord@cos.it </p>
+				
+				<p align= center>Indirizzo dedicato al Centro Italia: Sales.centro@cos.it	</p>
+				
+				<p align= center>Indirizzo dedicato al Sud Italia: Sales.sud@cos.it	</p>
+			</div>
 	</div>   
 </body>
 	<footer>   
