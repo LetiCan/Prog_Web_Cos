@@ -14,13 +14,19 @@
 class Prenotazione 
 {
     private $cod_prenotazione;
+    private $prov;
+    private $tipotamp;
+    private $lab;
     private $data_prenotazione;
     private $stato_conferma=false;
     private $utente;
     
-    public function __construct($dtp) 
+    public function __construct($dtp,$pr,$tt,$lb) 
     {
         $this->data_prenotazione=$dtp;
+        $this->prov=$pr;
+        $this->tipotamp=$tt;
+        $this->lab=$lb;
     }
     
     /*
@@ -29,6 +35,21 @@ class Prenotazione
     public function getUtente()
     {
         return $this->utente;
+    }
+
+    public function getProv()
+    {
+        return $this->prov;
+    }
+
+    public function getTamp()
+    {
+        return $this->tipotamp;
+    }
+
+    public function getLab()
+    {
+        return $this->lab;
     }
     
     public function getStato()
