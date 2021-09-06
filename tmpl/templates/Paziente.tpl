@@ -76,10 +76,29 @@
 <div class="collapse" id="pre">			
     <form method="POST" action="index.php">
         <div class="container">
-            <label>Id Utente: {$P.id} </label>           
+            <label for="userid">Id Utente: {$P.id} </label>           
             <br>
-            <label>Data prenotazione:</label>
-            <input type="date" name="datapre" ></input>
+            <label for="prov"> Povincia: </label>
+            <select name="prov" id="prov" onchange="aggiornaOpzioni()">
+                <option value="Pescara">Pescara </option>
+                <option value="Aquila"> Aquila </option>
+                <option value="Chieti"> Chieti </option>
+                <option value="Teramo"> Teramo </option>
+            </select>
+            <br>
+            <label for="lab"> Laboratori: </label>
+            <select name="lab" id="lab">
+
+            </select>
+            <br>
+            <label for="tipotmp" >Tipo Tampone: </label>
+            <select name="tamp" id="tamp">
+                <option value="testrapido">Tampone Rapido</option>
+                <option value="sierologico">Tampone Sierologico</option>
+            </select>
+            <br>
+            <label for="datapre" >Data prenotazione:</label>
+            <input type="date" name="datapre"></input>
             <br>
             <input type="submit" name="invia" value="invia"></input>
         </div>   
