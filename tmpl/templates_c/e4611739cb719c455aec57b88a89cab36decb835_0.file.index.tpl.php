@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-06 09:06:51
+/* Smarty version 3.1.39, created on 2021-09-06 09:21:02
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6135be0bde93c1_96894421',
+  'unifunc' => 'content_6135c15e175de7_06435195',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1630912007,
+      1 => 1630912855,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6135be0bde93c1_96894421 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6135c15e175de7_06435195 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,10 +55,18 @@ function content_6135be0bde93c1_96894421 (Smarty_Internal_Template $_smarty_tpl)
 					<a class="nav-link" href="#">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"  data-toggle="collapse">Chi siamo</a>
+					<a class="nav-link" href="#chisiamo"  data-toggle="collapse">Chi siamo</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#contact"  data-toggle="collapse"> Contatti </a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Operazioni </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" id="rp">Richiedi Passaporto</a>
+						<a class="dropdown-item" id="dm">Prenota Tampone</a>
+						<a class="dropdown-item" id="reg" onclick="Rgst();"> Registrati </a>
+					</div>
 				</li>
 			</ul>
 			<ul class="navbar-nav ">
@@ -101,7 +109,19 @@ function content_6135be0bde93c1_96894421 (Smarty_Internal_Template $_smarty_tpl)
 				<span class="carousel-control-next-icon"></span>
 			</a>
 		</div>
-
+		<div class="collapse" id="chisiamo">
+			<h2><p align= center><br><br>Centro Operativo Sanitario</p></h2>
+			<p align= center><br><br>
+			COS è il Gruppo leader in Italia nella medicina di laboratorio per i pazienti,
+			le strutture sanitarie e le imprese. Fondato nel 2013 dal Prof. Giggione  e dal Dr. Capossela, 
+			rappresenta oggi il più grande provider di analisi cliniche di laboratorio nel campo della chimica clinica,
+			dell’ematologia, dell’immunochimica, della microbiologia, della biologia molecolare, della citologia e 
+			della patologia. Nel 2018, con l’acquisizione del Laboratorio Giustino, il Gruppo COS è entrato anche
+			nel settore delle analisi ambientali ed alimentari. Grazie al proprio network di laboratori, all’eccellenza delle
+			competenze professionali e a tecnologie di ultima generazione, oggi Lifebrain rappresenta il Gruppo 
+			di laboratori a più alto tasso di crescita in Europa.
+			</p>
+		</div>
 		<div class="modal" id="log">						
 			<form method="POST" class="modal-content" action="index.php">
 				<div class="container">
@@ -116,19 +136,7 @@ function content_6135be0bde93c1_96894421 (Smarty_Internal_Template $_smarty_tpl)
 			</form>
 		</div>  		
 		<br><br>
-		<div>
-			<table width='100%' >
-				<tr>
-					<td><button id="rp" type="button" class="btn btn-primary">Richiedi Passaporto</button></td>
-					<td><button id="dm" type="button" class="btn btn-primary" >Prenota Tampone</button></td>
-					<td><button id="reg" type="button" class="btn btn-primary" onclick="Rgst();">Registrati</button></td>
-				</tr>
-			</table>
-		</div>
 		 <div  class="collapse" id="contact">
-				<br><br>
-				<h1><p align= center><br>Contatti</p></h1>
-				
 				<h2><p align= center><br>Centro Operativo Sanitario</p></h2>
 				<p align= center>
 					Sede Amministrativa c/o Tecnopolo Tiburtino, Via Giacomo Peroni, 452 – 00131 Roma
