@@ -105,6 +105,52 @@ function controllocheckbox()
 }
 
 function openForm()
- {
+{
     document.getElementById("log").style.display = "block";
- }
+}
+
+function aggiornaOpzioni()
+{
+    var selezionato = document.forms[0].prov.selectedIndex;
+    var campo = document.forms[0].prov.options;
+    selezionaOpzioni(campo[selezionato].value);
+}
+
+
+function selezionaOpzioni(scelta) 
+{
+  var lab = document.forms[0].lab;
+  lab.options.length = 0;
+  if (scelta == "Pescara") 
+  {
+      lab.options[lab.options.length] = new Option('lab_PE_1');
+      lab.options[lab.options.length] = new Option('lab_PE_2');
+      lab.options[lab.options.length] = new Option('lab_PE_3');
+      lab.options[lab.options.length] = new Option('lab_PE_4');
+  }
+  
+  if (scelta == "Aquila") 
+  {
+      lab.options[lab.options.length] = new Option('lab_AQ_1');
+      lab.options[lab.options.length] = new Option('lab_AQ_2');
+  }
+
+  if (scelta == "Chieti") 
+  {
+      lab.options[lab.options.length] = new Option('lab_CH_1');
+      lab.options[lab.options.length] = new Option('lab_CH_2');
+      lab.options[lab.options.length] = new Option('lab_CH_3');
+      lab.options[lab.options.length] = new Option('lab_CH_4');
+      lab.options[lab.options.length] = new Option('lab_CH_5');
+      lab.options[lab.options.length] = new Option('lab_CH_6');
+  }
+
+  if (scelta == "Teramo") 
+  {
+      lab.options[lab.options.length] = new Option('lab_TE_1');
+      lab.options[lab.options.length] = new Option('lab_TE_2');
+      lab.options[lab.options.length] = new Option('lab_TE_3');
+
+  }
+  
+}
