@@ -36,12 +36,16 @@ class Chome
             else
             {
                 $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf(),'id'=>$arr->get_id());
-                $vl->caricaTemplate('P',$dati,'Paziente.tpl');
-                $ur->InviaPrenotazione($arr->get_id());
-                if($vl->Logout())
+                $vl->caricaTemplate('P',$dati,'Paziente.tpl');      
+                switch($vl)
                 {
-                    $ur->getSessione()->UnsetSessione('id_utente');
-                }
+                    case $vl->Pre():
+                        $ur->InviaPrenotazione($arr->get_id());
+                        break;
+                    case $vl->Logout():
+                        $ur->getSessione()->UnsetSessione('id_utente');
+                        break;
+                }        
             }         
         }
     }
