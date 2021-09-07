@@ -131,11 +131,6 @@
 			</div>
 	</div>   
 </body>
-	<footer>   
-		<div  id="info">
-			<p>@copyright by..... </p>
-		<div>       
-	</footer>
 	<script>
 		// Get the modal
 		var modal = document.getElementById('log');
