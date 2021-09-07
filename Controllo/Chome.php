@@ -8,7 +8,6 @@ class Chome
 
     public function imp()
     {
-        $b=false;
         $vh= Gpreleva::getIstanza('Vhome');     
         $ur= Gpreleva::getIstanza('Clogin'); 
         $vl= Gpreleva::getIstanza('VUtente');       
@@ -32,17 +31,11 @@ class Chome
             {
                 $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf(),'id'=>$arr->get_id());
                 $vl->caricaTemplate('P',$dati,'Paziente.tpl'); 
-                if($vl->Pre())
-                {
-                    $ur->InviaPrenotazione($arr->get_id());
-                }
+                $this->Prenotazione($arr->get_id());
                   
             }
-
-            if($vl->Logout())
-            {
-                $ur->getSessione()->UnsetSessione("username");
-            }         
+            $this->Logout('username');
+ 
         }
     }
 
@@ -62,6 +55,32 @@ class Chome
         }
         return $info;
     }
+
+    public function Prenotazione($id)
+    {
+        $vl= Gpreleva::getIstanza('VUtente');
+        $ur= Gpreleva::getIstanza('Clogin');    
+        if($vl->Pre())
+        {
+            $ur->InviaPrenotazione($id);
+        }
+
+    }
+
+    public function Logout($c)
+    {
+        $vl= Gpreleva::getIstanza('VUtente');
+        $ur= Gpreleva::getIstanza('Clogin');    
+        if($vl->Logout())
+        {
+            $ur->getSessione()->UnsetSessione($c);
+            $vl->caricaindex();
+        }
+        else{
+            echo 'gneeeee';
+        }         
+    }
+
   /*  public function smista() {
         $view=USingleton::getInstance('VHome');
         switch ($view->getController()) {
