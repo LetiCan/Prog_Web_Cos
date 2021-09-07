@@ -31,7 +31,6 @@
 	<td><button id="pren"  class="btn btn-primary"  href="#pre" data-toggle="collapse"  >Prenotazione Tampone</button></td>
 	<td><button id="pass"  class="btn btn-primary" onclick="">Richiesta Passaporto</button></td>
     <td><button id="dosi"  class="btn btn-primary" onclick="">Caricamento dosi</button></td>
-    <td><button id="lgo" class="btn btn-primary" type="submit" name="lgo" >Logout</button>
 	</tr>
 	</table>
  
@@ -73,14 +72,25 @@
 </div>
 
 <br>
-<div class="collapse" id="pre">			
-    <form method="POST" action="index.php">
-        <div class="container">
+<div class="collapse" id="pre">		
+    <h1>Prenotazione Online</h1>
+    <br>
+	<h2><p align= center>Prenotazione tampone covid-19</p></h2>
+	<i><p align= center>Indicazioni generali</p></i>
+	<p align= center>Ti ricordiamo che per il tampone molecolare la prescrizione medica è necessaria in Lombardia e Campania. Per il tampone antigenico rapido la prescrizione
+                     medica è necessaria in Sardegna e Lombardia.
+                     É possibile prenotare il test salivare nei centri
+                     COS del Lazio scegliendo il servizio “Tampone molecolare
+                     e Salivare”
+    </p>
+    <br>	
+    <form method="POST" action="index.php" id="formPre">
+        <div class="container" bgcolor="#B0E0E6">
             <label for="userid">Id Utente: {$P.id} </label>           
             <br>
             <label for="prov"> Povincia: </label>
             <select name="prov" id="prov" onchange="aggiornaOpzioni()">
-                <option value="Pescara">Pescara </option>
+                <option value="Pescara"> Pescara </option>
                 <option value="Aquila"> Aquila </option>
                 <option value="Chieti"> Chieti </option>
                 <option value="Teramo"> Teramo </option>
@@ -100,9 +110,11 @@
             <label for="datapre" >Data prenotazione:</label>
             <input type="date" name="datapre"></input>
             <br>
-            <input type="submit" name="invia" value="invia"></input>
+            <input type="submit" name="invia" value="Invia"></input>
         </div>   
     </form>
 </div>
-
+<form method="POST" action="index.php">
+    <input class="btn btn-primary" type="submit" name="lgo" value="Logout" ></input>
+<form>
 </body>
