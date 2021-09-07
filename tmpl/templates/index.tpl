@@ -98,7 +98,8 @@
 					<input type="text" placeholder="Username" id="user" name="user" value="" ><br>
 
 					<label for="password"><b>Password</b></label><br>
-					<input type="password" placeholder="Password"  id="psw" name="psw" value=""><br>
+					<input type="password" placeholder="Password"  id="psw" name="psw" value="">
+					<br>
 
 					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
 				</div>		
