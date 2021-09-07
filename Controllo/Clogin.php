@@ -20,8 +20,8 @@ class Clogin
         if(isset($u))
         {    
             $this->sessione = Gpreleva::getIstanza('Gsessione');     
-            $this->sessione->impSessione('id_utente',$u->get_id()); 
-            if($this->sessione->VerificaSessione('id_utente') !== false)
+            $this->sessione->impSessione("username",$u->get_username()); 
+            if($this->sessione->VerificaSessione("username") !== false)
             {
                 
                 return $u;
@@ -73,7 +73,7 @@ class Clogin
     {
         $vu=Gpreleva::getIstanza('VUtente');
         $Fp = new FPrenotazione();
-        $temp=$vl->getPrenotazione();
+        $temp=$vu->getPrenotazione();
         $datip=array('prov'=>$temp['prov'],'tamp'=>$temp['tamp'],'lab'=>$temp['lab'],'datapre'=>$temp['datapre'],'id_utente'=>$idut);
         if(isset($datip))
         {
@@ -84,8 +84,6 @@ class Clogin
         {
             echo 'Prenotazione fallita';
         }
-        
-
     }
 
     public function StoricoPaz()
