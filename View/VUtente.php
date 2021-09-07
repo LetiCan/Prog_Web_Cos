@@ -32,14 +32,6 @@ class VUtente extends View
         return $dtp;
     }
 
-    public function Login()
-    {
-      if(isset($_POST['lg']))
-      {
-          return $_POST['lg'];
-      }
-      return false;
-    }
     
     public function Logout()
     {
