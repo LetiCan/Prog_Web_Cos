@@ -8,6 +8,7 @@ class Chome
 
     public function imp()
     {
+        $b=false;
         $vh= Gpreleva::getIstanza('Vhome');     
         $ur= Gpreleva::getIstanza('Clogin'); 
         $vl= Gpreleva::getIstanza('VUtente');       
@@ -18,8 +19,9 @@ class Chome
             {                   
                 $ur->InsUtente();
             }
+            
         }    
-        elseif($vl->Login())
+        elseif($vh->Login())
         {   
             $arr=$ur->autenticazione($vl->getUser(),$vl->getPwd());
             if($arr->get_tipo() == 1)
@@ -33,12 +35,13 @@ class Chome
                 if($vl->Pre())
                 {
                     $ur->InviaPrenotazione($arr->get_id());
-                }      
+                }
+                  
             }
 
             if($vl->Logout())
             {
-                $ur->getSessione()->UnsetSessione('id_utente');
+                $ur->getSessione()->UnsetSessione("username");
             }         
         }
     }
