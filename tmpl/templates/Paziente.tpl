@@ -114,7 +114,7 @@
         </div>   
     </form>
 </div>
-<form method="POST" action="index.php">
-    <input class="btn btn-primary" type="submit" name="lgo" value="Logout" ></input>
+<form method="POST" action="index.php" id="formLog">
+    <input class="btn btn-link" type="submit" name="lgo" value="Logout" ></input>
 <form>
 </body>
