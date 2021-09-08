@@ -6,47 +6,53 @@
 	</div>
 <br><br>
 <hr>
-    <fieldset>
-     <legend>
-        Inserisci i tuoi dati
-    </legend>
-    </fieldset>
-<form method="POST" action="index.php">
-	<div class="form-group">
- 	  <label for="nome">Nome:</label>
-	  <input type="text" name="nome" id="nome" placeholder="Nome" ><br>
+<div class="row">
+	<dv class="column">
+		<fieldset>
+		<legend>
+			Inserisci i tuoi dati
+		</legend>
+		</fieldset>
+	</diV>
+</div>
+<div class="row">
+	<form method="POST" action="index.php">
+		<div class="form-group">
+		<label for="nome">Nome:</label>
+		<input type="text" name="nome" id="nome" placeholder="Nome" ><br>
 
-	  <label for="cognome">cognome:</label>
-	  <input type="text" name="cognome" id="cognome" placeholder="cognome" ><br>
+		<label for="cognome">cognome:</label>
+		<input type="text" name="cognome" id="cognome" placeholder="cognome" ><br>
 
-	  <label for="datanascita">Data di Nascita:</label>
-	  <input type="date" name="datanascita" id="dtn" ><br>
+		<label for="datanascita">Data di Nascita:</label>
+		<input type="date" name="datanascita" id="dtn" ><br>
 
-	  
-	  <label for="ldn">Luogo di Nascita:</label>
-	  <input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita"><br>
+		
+		<label for="ldn">Luogo di Nascita:</label>
+		<input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita"><br>
 
-	  <label for="cdf">Codice fiscale:</label>
-	  <input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16"><br>
+		<label for="cdf">Codice fiscale:</label>
+		<input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16"><br>
 
-	  <label for="sesso">Sesso:</label>
-	  <input type="checkbox" name="sesso" id="sesso" value="M" onclick="controllocheckbox()">
-	  <label for="M">M</label>
-	  <input type="checkbox" name="sesso" id="sesso" value="F" onclick="controllocheckbox()" >
-	  <label for="F">F</label>
-	  <br>
-	  <label for="uesr">Username:</label>
-	  <input type="text" id="user" name="username" placeholder="username"><br>
+		<label for="sesso">Sesso:</label>
+		<input type="checkbox" name="sesso" id="sesso" value="M" onclick="controllocheckbox()">
+		<label for="M">M</label>
+		<input type="checkbox" name="sesso" id="sesso" value="F" onclick="controllocheckbox()" >
+		<label for="F">F</label>
+		<br>
+		<label for="uesr">Username:</label>
+		<input type="text" id="user" name="username" placeholder="username"><br>
 
-	  <label for="psw">Password:</label>
-	  <input type="password" id="pwd" name="pwd" placeholder="password" ><br>
+		<label for="psw">Password:</label>
+		<input type="password" id="pwd" name="pwd" placeholder="password" ><br>
 
-	  <p id="validazione">
-			<input class="btn btn-primary" type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
-			<input type="reset" value="Ripristina" name="rpr" onclick="">
-	  </p>
-	</div>		
-<form>
+		<p id="validazione">
+				<input class="btn btn-primary" type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
+				<input type="reset" value="Ripristina" name="rpr" onclick="">
+		</p>
+		</div>		
+	<form>
+</div>
 <a href="index.php">home</a>
 <hr>
 </div>
