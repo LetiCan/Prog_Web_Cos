@@ -71,10 +71,9 @@ class Chome
     {
         $vl= Gpreleva::getIstanza('VUtente');
         $ur= Gpreleva::getIstanza('Clogin');    
-        if($vl->Logout())
+        if(!$vl->Logout())
         {
             $ur->getSessione()->UnsetSessione($c);
-            $vl->caricaindex();
         }
         else{
             echo 'gneeeee';
