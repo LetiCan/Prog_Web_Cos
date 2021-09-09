@@ -31,6 +31,11 @@ class View extends Smarty
         $this->assign($placeholder , $dt); 
     }
 
+    public function isImpo($dati)
+    {
+        $this->assign($dati,true);
+    }
+
     
 }
 ?>
