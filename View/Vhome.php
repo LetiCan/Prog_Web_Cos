@@ -34,10 +34,10 @@ class Vhome extends View
             'cdf'=>$_POST['cdf'],
             'sesso'=>$_POST['sesso'],
             'username'=>$_POST['username'],
-            'pwd'=>$_POST['pwd']);
+            'pwd'=>$_POST['pwd']);       
         }
         return $d;
-        
+           
     }
 }
 ?>
