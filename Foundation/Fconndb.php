@@ -137,6 +137,177 @@ class Fconndb
     {
        $this->db=null;
     }
-    
+    /*
+        public function Avvisi($a)							//INSERIMENTO AVVISO BACHECA
+	{
+		$sdb=$this->connessione();
+        $q="INSERT INTO ".$this->tabella."(data_pubblicazione,fk_utente)"."VALUES(:dpb,:fku)"; 
+		$q="INSERT INTO ".$this->tabella."(id_avviso,data_pubblicazione,descrizione,fk_utente)"."VALUES(:ida,:dpb,:desc,:fku)";
+		$this->query_result=$sdb->prepare($q);
+		$this->query_result->bindParam(':ida',$a['id_avviso']);
+		$this->query_result->bindParam(':dpb',$a['data_pubblicazione']);
+		$this->query_result->bindParam(':desc',$a['descrizione']);
+		$this->query_result->bindParam(':fku',$a['fk_utente']);
+		$this->query_result->execute();
+        $sdb=$this->connclose();
+	
+	}
+	
+	
+	public function elimina_ut($us,$pwd)					//ELIMINA UTENTE
+	{
+		$sdb=$this->connessione();
+		$q= "DELETE FROM".this->tabella."  WHERE "WHERE username= :us  AND pwd= :ps";
+		$this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':us',$us);
+        $this->query_result->bindParam(':ps',$pwd);
+        $this->query_result->execute();
+		$sdb->connclose();
+	}
+	
+	
+	public function elimina_pre($dtp,$fku)					//ELIMINA PRENOTAZIONE
+	{
+		$sdb=$this->connessione();
+		$q= "DELETE FROM".this->tabella."  WHERE "WHERE data_prenotazione= :dp  AND fk_utente= :fku";
+		$this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':dp',$dtp);
+        $this->query_result->bindParam(':fku',$fku);
+        $this->query_result->execute();
+		$sdb->connclose();
+	}
+	
+	
+	
+	public function elimina_avv($dpb,$fku)					//ELIMINA AVVISO
+	{
+		$sdb=$this->connessione();
+		$q= "DELETE FROM".this->tabella."  WHERE "WHERE data_pubblicazione= :dpb  AND fk_utente= :fku";
+		$this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':dpb',$dpb);
+        $this->query_result->bindParam(':fku',$fku);
+        $this->query_result->execute();
+		$sdb->connclose();
+	}
+	
+	
+	public function modifica_ut($nm,$cgn,$dtn,$tp,$us,$ps,$ln,$sex,$cdf,$id)					//MODIFICA UTENTE
+	{
+		$sdb=$this->connessione();
+		$q= "UPDATE utente SET ':nm'=$nm, ':cgn'=$cgn, ':dtn'=$dtn", ':tp'=$tp, ':us'=$us,':ps'=$ps, ':ln'=$ln, ':sex'=$sex, ':cdf'=$cdf".this->tabella."WHERE id_utente=:id";
+		$this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':id',$id);
+        $this->query_result->execute();
+		$sdb->connclose();
+	}
+	
+	public function modifica_dosi($id, $vacc,$num)					//MODIFICA VACCINI
+	{
+		$sdb=$this->connessione();
+		$n=$num;
+		if($n=="1")
+		{
+			$q= "UPDATE utente SET ':std1'=$vacc ".this->tabella."WHERE id_utente=:id";
+			$this->query_result=$sdb->prepare($q);
+			$this->query_result->bindParam(':id',$id);
+			$this->query_result->execute();
+			$sdb->connclose();
+		}
+		else
+		{
+			$q= "UPDATE utente SET ':std2' ".this->tabella."WHERE id_utente=:id";
+			$this->query_result=$sdb->prepare($q);
+			$this->query_result->bindParam(':id',$id);
+			$this->query_result->execute();
+			$sdb->connclose();
+		}
+		
+	}
+	
+	public function modifica_avv($dpb,$fku,$desc)					//MODIFICA AVVISO
+	{
+		$sdb=$this->connessione();
+		$q= "UPDATE utente SET ':desc'=$desc".this->tabella."WHERE fk_utente=':fku' AND data_pubblicazione=':dpb'";
+		$this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':dpb',$dpb);
+		$this->query_result->bindParam(':fku',$fku);
+        $this->query_result->execute();
+		$sdb->connclose();
+	}
+    public function Ricerca_perdata($d)				//RICERCA PRENOTAZIONE CON DATA
+	{
+		$sdb=$this->connessione();
+		$q="SELECT data_prenotazione FROM ".$this->tabella."WHERE data_prenotazione=$d";
+		$this->query_result=$sdb->prepare($q);
+		$this->query_result->bindParam(':dp',$d['datapre']);
+		$this->query_result->execute();
+		while($row=$this->query_result->fetch())
+        {
+            $pr=$row['provincia'];
+            $tp=$row['tampone'];
+            $lb=$row['lab'];
+            $dp=$row['data_prenotazione'];
+            $fku=$row['fk_utente'];
+            $prenotazione =new Prenotazione($pr,$tp,$lb,$dp,$fku);
+            $array_pre[$i]=$prenotazione;
+            $i++;
+        }
+		$sdb->connclose();
+        return $array_pre;
+	}
+	
+	
+	public function paz_green()								//ELENCO PAZIENTI CON GREEN PASS
+	{
+		$sdb=$this->connessione();
+		$val="true";
+		$q="SELECT * FROM ".$this->tabella."WHERE std1=$val AND std2=$val;
+		$this->query_result=$sdb->prepare($q);
+		$this->query_result->bindParam(':std1',$val);
+		$this->query_result->bindParam(':std2',$val);
+		$this->query_result->execute();
+		while($row=$this->query_result->fetch())
+        {
+            $id=$row['id_utente'];
+            $user=$row['username'];
+            $pws=$row['pwd'];
+            $nome=$row['nome'];
+            $cognome=$row['cognome'];
+            $dtn=$row['data_nascita'];
+            $ln=$row['luogo_nascita'];
+            $s=$row['sesso'];
+            $cf=$row['codice_fiscale'];
+            $tp=$row['tipo'];
+            $std1=$row['std1'];
+            $std2=$row['std2'];
+            $utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
+            $array_green[$i]=$utente;
+            $i++;
+        }
+		$sdb->connclose();
+        return $array_green;
+	}	
+	
+	public function preleva_avv($dpb)						//ELENCO AVVISI CON DATA
+    {
+        $sdb=$this->connessione();
+        $q=" SELECT * FROM ". $this->tabella." WHERE data_pubblicazione=':dpb'";
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':dpb',$d);
+        $this->query_result->execute();
+        //$row=$this->qresult->fetchAll();
+        while($row=$this->query_result->fetch())
+        {
+            $id_avviso=$row['id_avvisoa'];
+            $dpb=$row['data_pubblicazione'];
+            $desc=$row['descrizione'];
+            $fku=$row['fk_utente'];
+
+        }
+        $avviso=new Avviso($id_avviso,$dpb,$desc,$fku);
+       // $sdb->connclose();
+        return $avviso;
+    }
+    */
 }
    
