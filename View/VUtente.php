@@ -29,12 +29,11 @@ class VUtente extends View
         {
            $dtp=array('datapre'=>$_POST['datapre'],'prov'=>$_POST['prov'],'tamp'=>$_POST['tamp'],'lab'=>$_POST['lab']);
         }
-        header('Location:index.php');
         return $dtp;
     }
 
     
-    public function Logout()
+    public function TastoLogout()
     {
       if(isset($_POST['lgo']))
       {
