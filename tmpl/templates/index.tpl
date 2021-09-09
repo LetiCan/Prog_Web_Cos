@@ -12,8 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="funzioniJs/funz.js"></script>
 </head>
-<body class="container-fluid" id="box">
-<header>  
+<body class="container-fluid" id="boxs"> 
 	<div class="header" id="intestazione" >
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between " >						
 			<ul class="navbar-nav mr-auto" id="links">
@@ -34,7 +33,7 @@
 					<div class="dropdown-menu">
 						<a class="dropdown-item" id="rp">Richiedi Passaporto</a>
 						<a class="dropdown-item" id="dm">Prenota Tampone</a>
-						<a class="dropdown-item" id="reg" onclick="Rgst();"> Registrati </a>
+						<a class="dropdown-item" name="rg" id="rg" onclick="Rgst();" >Registrati</a>
 					</div>
 				</li>
 			</ul>
@@ -45,7 +44,7 @@
 			</ul> 
 		</nav>
 	</div>		
-</header>
+
 
 	<div class="container-fluid" id="home">
 		<div id="demo" class="carousel slide" data-ride="carousel">
