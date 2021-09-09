@@ -1,6 +1,7 @@
 <?php
 require_once 'View/VUtente.php';
 require_once 'View/Vhome.php';
+require_once 'View/VRegistrazione.php';
 require_once 'Foundation/Gestione/Gpreleva.php';
 require_once 'Clogin.php';
 class Chome
@@ -8,15 +9,17 @@ class Chome
 
     public function imp()
     {
-        $vh= Gpreleva::getIstanza('Vhome');     
+        $vh= Gpreleva::getIstanza('Vhome'); 
+        $vr= Gpreleva::getIstanza('VRegistrazione');    
         $ur= Gpreleva::getIstanza('Clogin'); 
         $vl= Gpreleva::getIstanza('VUtente');       
         if((strcmp($vl->getUser(),"") == 0) && (strcmp($vl->getPwd(),"") == 0))
         {
-            $vl->caricaindex();
+            $vh->caricaindex();
             if($vh->Registrazione())
-            {                   
+            {    
                 $ur->InsUtente();
+                          
             }
             
         }    
@@ -34,7 +37,11 @@ class Chome
                 $this->Prenotazione($arr->get_id());
                   
             }
-            $this->Logout('username');
+            if($vl->TastoLogout())
+            {
+                $this->Logout('username');
+            }
+            
  
         }
     }
@@ -71,7 +78,7 @@ class Chome
     {
         $vl= Gpreleva::getIstanza('VUtente');
         $ur= Gpreleva::getIstanza('Clogin');    
-        if(!$vl->Logout())
+        if($vl->Logout())
         {
             $ur->getSessione()->UnsetSessione($c);
         }
