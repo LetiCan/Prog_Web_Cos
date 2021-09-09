@@ -43,7 +43,7 @@ class Clogin
         $a=$Fu->UtentiReg();
         $dreg=$vu->DatiReg();
         $conta=0;      
-        if($dreg !== null )
+        if($dreg !== null)
         {
             if(isset($a))
             {
