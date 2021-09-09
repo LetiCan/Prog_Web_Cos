@@ -7,8 +7,8 @@ function Rgst()
     });
     });*/
     $(document).ready(function(){
-	$("#reg").click(function(){
-	$("#box").load("tmpl/templates/Registrazione.tpl #rg");
+	$("#rg").click(function(){
+	$("#home").load("tmpl/templates/Registrazione.tpl #box");
 	});
 	});
    /* $(document).ready(function(){
@@ -25,6 +25,32 @@ function fun1()
 	$("#content").load("tmpl/templates/StoricoPrenotazioni.tpl #storicopre");
 	});
 	});
+    $(document).ready(function(){
+        $("#pren").click(function(){
+            $("#content").load("tmpl/templates/Prenotazione.tpl #pre");
+        });
+    });
+
+}
+function checkPrenotazione()
+{
+    if( document.getElementById("prov").value === "" )
+    {
+        alert("Impossibile inviare i dati");
+        return false;
+    }
+    
+    if( document.getElementById("lab").value === "" )
+    {
+        alert(" Impossibile inviare i dati");
+        return false;
+    }
+    if( document.getElementById("datapre").value === "" )
+    {
+        alert(" Impossibile inviare i dati");
+        return false;
+    }
+    return true;
 
 }
 
