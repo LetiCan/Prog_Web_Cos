@@ -1,13 +1,16 @@
- <?php 
-require_once 'Foundation/Gestione/Gpreleva.php';
-require_once 'Controllo/Chome.php';
-$cix = Gpreleva::getIstanza('Chome');
-$cix->imp();
-/* $v=new View();
- $v->caricaindex('index.tpl');
- <?php include 'filehtml\header.html'?>
-    <br><br>
-    <?php include 'filehtml\home.html'?>
-    <br><br>
-    <?php include 'filehtml\footer.html'?>	
- */
+<?php 
+ require_once 'View/VUtente.php';
+ require_once 'View/Vhome.php';
+ require_once 'View/VRegistrazione.php';
+ require_once 'Foundation/Gestione/Gpreleva.php';
+ require_once 'Controllo/Clogin.php';
+ require_once 'Foundation/Gestione/Gsessione.php';
+ require_once 'Controllo/Chome.php';
+ $ses = Gpreleva::getIstanza('Gsessione');
+ $cix = Gpreleva::getIstanza('Chome');
+ $cix->imp();
+ $vl= Gpreleva::getIstanza('VUtente');
+ $ur= Gpreleva::getIstanza('Clogin'); 
+ 
+  
+?>
