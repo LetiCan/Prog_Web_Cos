@@ -62,7 +62,7 @@ class Fconndb
 
         }
         $utente =new Utente($id,$user,$pws,$nome,$cognome,$dtn,$ln,$s,$cf,$tp,$std1,$std2);
-       // $sdb->connclose();
+        $sdb=$this->connessione();
         return $utente;
     }
 
