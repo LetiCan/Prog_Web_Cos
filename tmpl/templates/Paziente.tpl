@@ -81,7 +81,7 @@
 
 <br>
 
-<form method="POST" action="index.php" id="formLog">
+<form method="POST" action=" " id="formLog">
     <input class="btn btn-link" type="submit" name="lgo" value="Logout" ></input>
 <form>
 </body>
