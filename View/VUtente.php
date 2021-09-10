@@ -25,9 +25,9 @@ class VUtente extends View
 
     public function getPrenotazione()
     {
-        if(isset($_POST['datapre'],$_POST['prov'],$_POST['tamp'],$_POST['lab']))
+        if(isset($_POST['datapre'],$_POST['prov'],$_POST['tamp'],$_POST['lab'],$_POST['id']))
         {
-           $dtp=array('datapre'=>$_POST['datapre'],'prov'=>$_POST['prov'],'tamp'=>$_POST['tamp'],'lab'=>$_POST['lab']);
+           $dtp=array('datapre'=>$_POST['datapre'],'prov'=>$_POST['prov'],'tamp'=>$_POST['tamp'],'lab'=>$_POST['lab'],'id_utente'=>$_POST['id']);
         }
         return $dtp;
     }
@@ -42,11 +42,11 @@ class VUtente extends View
       return false;
     }
 
-    public function Pre()
+    public function TastoInvia()
     { 
-        if(isset($_POST['invia']))
+        if(isset($_POST['Invia']))
         {
-            return $_POST['invia'];
+            return $_POST['Invia'];
         }
         return false;
     }
