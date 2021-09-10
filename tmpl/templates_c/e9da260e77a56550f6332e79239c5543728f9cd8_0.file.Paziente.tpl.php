@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-09 09:06:55
+/* Smarty version 3.1.39, created on 2021-09-10 12:37:11
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6139b28f68cc71_92482384',
+  'unifunc' => 'content_613b3557e546e4_80736194',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1631171209,
+      1 => 1631269910,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6139b28f68cc71_92482384 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613b3557e546e4_80736194 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -117,7 +117,7 @@ function content_6139b28f68cc71_92482384 (Smarty_Internal_Template $_smarty_tpl)
 
 <br>
 
-<form method="POST" action="index.php" id="formLog">
+<form method="POST" action=" " id="formLog">
     <input class="btn btn-link" type="submit" name="lgo" value="Logout" ></input>
 <form>
 </body><?php }
