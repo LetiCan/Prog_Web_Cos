@@ -6,34 +6,39 @@ require_once 'Foundation/FPrenotazione.php';
 require_once 'Foundation/Fconndb.php';
 require_once 'View/VUtente.php';
 require_once 'View/Vhome.php';
-class Clogin
+class Clogin 
 {
     private $username;
     private $password;
+    private $utenteA;
     private $messaggio;
     private $sessione;
     
-    public function autenticazione($u,$p)
+    public function autenticazione($us,$p)
     {
         $Fu = new Futente();
-        $u=$Fu->preleva_user($u,$p);             
-        if(isset($u))
+        $this->utenteA=$Fu->preleva_user($us,$p);             
+        if(isset( $this->utenteA))
         {    
             $this->sessione = Gpreleva::getIstanza('Gsessione');     
-            $this->sessione->impSessione("username",$u->get_username()); 
-            if($this->sessione->VerificaSessione("username") !== false)
+            $this->sessione->impSessione($us,$this->utenteA->get_username()); 
+            if($this->sessione->VerificaSessione($us) !== false)
             {
                 
-                return $u;
+                return  $this->utenteA;
             }
             
         }
         else
         {
-            $this->messaggio= 'credenziali sbagliate';
-            return $this->messaggio; 
+            echo 'credenziali incorrette';
         }
         
+    }
+
+    public function get_ute()
+    {
+        return $this->utenteA;
     }
 
     public function InsUtente()
@@ -69,22 +74,31 @@ class Clogin
         }
     }
 
-    public function InviaPrenotazione($idut)
+    public function InviaPrenotazione()
     {
-        $vu=Gpreleva::getIstanza('VUtente');
-        $Fp = new FPrenotazione();
-        $temp=$vu->getPrenotazione();
-        $datip=array('prov'=>$temp['prov'],'tamp'=>$temp['tamp'],'lab'=>$temp['lab'],'datapre'=>$temp['datapre'],'id_utente'=>$idut);
-        if(isset($datip))
+        $vh=Gpreleva::getIstanza('Vhome'); 
+        $Fp = new FPrenotazione();             
+        $t=$this->RiepilogoPre(); 
+        if(isset($t))
         {
+            $datip=array('prov'=>$t['prov'],'tamp'=>$t['tamp'],'lab'=>$t['lab'],'datapre'=>$t['datapre'],'id_utente'=>$t['id_utente']);
             $Fp->DatiPrenotazione($datip);
             echo 'Prenotazione riuscita';
         }
         else
         {
             echo 'Prenotazione fallita';
-        }
+        } 
     }
+
+    public function RiepilogoPre()
+    {
+        $vu=Gpreleva::getIstanza('VUtente');
+        $temp=$vu->getPrenotazione(); 
+        return $temp;
+
+    }
+
 
     public function StoricoPaz()
     {
