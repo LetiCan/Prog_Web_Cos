@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-09 08:51:44
+/* Smarty version 3.1.39, created on 2021-09-10 09:51:12
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6139af0063af74_84112243',
+  'unifunc' => 'content_613b0e7017ac27_18757262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1631170298,
+      1 => 1631260207,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6139af0063af74_84112243 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613b0e7017ac27_18757262 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +70,7 @@ function content_6139af0063af74_84112243 (Smarty_Internal_Template $_smarty_tpl)
 			</ul>
 			<ul class="navbar-nav ">
 				<li class="nav-item ">							
-					<a class="nav-link" onclick="document.getElementById('log').style.display='block'"> Login </a>							
+					<a class="nav-link" data-toggle="modal" data-target="#log"> Login </a>							
 				</li>
 			</ul> 
 		</nav>
@@ -122,18 +122,20 @@ function content_6139af0063af74_84112243 (Smarty_Internal_Template $_smarty_tpl)
 			</p>
 		</div>
 		<div class="modal" id="log">						
-			<form method="POST" class="modal-content" action="index.php">
-				<div class="container">
-					<label for="username"><b>Username</b></label><br>
-					<input type="text" placeholder="Username" id="user" name="user" value="" ><br>
+			<div class="modal-dialog modal-dialog-centered modal-sm">	
+				<form method="POST"  class="modal-content" action="index.php">
+					<div class="container">
+						<label for="username"><b>Username</b></label><br>
+						<input type="text" placeholder="Username" id="user" name="user" value="" ><br>
 
-					<label for="password"><b>Password</b></label><br>
-					<input type="password" placeholder="Password"  id="psw" name="psw" value="">
-					<br>
+						<label for="password"><b>Password</b></label><br>
+						<input type="password" placeholder="Password"  id="psw" name="psw" value="">
+						<br>
 
-					<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
-				</div>		
-			</form>
+						<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
+					</div>
+				</form>		
+			</div>
 		</div>  		
 		<br><br>
 		 <div  class="collapse" id="contact">
@@ -162,20 +164,6 @@ function content_6139af0063af74_84112243 (Smarty_Internal_Template $_smarty_tpl)
 			</div>
 	</div>   
 </body>
-	<?php echo '<script'; ?>
->
-		// Get the modal
-		var modal = document.getElementById('log');
-
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	<?php echo '</script'; ?>
->
-
 </html>
  
 <?php }
