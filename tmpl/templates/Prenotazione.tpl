@@ -23,8 +23,10 @@
                      e Salivare”
     </p>
     <br>	
-    <form method="POST" action="index.php" id="formPre" onsubmit="checkPrenotazione()">
+    <form method="POST" action="index.php" onsubmit="checkPrenotazione()">
         <div class="container" bgcolor="#B0E0E6">
+        <label > ID Utente: </label>
+        <input type="number" name="id" id="id"></input>
             <label for="prov"> Povincia: </label>
             <select name="prov" id="prov" onchange="aggiornaOpzioni()">
                 <option value="Pescara"> Pescara </option>
@@ -47,7 +49,7 @@
             <label for="datapre" >Data prenotazione:</label>
             <input type="date" name="datapre" id="datapre"></input>
             <br>
-            <input type="submit" name="invia" value="Invia"></input>
+            <input type="submit" class="btn btn-success" name="Invia" value="Invia"></input>
         </div>   
     </form>
 </div>
