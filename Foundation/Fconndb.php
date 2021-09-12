@@ -1,5 +1,6 @@
 <?php
 require_once 'classi/Utente.php';
+require_once 'Classi/Bacheca.php';
 class Fconndb
 {
     private $db;
@@ -130,6 +131,29 @@ class Fconndb
         $this->query_result->execute();
         $sdb=$this->connclose();
 
+    }
+
+    public function preleva_avv()						//ELENCO AVVISI CON DATA
+    {
+        $sdb=$this->connessione();
+        $i=0;
+        $q=" SELECT * FROM ". $this->tabella ;
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->execute();
+        //$row=$this->qresult->fetchAll();
+        while($row=$this->query_result->fetch())
+        {
+            $id_avviso=$row['id_avviso'];
+            $dpb=$row['data_pubblicazione'];
+            $desc=$row['descrizione'];
+            $fku=$row['fk_utente'];
+            $avviso=new Bacheca($id_avviso,$dpb,$desc,$fku);
+            $array_av[$i]=$avviso;
+            $i++;
+
+        }
+        $sdb=$this->connclose();
+        return $array_av;
     }
 
 
@@ -288,26 +312,7 @@ class Fconndb
         return $array_green;
 	}	
 	
-	public function preleva_avv($dpb)						//ELENCO AVVISI CON DATA
-    {
-        $sdb=$this->connessione();
-        $q=" SELECT * FROM ". $this->tabella." WHERE data_pubblicazione=':dpb'";
-        $this->query_result=$sdb->prepare($q);
-        $this->query_result->bindParam(':dpb',$d);
-        $this->query_result->execute();
-        //$row=$this->qresult->fetchAll();
-        while($row=$this->query_result->fetch())
-        {
-            $id_avviso=$row['id_avvisoa'];
-            $dpb=$row['data_pubblicazione'];
-            $desc=$row['descrizione'];
-            $fku=$row['fk_utente'];
-
-        }
-        $avviso=new Avviso($id_avviso,$dpb,$desc,$fku);
-       // $sdb->connclose();
-        return $avviso;
-    }
+	
     */
 }
    
