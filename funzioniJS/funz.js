@@ -18,6 +18,16 @@ function Rgst()
 	});  */
 }
 
+function bacheca()
+{
+    $(document).ready(function(){
+    $("#bac").click(function(){
+    $("#amm").load("tmpl/templates/Bacheca.tpl #bacheca");
+    });
+    });
+
+}
+
 function fun1()
 {
 	$(document).ready(function(){
