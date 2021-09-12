@@ -13,13 +13,15 @@
  */
 class Bacheca 
 {
+    private $id_avv;
     private $data_pubblicazione;
     private $descrizione;
     private $utente;
     
-    public function __construct($ds,$ut) 
+    public function __construct($ida,$dp,$ds,$ut) 
     {
-        $this->data_pubblicazione=date('D-M-Y');
+        $this->id_avv=$ida;
+        $this->data_pubblicazione=$dp;
         $this->utente=$ut;
         $this->descrizione=$ds;
     }
@@ -37,6 +39,11 @@ class Bacheca
     public function get_utente()
     {
         return $this->utente;
+    }
+
+    public function get_ida()
+    {
+        return $this->id_avv;
     }
     
     public function set_datapbb()
