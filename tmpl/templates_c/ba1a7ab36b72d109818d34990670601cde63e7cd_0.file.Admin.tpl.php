@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-31 18:19:01
+/* Smarty version 3.1.39, created on 2021-09-12 15:37:58
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612e56750970c5_22076459',
+  'unifunc' => 'content_613e02b6aa3195_78699625',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba1a7ab36b72d109818d34990670601cde63e7cd' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Admin.tpl',
-      1 => 1630421710,
+      1 => 1631453871,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612e56750970c5_22076459 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613e02b6aa3195_78699625 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -37,6 +37,9 @@ function content_612e56750970c5_22076459 (Smarty_Internal_Template $_smarty_tpl)
 >
   <?php echo '<script'; ?>
  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="funzioniJs/funz.js"><?php echo '</script'; ?>
 >
 </head>
 
@@ -93,10 +96,11 @@ $_smarty_tpl->tpl_vars['a'] = $__foreach_a_0_saved;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	</table>
 
+	<button id="bac"  class="btn btn-primary" onclick="bacheca()">Bacheca</button>
+
 	<form method="POST" action="index.php">
 		<input type="submit" name="lgo" value="Logout"></input>
 	</form>
-	
 </div>
 
 
