@@ -3,6 +3,7 @@ require_once 'Foundation/Gestione/Gpreleva.php';
 require_once 'Foundation/Gestione/Gsessione.php';
 require_once 'Foundation/Futente.php';
 require_once 'Foundation/FPrenotazione.php';
+require_once 'Foundation/FBacheca.php';
 require_once 'Foundation/Fconndb.php';
 require_once 'View/VUtente.php';
 require_once 'View/Vhome.php';
@@ -105,6 +106,18 @@ class Clogin
         $Fu= new Futente();
         $a=$Fu->UtentiReg();
         return $a;
+    }
+
+    public function AvvisiBacheca()
+    {
+        $Fb = new FBacheca();
+        $bacheca = $Fb->preleva_avv();
+        for($i=0;$i<sizeof($bacheca);$i++)
+        {
+            $infoA[$i]=array('data'=>$bacheca[$i]->get_datapubb(),
+                    'ann'=>$bacheca[$i]->get_desc());
+        }
+        return $infoA;
     }
 
     public function getSessione()
