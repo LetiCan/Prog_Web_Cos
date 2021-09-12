@@ -69,13 +69,46 @@
 				</div>
 			</div>
 
-			<!-- Left and right controls -->
+			<!-- Left and "right" controls -->
 			<a class="carousel-control-prev" href="#demo" data-slide="prev">
 				<span class="carousel-control-prev-icon"></span>
 			</a>
 			<a class="carousel-control-next" href="#demo" data-slide="next">
 				<span class="carousel-control-next-icon"></span>
 			</a>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-9">
+				<p ><h2><b>Centro Operativo Sanitario</b></h2></p>
+				<p >Centro per richieste di tamponi e Green Pass</p>
+			</div>
+			<div class="col-sm-3">
+					<p id="orari">
+						<h3>Orari</h3>
+						<h5><i>Tamponi</h5></i>
+						Lunedi- Sabato 7:30-11:00<br>
+						<h5><i>Ritiro Passaporti</h5></i>
+						Lunedi-Venerdi 11:00-13:00, 17:00-18:00<br>
+						Sabato: 11:00-13:00		
+					</p>
+			</div>
+		</div>
+		<div class="container-fluid" id="avvisi" >
+			<table border cols=2 width='100%'>
+			{foreach $avv as $a }
+				{if $a@first}
+				<tr>
+					<td> DATA </td>
+					<td> ANNUNCIO</td>
+				</tr>
+				{/if}
+				<tr>
+					<td>{$a.data}</td>
+					<td>{$a.ann}</td>
+				</tr>
+			{/foreach}
+			</table>	
 		</div>
 		<div class="collapse" id="chisiamo">
 			<h2><p align= center><br><br>Centro Operativo Sanitario</p></h2>
