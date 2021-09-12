@@ -2,6 +2,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  </head>
+ <!--
  <style>
   a{color: white;}
  input[type=text], input[type=password] {
@@ -44,50 +45,52 @@
 {
 	float:right;
 }  </style>
-<div id="header">
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
-		<a class="navbar-brand" href="#">Logo</a>
-		<a class="nav-link" href="#">{$username}</a>
-	</nav>
-</div>
-
-<div  class="container-fluid" id="amm">
-  
-	<br><br>
-	<tr>
-	<td><button id="annuncio" type="button" class="nav-link" onclick="document.getElementById('log').style.display='block'">Scrivi nuovo annuncio</button></td>
-	</tr>
-<center><table border cols=3 width='100%'>
-	<tr>
-	<td> DATA </td>
-	<td> OGGETTO </td>
-	<td> ANNUNCIO</td>
-	</tr>
-	<tr>
-	<td>Valore1</td>
-	<td>Valore2</td>
-	<td>Valore3</td>
-	</tr>
-</div>
-
-	<div class="modal" id="log">						
-			<form method="POST" class="modal-content">
-				<div class="container">
-				
-					<label for="data"><b>DATA</b></label>
-					<input type="date" placeholder="data" id="data" name="data" >
-					<br><br>
-					<label for="oggetto"><b>OGGETTO</b></label>
-					<input type="tex" placeholder="Oggetto"  id="ogg" name="ogg" >
-					<br><br>
-					<label for="annuncio"><b>ANNUNCIO</b></label>
-					<br><br>
-					<textarea rows="4" cols="50"></textarea>
-					<br><br>
-				</div>		
-			</form>
+<div class="container-fluid" id="avvisi" >
+	<table border cols=3 width='100%'>
+	{foreach $avv as $a }
+		{if $a@first}
+		<tr>
+			<td> DATA </td>
+			<td> ANNUNCIO</td>
+		</tr>
+		{/if}
+		<tr>
+			<td>{$a.data}</td>
+			<td>{$a.ann}</td>
+		</tr>
+	{/foreach}
+	</table>	
+</div>		
+-->
+<div class="container" id="bacheca">
+	<div id="header">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
+			<a class="navbar-brand" href="#">Logo</a>
+			<a class="nav-link" href="#">{$username}</a>
+		</nav>
+	</div> 
+	<div class="container-fluid" id="avvisi" >
+		<button id="annuncio" type="button" class="nav-link" onclick="document.getElementById('log').style.display='block'">Scrivi nuovo annuncio</button>
 	</div>
-			
+	<div class="modal" id="log">						
+				<form method="POST" class="modal-content">
+					<div class="container">
+					
+						<label for="data"><b>DATA</b></label>
+						<input type="date" placeholder="data" id="data" name="data" >
+						<br><br>
+						<label for="oggetto"><b>OGGETTO</b></label>
+						<input type="tex" placeholder="Oggetto"  id="ogg" name="ogg" >
+						<br><br>
+						<label for="annuncio"><b>ANNUNCIO</b></label>
+						<br><br>
+						<textarea rows="4" cols="50"></textarea>
+						<br><br>
+					</div>		
+				</form>
+	</div>
+</div>
+
 	<script>
 		// Get the modal
 		var modal = document.getElementById('log');
