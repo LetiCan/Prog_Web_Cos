@@ -19,7 +19,12 @@
   background-color: #ddd;
   color: black;
 }
-*/
+
+a{color: white;}*/
+#orari{
+  float:inline-end;
+  color:#1aa1f4;
+}
 #freg{
   margin-left: 500px;
 }
