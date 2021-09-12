@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-10 09:51:12
+/* Smarty version 3.1.39, created on 2021-09-12 16:18:55
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613b0e7017ac27_18757262',
+  'unifunc' => 'content_613e0c4fc25c15_18900636',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1631260207,
+      1 => 1631456332,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613b0e7017ac27_18757262 (Smarty_Internal_Template $_smarty_tpl) {
+function content_613e0c4fc25c15_18900636 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -100,13 +100,60 @@ function content_613b0e7017ac27_18757262 (Smarty_Internal_Template $_smarty_tpl)
 				</div>
 			</div>
 
-			<!-- Left and right controls -->
+			<!-- Left and "right" controls -->
 			<a class="carousel-control-prev" href="#demo" data-slide="prev">
 				<span class="carousel-control-prev-icon"></span>
 			</a>
 			<a class="carousel-control-next" href="#demo" data-slide="next">
 				<span class="carousel-control-next-icon"></span>
 			</a>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-9">
+				<p ><h2><b>Centro Operativo Sanitario</b></h2></p>
+				<p >Centro per richieste di tamponi e Green Pass</p>
+			</div>
+			<div class="col-sm-3">
+					<p id="orari">
+						<h3>Orari</h3>
+						<h5><i>Tamponi</h5></i>
+						Lunedi- Sabato 7:30-11:00<br>
+						<h5><i>Ritiro Passaporti</h5></i>
+						Lunedi-Venerdi 11:00-13:00, 17:00-18:00<br>
+						Sabato: 11:00-13:00		
+					</p>
+			</div>
+		</div>
+		<div class="container-fluid" id="avvisi" >
+			<table border cols=2 width='100%'>
+			<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['avv']->value, 'a');
+$_smarty_tpl->tpl_vars['a']->index = -1;
+$_smarty_tpl->tpl_vars['a']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['a']->value) {
+$_smarty_tpl->tpl_vars['a']->do_else = false;
+$_smarty_tpl->tpl_vars['a']->index++;
+$_smarty_tpl->tpl_vars['a']->first = !$_smarty_tpl->tpl_vars['a']->index;
+$__foreach_a_0_saved = $_smarty_tpl->tpl_vars['a'];
+?>
+				<?php if ($_smarty_tpl->tpl_vars['a']->first) {?>
+				<tr>
+					<td> DATA </td>
+					<td> ANNUNCIO</td>
+				</tr>
+				<?php }?>
+				<tr>
+					<td><?php echo $_smarty_tpl->tpl_vars['a']->value['data'];?>
+</td>
+					<td><?php echo $_smarty_tpl->tpl_vars['a']->value['ann'];?>
+</td>
+				</tr>
+			<?php
+$_smarty_tpl->tpl_vars['a'] = $__foreach_a_0_saved;
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+			</table>	
 		</div>
 		<div class="collapse" id="chisiamo">
 			<h2><p align= center><br><br>Centro Operativo Sanitario</p></h2>
