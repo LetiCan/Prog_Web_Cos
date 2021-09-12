@@ -39,7 +39,7 @@ class Chome
         $vl= Gpreleva::getIstanza('VUtente');
         if((strcmp($vl->getUser(),"") == 0) && (strcmp($vl->getPwd(),"") == 0))
         {
-            $vh->caricaindex();     
+            $vh->caricaTemplate('avv',$ur->AvvisiBacheca(),'index.tpl');     
             if($vh->Registrazione())
             {    
                 $ur->InsUtente();                         
