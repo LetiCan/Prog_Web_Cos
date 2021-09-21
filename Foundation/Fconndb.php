@@ -46,7 +46,7 @@ class Fconndb
         $this->query_result->bindParam(':ps',$p);
         $this->query_result->execute();
         //$row=$this->qresult->fetchAll();
-         while($row=$this->query_result->fetch())
+        while($row=$this->query_result->fetch())
         {
             $id=$row['id_utente'];
             $user=$row['username'];
@@ -156,6 +156,42 @@ class Fconndb
         return $array_av;
     }
 
+    public function carica_dosi($dose)					//MODIFICA VACCINI
+	{
+		$sdb=$this->connessione();
+        $q1="SELECT std1,std2 FROM ".$this->tabella." WHERE id_utente=:id";
+        $this->query_result=$sdb->prepare($q1);
+        $this->query_result->bindParam(':id',$dose['id']);	
+        $this->query_result->execute();
+        while($row=$this->query_result->fetch())
+        {
+            $std1=$row['std1'];
+            $std2=$row['std2'];
+            $vacc=array($std1,$std2);
+        }
+        if(!isset($vacc[0]) || !isset($vacc[1]))  
+        {
+            if((strcmp($dose['std1'],'no') == 0 ) || (strcmp($dose['std1'],'si') == 0 ))
+            {
+                $q= "UPDATE ".$this->tabella." SET std1 = :d1"." WHERE id_utente = :idu";
+                $this->query_result=$sdb->prepare($q);
+                $this->query_result->bindParam(':d1',$dose['std1']);		
+                $this->query_result->bindParam(':idu',$dose['id']);
+                $this->query_result->execute();
+            }
+            elseif((strcmp($dose['std2'],'no') == 0 ) || (strcmp($dose['std2'],'si') == 0 ))
+            {
+                $q= "UPDATE ".$this->tabella." SET std2=:d2"." WHERE id_utente=:idu";
+                $this->query_result=$sdb->prepare($q);
+                $this->query_result->bindParam(':d2',$dose['std2']);
+                $this->query_result->bindParam(':idu',$dose['id']);
+                $this->query_result->execute();
+            }
+
+        }        
+		$sdb=$this->connclose();
+	}
+
 
     public function connclose() 
     {
@@ -225,28 +261,7 @@ class Fconndb
 		$sdb->connclose();
 	}
 	
-	public function modifica_dosi($id, $vacc,$num)					//MODIFICA VACCINI
-	{
-		$sdb=$this->connessione();
-		$n=$num;
-		if($n=="1")
-		{
-			$q= "UPDATE utente SET ':std1'=$vacc ".this->tabella."WHERE id_utente=:id";
-			$this->query_result=$sdb->prepare($q);
-			$this->query_result->bindParam(':id',$id);
-			$this->query_result->execute();
-			$sdb->connclose();
-		}
-		else
-		{
-			$q= "UPDATE utente SET ':std2' ".this->tabella."WHERE id_utente=:id";
-			$this->query_result=$sdb->prepare($q);
-			$this->query_result->bindParam(':id',$id);
-			$this->query_result->execute();
-			$sdb->connclose();
-		}
-		
-	}
+	
 	
 	public function modifica_avv($dpb,$fku,$desc)					//MODIFICA AVVISO
 	{
@@ -311,8 +326,7 @@ class Fconndb
 		$sdb->connclose();
         return $array_green;
 	}	
-	
-	
+
     */
 }
    
