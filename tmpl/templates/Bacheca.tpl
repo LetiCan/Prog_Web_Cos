@@ -60,34 +60,38 @@
 		</tr>
 	{/foreach}
 	</table>	
-</div>		
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
+	<a class="navbar-brand" href="#">Logo</a>
+	<a class="nav-link" href="#">{$username}</a>
+</nav>		
 -->
-<div class="container" id="bacheca">
-	<div id="header">
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
-			<a class="navbar-brand" href="#">Logo</a>
-			<a class="nav-link" href="#">{$username}</a>
-		</nav>
-	</div> 
-	<div class="container-fluid" id="avvisi" >
-		<button id="annuncio" type="button" class="nav-link" onclick="document.getElementById('log').style.display='block'">Scrivi nuovo annuncio</button>
+<div class="container-fluid" id="avvisi" >
+		<div class="row">
+			<div class="col-sm-12">
+				<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center fixed-top" >
+					<a class="navbar-brand" href="#">Logo</a>
+					<a class="nav-link" href="#">{$username}</a>
+				</nav>
+				<button id="annuncio" type="button" class="nav-link" onclick="document.getElementById('log').style.display='block'">Scrivi nuovo annuncio</button>
+			</div>
+		</div>
 	</div>
 	<div class="modal" id="log">						
-				<form method="POST" class="modal-content">
-					<div class="container">
-					
-						<label for="data"><b>DATA</b></label>
-						<input type="date" placeholder="data" id="data" name="data" >
-						<br><br>
-						<label for="oggetto"><b>OGGETTO</b></label>
-						<input type="tex" placeholder="Oggetto"  id="ogg" name="ogg" >
-						<br><br>
-						<label for="annuncio"><b>ANNUNCIO</b></label>
-						<br><br>
-						<textarea rows="4" cols="50"></textarea>
-						<br><br>
-					</div>		
-				</form>
+		<form method="POST" class="modal-content">
+			<div class="container">					
+				<label for="data"><b>DATA</b></label>
+				<input type="date" placeholder="data" id="data" name="data" >
+				<br><br>
+				<label for="oggetto"><b>OGGETTO</b></label>
+				<input type="tex" placeholder="Oggetto"  id="ogg" name="ogg" >
+				<br><br>
+				<label for="annuncio"><b>ANNUNCIO</b></label>
+				<br><br>
+				<textarea rows="4" cols="50"></textarea>
+				<br><br>
+			</div>		
+		</form>
 	</div>
 </div>
 
