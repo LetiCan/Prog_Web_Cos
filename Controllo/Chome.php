@@ -6,56 +6,45 @@ require_once 'Foundation/Gestione/Gpreleva.php';
 require_once 'Clogin.php';
 class Chome
 {
-    public function imp1()
-    {
-        $vh= Gpreleva::getIstanza('Vhome'); 
-        $vr= Gpreleva::getIstanza('VRegistrazione');    
-        $ur= Gpreleva::getIstanza('Clogin'); 
-        $vl= Gpreleva::getIstanza('VUtente');  
-        $arr=$ur->autenticazione($vl->getUser(),$vl->getPwd());     
-        if(isset($arr))
-        {
-            if($arr->get_tipo() == 1)
-            { 
-                $vl->caricaTemplate('info',$this->infop(),'Admin.tpl'); 
-                
-            }
-            else
-            {
-                $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf(),'id'=>$arr->get_id());
-                $vl->caricaTemplate('P',$dati,'Paziente.tpl');                                                           
-            }            
-        }
-        else{
-
-        }
-    }
-
     public function imp()
     {
         $vh= Gpreleva::getIstanza('Vhome'); 
         //$vr= Gpreleva::getIstanza('VRegistrazione');    
         $ur= Gpreleva::getIstanza('Clogin'); 
-        $vl= Gpreleva::getIstanza('VUtente');
-        if((strcmp($vl->getUser(),"") == 0) && (strcmp($vl->getPwd(),"") == 0))
+        $vl= Gpreleva::getIstanza('VUtente');       
+        switch($vl->Submit())
         {
-            $vh->caricaTemplate('avv',$ur->AvvisiBacheca(),'index.tpl');     
-            if($vh->Registrazione())
-            {    
-                $ur->InsUtente();                         
-            }
-            
+            case 'Accedi':
+                $arr=$ur->autenticazione($vl->getUser(),$vl->getPwd());  
+                if(isset($arr))
+                {
+                    if($arr->get_tipo() == 1)
+                    { 
+                        $vl->caricaTemplate('info',$this->infop(),'Admin.tpl'); 
+                    }
+                    else
+                    {
+                        $dati=array('username'=>$arr->get_username(),'nome'=>$arr->get_nome(),'cognome'=>$arr->get_cognome(),'cod_fisc'=>$arr->get_cdf(),'id'=>$arr->get_id());
+                        $vl->caricaTemplate('P',$dati,'Paziente.tpl'); 
+                    }                              
+                }
+                break;
+            case 'Invia':
+                $ur->InviaPrenotazione();
+                break;
+            case 'carica':
+                $ur->caricaDosi();
+                break;
+            case 'Registrati':
+                $ur->InsUtente();
+                break; 
+            case 'Logout':
+                $this->Logout($vl->getUser());
+                break;
+            default :
+                $vh->caricaTemplate('avv',$ur->AvvisiBacheca(),'index.tpl');
+                break;
         }
-        
-        if($vh->Login())
-        {
-            $this->imp1();
-        }
-
-        if($vl->TastoInvia())
-        {
-            $ur->InviaPrenotazione();
-        }  
            
     }
 
@@ -80,14 +69,8 @@ class Chome
     {
         $vl= Gpreleva::getIstanza('VUtente');
         $ur= Gpreleva::getIstanza('Clogin');  
-        if($vl->Logout())
-        {
-            $ur->getSessione()->UnsetSessione($c);
-           echo $$ur->getSessione(); 
-        }
-        else{
-            echo 'gneeeee';
-        }         
+        $ur->getSessione($c);
+        header('Location:index.php');         
     }
 
   /*  public function smista() {
