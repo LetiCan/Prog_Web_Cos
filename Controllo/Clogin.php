@@ -24,8 +24,7 @@ class Clogin
             $this->sessione = Gpreleva::getIstanza('Gsessione');     
             $this->sessione->impSessione($us,$this->utenteA->get_username()); 
             if($this->sessione->VerificaSessione($us) !== false)
-            {
-                
+            {              
                 return  $this->utenteA;
             }
             
@@ -37,9 +36,21 @@ class Clogin
         
     }
 
-    public function get_ute()
+    public function caricaDosi()
     {
-        return $this->utenteA;
+        $vu=Gpreleva::getIstanza('VUtente');
+        $Fu= new Futente();
+        $ds=$vu->getDose();
+        if($ds !== null)
+        {
+            $Fu->carica_dosi($ds);
+            echo 'ok';
+        
+        }
+        else{
+            echo 'nessun input ricevuto';
+        }
+
     }
 
     public function InsUtente()
@@ -120,9 +131,24 @@ class Clogin
         return $infoA;
     }
 
-    public function getSessione()
+    public function getSessione($c)
     {
-        return $this->sessione;
+       if(isset($this->sessione))
+       {
+           $this->sessione->UnsetSessione($c);
+       }
+       else{
+           echo 'nessuna sessione in corso';
+       }
     }
+    
+    public function get_ute($u,$p)
+    {
+        $Fu= new Futente();
+        $utente=$Fu->preleva_user($u,$p);
+        return $utente;
+    }
+
+
 }
 ?>
