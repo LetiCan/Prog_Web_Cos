@@ -134,7 +134,7 @@
 						<input type="password" placeholder="Password"  id="psw" name="psw" value="">
 						<br>
 
-						<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
+						<input type="submit" name="submit" value="Accedi" onclick="checkLogin();"></input>
 					</div>
 				</form>		
 			</div>
