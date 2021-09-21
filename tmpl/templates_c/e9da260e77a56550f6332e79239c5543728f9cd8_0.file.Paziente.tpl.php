@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-10 12:37:11
+/* Smarty version 3.1.39, created on 2021-09-21 09:59:45
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613b3557e546e4_80736194',
+  'unifunc' => 'content_614990f19c71f3_48189320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1631269910,
+      1 => 1632211131,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613b3557e546e4_80736194 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614990f19c71f3_48189320 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
   <link href="stilepagine/stile1.css" rel="stylesheet" type="text/css">
-  <link href="stilepagine/stile_header.css" rel="stylesheet" type="text/css">
-  <link href="stilepagine/stile_footer.css" rel="stylesheet" type="text/css">
+  <!--<link href="stilepagine/stile_header.css" rel="stylesheet" type="text/css">
+  <link href="stilepagine/stile_footer.css" rel="stylesheet" type="text/css">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <?php echo '<script'; ?>
@@ -62,7 +62,7 @@ function content_613b3557e546e4_80736194 (Smarty_Internal_Template $_smarty_tpl)
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
 	<td><button id="pren"  class="btn btn-primary"  onclick="fun1()">Prenotazione Tampone</button></td>
 	<td><button id="pass"  class="btn btn-primary" onclick="">Richiesta Passaporto</button></td>
-    <td><button id="dosi"  class="btn btn-primary" onclick="">Caricamento dosi</button></td>
+    <td><button id="dosi"  class="btn btn-primary" data-toggle="modal" data-target="#formLog">Caricamento dosi</button></td>
 	</tr>
 	</table>
  
@@ -116,9 +116,35 @@ function content_613b3557e546e4_80736194 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 
 <br>
-
-<form method="POST" action=" " id="formLog">
-    <input class="btn btn-link" type="submit" name="lgo" value="Logout" ></input>
-<form>
+<div class="modal" id="formLog">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <form method="POST" class="modal-content" action="index.php"  onclick="controllocheckbox()" >
+            <div class="container">
+                <label for="dose1">1° Dose:</label>
+                <input type="checkbox" name="dose1" id="dose1" value="si" >
+                <label for="Si">Si</label>
+                <input type="checkbox" name="dose1" id="dose1" value="no" >
+                <label for="No">No</label>
+                <br>
+                <label for="dose2">2° Dose:</label>
+                <input type="checkbox" name="dose2" id="dose2" value="si" >
+                <label for="Si">Si</label>
+                <input type="checkbox" name="dose2" id="dose2" value="no" >
+                <label for="No">No</label>
+                <br>
+                <input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['id'];?>
+"></input>
+                <input class="btn btn-link" type="submit" name="submit" value="carica" ></input>
+            </div>
+        <form>
+    </div>
+</div>
+<div>
+    <form action="index.php" method="POST">
+        <input type="hidden" name="user" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['username'];?>
+"></input>
+        <input type="submit"  class="btn btn-link" name="submit" value="Logout"></input>
+    </form>
+</div>
 </body><?php }
 }
