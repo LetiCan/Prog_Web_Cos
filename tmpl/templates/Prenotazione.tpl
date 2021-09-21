@@ -49,7 +49,7 @@
             <label for="datapre" >Data prenotazione:</label>
             <input type="date" name="datapre" id="datapre"></input>
             <br>
-            <input type="submit" class="btn btn-success" name="Invia" value="Invia"></input>
+            <input type="submit" class="btn btn-success" name="submit" value="Invia"></input>
         </div>   
     </form>
 </div>
