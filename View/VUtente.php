@@ -32,6 +32,19 @@ class VUtente extends View
         return $dtp;
     }
 
+    public function getDose()
+    {
+        if(isset($_POST['dose1']))
+        {
+           $dtp=array('std1'=>$_POST['dose1'],'id'=>$_POST['id']);
+        }
+        elseif(isset($_POST['dose2']))
+        {
+            $dtp=array('std2'=>$_POST['dose2'],'id'=>$_POST['id']);
+        }
+        return $dtp;
+    }
+
     
     public function TastoLogout()
     {
@@ -47,6 +60,15 @@ class VUtente extends View
         if(isset($_POST['Invia']))
         {
             return $_POST['Invia'];
+        }
+        return false;
+    }
+
+    public function Submit()
+    {
+        if(isset($_POST['submit']))
+        {
+            return $_POST['submit'];
         }
         return false;
     }
