@@ -75,6 +75,14 @@ class Utente
 	{
 		return $this->luogon;
 	}
+	public function get_std1()
+	{
+		return $this->std1;
+	}
+	public function get_std2()
+	{
+		return $this->std2;
+	}
 	public function set_std1()
 	{
 		$this->std1=true;
