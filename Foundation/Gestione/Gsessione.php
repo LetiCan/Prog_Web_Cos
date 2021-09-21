@@ -10,6 +10,7 @@ class Gsessione
     public function impSessione($c,$v)
     {
         $_SESSION[$c]=$v;
+        //return $_SESSION[$c];
     }
     public function UnsetSessione($c)
     {
