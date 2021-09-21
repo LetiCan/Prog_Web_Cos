@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-12 16:18:55
+/* Smarty version 3.1.39, created on 2021-09-21 09:18:52
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613e0c4fc25c15_18900636',
+  'unifunc' => 'content_6149875c6508e6_06897119',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1631456332,
+      1 => 1632208573,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613e0c4fc25c15_18900636 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6149875c6508e6_06897119 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -179,7 +179,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 						<input type="password" placeholder="Password"  id="psw" name="psw" value="">
 						<br>
 
-						<input type="submit" name="lg" value="Accedi" onclick="checkLogin();"></input>
+						<input type="submit" name="submit" value="Accedi" onclick="checkLogin();"></input>
 					</div>
 				</form>		
 			</div>
