@@ -48,7 +48,7 @@
 				<input type="password" id="pwd" name="pwd" placeholder="password" ><br>
 
 				<p id="validazione">
-						<input class="btn btn-primary" type="submit" value="Registrati" name="rgs" onclick="checkRegistrazione()">
+						<input class="btn btn-primary" type="submit" value="Registrati" name="submit" onclick="checkRegistrazione()">
 						<input type="reset" value="Ripristina" name="rpr" onclick="">
 				</p>
 				</div>		
