@@ -49,7 +49,7 @@
 	<button id="bac"  class="btn btn-primary" onclick="bacheca()">Bacheca</button>
 
 	<form method="POST" action="index.php">
-		<input type="submit" name="lgo" value="Logout"></input>
+		<input type="submit" name="submit" value="Logout"></input>
 	</form>
 </div>
 
