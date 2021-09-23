@@ -91,7 +91,12 @@ class Utente
 	{
 		$this->std2=true;
 	}
-        /*public function Registrazione($db)
+	/*
+	public function toString()
+	{
+		return $this->id_ut."\n".$this->nome."\n".$this->cognome."\n".$this->cdf."\n".$this->sesso."\n".$this->dtn."\n".$this->luogon."\n".$this->std1."\n".$this->std2;
+	}
+        public function Registrazione($db)
 	{
 		//controllo dello user
 		$checkuser = filter_var($this->username,FILTER_VALIDATE_REGEXP, ["options" => ["regexp" => "/^[a-z\d_]{3,20}$/i"]]);
@@ -172,10 +177,7 @@ class Utente
 		$this->password = $npdw;
 	}
 
-	public function toString()
-	{
-		return $this->nome.":".$this->cognome.":".$this->cdf.":".$this->sesso.":".$this->email.":".$this->password.":".$this->dtn.":".$this->luogon;
-	}
+	
 	
 	*/
 }
