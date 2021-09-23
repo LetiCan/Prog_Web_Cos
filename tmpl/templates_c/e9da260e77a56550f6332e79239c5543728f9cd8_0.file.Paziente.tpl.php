@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-21 09:59:45
+/* Smarty version 3.1.39, created on 2021-09-22 17:44:14
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_614990f19c71f3_48189320',
+  'unifunc' => 'content_614b4f4e1358e2_87478070',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1632211131,
+      1 => 1632325450,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_614990f19c71f3_48189320 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614b4f4e1358e2_87478070 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -61,7 +61,7 @@ function content_614990f19c71f3_48189320 (Smarty_Internal_Template $_smarty_tpl)
 	<tr>
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
 	<td><button id="pren"  class="btn btn-primary"  onclick="fun1()">Prenotazione Tampone</button></td>
-	<td><button id="pass"  class="btn btn-primary" onclick="">Richiesta Passaporto</button></td>
+	<td><form method="POST" action="impo/Pdfgreenpass.php" class="form-inline"><input type="submit" name="pass" id="pass"  class="btn btn-primary" value="Richiesta Passaporto"></input></form></td>
     <td><button id="dosi"  class="btn btn-primary" data-toggle="modal" data-target="#formLog">Caricamento dosi</button></td>
 	</tr>
 	</table>
