@@ -2,27 +2,7 @@
 require_once 'View.php';
 class Vhome extends View
 {
-
-    public function Registrazione()
-    {
-      if(isset($_POST['rgs']))
-      {
-          return $_POST['rgs'];
-      }
-      return false;
-    }
-
-
-    public function Login()
-    {
-      if(isset($_POST['lg']))
-      {
-          return $_POST['lg'];
-      }
-      return false;
-    }
-    
-    
+ 
     public function DatiReg()
     {
         if(isset($_POST['nome'],$_POST['cognome'],$_POST['datanascita'],$_POST['ldn'],$_POST['cdf'],$_POST['sesso'],$_POST['username'],$_POST['pwd']))
