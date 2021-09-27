@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-12 15:37:58
+/* Smarty version 3.1.39, created on 2021-09-24 10:03:02
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_613e02b6aa3195_78699625',
+  'unifunc' => 'content_614d8636cf1540_47257661',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba1a7ab36b72d109818d34990670601cde63e7cd' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Admin.tpl',
-      1 => 1631453871,
+      1 => 1632470577,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_613e02b6aa3195_78699625 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614d8636cf1540_47257661 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -70,7 +70,6 @@ $__foreach_a_0_saved = $_smarty_tpl->tpl_vars['a'];
 			<td><b>Luogo di nascita</b></td>
 			<td><b>Codice Fiscale</b></td>
 			<td><b>Tamponi effettuati</b></td>
-			<td><b>Approvazione Passaporto</b></td>
 			</tr>
 		<?php }?>
 		<tr>
@@ -88,7 +87,6 @@ $__foreach_a_0_saved = $_smarty_tpl->tpl_vars['a'];
 </td>
 		<td><?php echo $_smarty_tpl->tpl_vars['a']->value['tf'];?>
 </td>
-		<td><button id="approva"  class="btn btn-primary" onclick="">Approvato </button></td>
 		</tr>
 	<?php
 $_smarty_tpl->tpl_vars['a'] = $__foreach_a_0_saved;
@@ -99,7 +97,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 	<button id="bac"  class="btn btn-primary" onclick="bacheca()">Bacheca</button>
 
 	<form method="POST" action="index.php">
-		<input type="submit" name="lgo" value="Logout"></input>
+		<input type="submit" name="submit" value="Logout"></input>
 	</form>
 </div>
 
