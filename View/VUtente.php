@@ -55,25 +55,6 @@ class VUtente extends View
         return $dtp;
     }
 
-    
-    public function TastoLogout()
-    {
-      if(isset($_POST['lgo']))
-      {
-          return $_POST['lgo'];
-      }
-      return false;
-    }
-
-    public function TastoInvia()
-    { 
-        if(isset($_POST['Invia']))
-        {
-            return $_POST['Invia'];
-        }
-        return false;
-    }
-
     public function Submit()
     {
         if(isset($_POST['submit']))
