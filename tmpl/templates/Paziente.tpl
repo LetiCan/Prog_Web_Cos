@@ -30,9 +30,9 @@
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
 	<td><button id="pren"  class="btn btn-primary"  onclick="fun1()">Prenotazione Tampone</button></td>
 	<td>
-        <form method="POST" action="Pdfgreenpass.php" class="form-inline">
+        <form method="POST" action="Pdfgreenpass.php" class="form-inline" target="_blank">
             <input type="hidden" value="{$P.id}" name="id" ></input>
-            <input type="submit" name="pass" id="pass"  class="btn btn-primary" value="Richiesta Passaporto"></input>
+            <input type="submit" name="pass" id="pass"  class="btn btn-primary" value="Green Pass"></input>
         </form>
     </td>
     <td><button id="dosi"  class="btn btn-primary" data-toggle="modal" data-target="#formLog">Caricamento dosi</button></td>
