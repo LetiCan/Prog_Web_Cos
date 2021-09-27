@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-23 11:50:54
+/* Smarty version 3.1.39, created on 2021-09-24 10:30:03
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_614c4dfe7f11c0_50771789',
+  'unifunc' => 'content_614d8c8bce66b2_89567233',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1632390338,
+      1 => 1632472192,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_614c4dfe7f11c0_50771789 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614d8c8bce66b2_89567233 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -62,10 +62,10 @@ function content_614c4dfe7f11c0_50771789 (Smarty_Internal_Template $_smarty_tpl)
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
 	<td><button id="pren"  class="btn btn-primary"  onclick="fun1()">Prenotazione Tampone</button></td>
 	<td>
-        <form method="POST" action="Pdfgreenpass.php" class="form-inline">
+        <form method="POST" action="Pdfgreenpass.php" class="form-inline" target="_blank">
             <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['id'];?>
 " name="id" ></input>
-            <input type="submit" name="pass" id="pass"  class="btn btn-primary" value="Richiesta Passaporto"></input>
+            <input type="submit" name="pass" id="pass"  class="btn btn-primary" value="Green Pass"></input>
         </form>
     </td>
     <td><button id="dosi"  class="btn btn-primary" data-toggle="modal" data-target="#formLog">Caricamento dosi</button></td>
