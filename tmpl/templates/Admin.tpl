@@ -30,7 +30,6 @@
 			<td><b>Luogo di nascita</b></td>
 			<td><b>Codice Fiscale</b></td>
 			<td><b>Tamponi effettuati</b></td>
-			<td><b>Approvazione Passaporto</b></td>
 			</tr>
 		{/if}
 		<tr>
@@ -41,7 +40,6 @@
 		<td>{$a.ldn}</td>
 		<td>{$a.cdf}</td>
 		<td>{$a.tf}</td>
-		<td><button id="approva"  class="btn btn-primary" onclick="">Approvato </button></td>
 		</tr>
 	{/foreach}
 	</table>
