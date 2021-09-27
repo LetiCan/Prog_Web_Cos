@@ -1,6 +1,7 @@
 <?php
 require_once 'classi/Utente.php';
-require_once 'Classi/Bacheca.php';
+require_once 'classi/Bacheca.php';
+require_once 'classi/Passaporto.php';
 class Fconndb
 {
     private $db;
@@ -134,7 +135,7 @@ class Fconndb
 
     }
 
-    public function preleva_avv()						//ELENCO AVVISI CON DATA
+    public function preleva_avv()					
     {
         $sdb=$this->connessione();
         $i=0;
@@ -157,7 +158,7 @@ class Fconndb
         return $array_av;
     }
 
-    public function carica_dosi($dose)					//MODIFICA VACCINI
+    public function carica_dosi($dose)					
 	{
 		$sdb=$this->connessione();
         $q1="SELECT std1,std2 FROM ".$this->tabella." WHERE id_utente=:id";
@@ -192,6 +193,55 @@ class Fconndb
         }        
 		$sdb=$this->connclose();
 	}
+
+    public function InsGP($data_rilascio,$stato,$idute)
+    {
+        $sdb=$this->connessione();
+        $q="INSERT INTO ".$this->tabella."(data_rilascio,stato_approvazione,fk_utente)"."VALUE(:dtr,:st,:fku)";
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':dtr',$data_rilascio);
+        $this->query_result->bindParam(':st',$stato);
+        $this->query_result->bindParam(':fku',$idute);
+        $this->query_result->execute();
+        $sdb=$this->connclose();
+
+    }
+
+    public function UtentiGreenPass()
+    {
+        $sdb=$this->connessione();
+        $i=0;
+        $q="SELECT fk_utente FROM ".$this->tabella;
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->execute();
+        while($row=$this->query_result->fetch())
+        {
+            $fku=$row['fk_utente'];
+            $array_fk[$i]=$fku;
+            $i++;
+        }
+        $sdb=$this->connclose();
+        return $array_fk;
+    }
+
+    public function Preleva_GreenPass($id_utente)
+    {
+        $sdb=$this->connessione();
+        $q="SELECT * FROM ".$this->tabella." WHERE fk_utente=:idu";
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':idu',$id_utente);
+        $this->query_result->execute();
+        while($row=$this->query_result->fetch())
+        {
+            $cdp=$row['cod_passaporto'];
+            $dtr=$row['data_rilascio'];
+            $stato=$row['stato_approvazione'];
+            $fku=$row['fk_utente'];
+        }
+        $Pasp= new Passaporto($cdp,$dtr,$stato,$fku);
+        $sdb=$this->connclose();
+        return $Pasp;
+    }
 
 
     public function connclose() 
