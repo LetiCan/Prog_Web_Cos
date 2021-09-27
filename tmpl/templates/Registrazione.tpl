@@ -49,7 +49,7 @@
 
 				<p id="validazione">
 						<input class="btn btn-primary" type="submit" value="Registrati" name="submit" onclick="checkRegistrazione()">
-						<input type="reset" value="Ripristina" name="rpr" onclick="">
+						<input type="reset" value="Ripristina" name="rpr">
 				</p>
 				</div>		
 			<form>
