@@ -5,11 +5,14 @@ class Passaporto
    private $data_richiesta;
    private $data_rilascio;
    private $utente;
-   private $stato_di_approvazione=false;
+   private $stato_di_approvazione;
    
-   public function __construct() 
+   public function __construct($cd,$dt,$sta,$ut) 
    {
-       $this->data_richiesta=date('D-M-Y');
+      $this->cod_passaporto=$cd;
+      $this->data_rilascio=$dt;
+      $this->stato_di_approvazione=$sta;
+      $this->utente=$ut;
    }
    
    public function getCod() 
