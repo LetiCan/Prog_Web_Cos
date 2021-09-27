@@ -23,6 +23,16 @@ class VUtente extends View
         return $this->us;
     }
 
+    
+    public function getID()
+    {
+        if(isset($_POST['id']))
+        {
+           return $_POST['id'];
+        }
+        return false;
+    }
+
     public function getPrenotazione()
     {
         if(isset($_POST['datapre'],$_POST['prov'],$_POST['tamp'],$_POST['lab'],$_POST['id']))
