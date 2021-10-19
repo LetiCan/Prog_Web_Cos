@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-24 10:30:03
+/* Smarty version 3.1.39, created on 2021-09-28 17:56:27
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\Paziente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_614d8c8bce66b2_89567233',
+  'unifunc' => 'content_61533b2b514b69_50520188',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e9da260e77a56550f6332e79239c5543728f9cd8' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\Paziente.tpl',
-      1 => 1632472192,
+      1 => 1632844358,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_614d8c8bce66b2_89567233 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61533b2b514b69_50520188 (Smarty_Internal_Template $_smarty_tpl) {
 ?><head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> COS </title>
@@ -124,7 +124,7 @@ function content_614d8c8bce66b2_89567233 (Smarty_Internal_Template $_smarty_tpl)
 <br>
 <div class="modal" id="formLog">
     <div class="modal-dialog modal-dialog-centered modal-sm">
-        <form method="POST" class="modal-content" action="index.php"  onclick="controllocheckbox()" >
+        <form method="POST" class="modal-content" action="index.php" onclick="controllocheckbox()" >
             <div class="container">
                 <label for="dose1">1° Dose:</label>
                 <input type="checkbox" name="dose1" id="dose1" value="si" >
