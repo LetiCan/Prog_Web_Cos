@@ -147,6 +147,7 @@ function openForm()
 
 function aggiornaOpzioni()
 {
+    document.forms[0].prov.selectedIndex=0;
     var selezionato = document.forms[0].prov.selectedIndex;
     var campo = document.forms[0].prov.options;
     selezionaOpzioni(campo[selezionato].value);
