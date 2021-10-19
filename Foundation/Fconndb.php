@@ -243,7 +243,6 @@ class Fconndb
         return $Pasp;
     }
 
-
     public function connclose() 
     {
        $this->db=null;
