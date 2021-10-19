@@ -29,11 +29,11 @@
 				<input type="date" name="datanascita" id="dtn" ><br>
 
 				
-				<label for="ldn">Luogo di Nascita:</label>
-				<input type="text" name="ldn" id="ldn" placeholder="Luogo di Nascita"><br>
-
-				<label for="cdf">Codice fiscale:</label>
-				<input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16"><br>
+				<label for="ldn">Comune di Nascita:</label>
+				<input type="text" name="ldn" id="ldn" placeholder="Comune di Nascita">
+				<label for="prov">Provincia:</label>
+				<input type="text" name="prov" id="prov" placeholder="Provincia>
+				<br>
 
 				<label for="sesso">Sesso:</label>
 				<input type="checkbox" name="sesso" id="sesso" value="M" onclick="controllocheckbox()">
@@ -41,6 +41,10 @@
 				<input type="checkbox" name="sesso" id="sesso" value="F" onclick="controllocheckbox()" >
 				<label for="F">F</label>
 				<br>
+
+				<label for="cdf">Codice fiscale:</label>
+				<input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16"><br>
+
 				<label for="uesr">Username:</label>
 				<input type="text" id="user" name="username" placeholder="username"><br>
 
