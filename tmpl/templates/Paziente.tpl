@@ -87,7 +87,7 @@
 <br>
 <div class="modal" id="formLog">
     <div class="modal-dialog modal-dialog-centered modal-sm">
-        <form method="POST" class="modal-content" action="index.php"  onclick="controllocheckbox()" >
+        <form method="POST" class="modal-content" action="index.php" onclick="controllocheckbox()" >
             <div class="container">
                 <label for="dose1">1° Dose:</label>
                 <input type="checkbox" name="dose1" id="dose1" value="si" >
