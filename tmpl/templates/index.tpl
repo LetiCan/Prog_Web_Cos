@@ -28,13 +28,8 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#contact"  data-toggle="collapse"> Contatti </a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Operazioni </a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" id="rp">Richiedi Passaporto</a>
-						<a class="dropdown-item" id="dm">Prenota Tampone</a>
-						<a class="dropdown-item" name="rg" id="rg" onclick="Rgst();" >Registrati</a>
-					</div>
+				<li class="nav-item">
+					<a class="nav-link"  name="rg" id="rg" onclick="Rgst();">Registrati</a>					
 				</li>
 			</ul>
 			<ul class="navbar-nav ">
