@@ -93,7 +93,7 @@ class Clogin
         $t=$this->RiepilogoPre(); 
         if(isset($t))
         {
-            $datip=array('prov'=>$t['prov'],'tamp'=>$t['tamp'],'lab'=>$t['lab'],'datapre'=>$t['datapre'],'id_utente'=>$t['id_utente']);
+            $datip=array('prov'=>$t['prov'],'tamp'=>$t['tamp'],'datapre'=>$t['datapre'],'id_utente'=>$t['id_utente']);
             $Fp->DatiPrenotazione($datip);
             echo 'Prenotazione riuscita';
         }
