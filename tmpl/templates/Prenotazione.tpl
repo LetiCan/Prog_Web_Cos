@@ -25,19 +25,13 @@
     <br>	
     <form method="POST" action="index.php" onsubmit="checkPrenotazione()">
         <div class="container" bgcolor="#B0E0E6">
-            <label > ID Utente: </label>
-            <input type="number" name="id" id="id"></input><br>
+            <input type="hidden" name="id" id="id"></input><br>
             <label for="prov"> Povincia: </label>
             <select name="prov" id="prov" onchange="aggiornaOpzioni()">
                 <option value="Pescara"> Pescara </option>
                 <option value="Aquila"> Aquila </option>
                 <option value="Chieti"> Chieti </option>
                 <option value="Teramo"> Teramo </option>
-            </select>
-            <br>
-            <label for="lab"> Laboratori: </label>
-            <select name="lab" id="lab">
-
             </select>
             <br>
             <label for="tipotmp" >Tipo Tampone: </label>
