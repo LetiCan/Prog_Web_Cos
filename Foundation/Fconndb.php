@@ -123,11 +123,10 @@ class Fconndb
     public function DatiPrenotazione($p)
     {
         $sdb=$this->connessione();
-        $q="INSERT INTO ".$this->tabella."(provincia,tampone,lab,data_prenotazione,fk_utente)"."VALUES(:pr,:tp,:lb,:dp,:fku)"; 
+        $q="INSERT INTO ".$this->tabella."(provincia,tampone,data_prenotazione,fk_utente)"."VALUES(:pr,:tp,:dp,:fku)"; 
         $this->query_result=$sdb->prepare($q);
         $this->query_result->bindParam(':pr',$p['prov']);
         $this->query_result->bindParam(':tp',$p['tamp']);
-        $this->query_result->bindParam(':lb',$p['lab']);
         $this->query_result->bindParam(':dp',$p['datapre']);
         $this->query_result->bindParam(':fku',$p['id_utente']);
         $this->query_result->execute();
