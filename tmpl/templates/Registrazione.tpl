@@ -30,9 +30,9 @@
 
 				
 				<label for="ldn">Comune di Nascita:</label>
-				<input type="text" name="ldn" id="ldn" placeholder="Comune di Nascita">
+				<input type="text" name="ldn" id="ldn" placeholder="Comune di Nascita"><br>
 				<label for="prov">Provincia:</label>
-				<input type="text" name="prov" id="prov" placeholder="Provincia>
+				<input type="text" name="prov" id="prov" placeholder="Provincia">
 				<br>
 
 				<label for="sesso">Sesso:</label>
