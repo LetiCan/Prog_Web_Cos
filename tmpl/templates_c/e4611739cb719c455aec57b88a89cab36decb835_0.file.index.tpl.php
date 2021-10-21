@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-21 09:18:52
+/* Smarty version 3.1.39, created on 2021-10-20 10:49:53
   from 'C:\Users\danue\public_html\Prog_Web_Cos\tmpl\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6149875c6508e6_06897119',
+  'unifunc' => 'content_616fd831b44193_01524400',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4611739cb719c455aec57b88a89cab36decb835' => 
     array (
       0 => 'C:\\Users\\danue\\public_html\\Prog_Web_Cos\\tmpl\\templates\\index.tpl',
-      1 => 1632208573,
+      1 => 1634719789,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6149875c6508e6_06897119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_616fd831b44193_01524400 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,13 +59,8 @@ function content_6149875c6508e6_06897119 (Smarty_Internal_Template $_smarty_tpl)
 				<li class="nav-item">
 					<a class="nav-link" href="#contact"  data-toggle="collapse"> Contatti </a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Operazioni </a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" id="rp">Richiedi Passaporto</a>
-						<a class="dropdown-item" id="dm">Prenota Tampone</a>
-						<a class="dropdown-item" name="rg" id="rg" onclick="Rgst();" >Registrati</a>
-					</div>
+				<li class="nav-item">
+					<a class="nav-link"  name="rg" id="rg" onclick="Rgst();">Registrati</a>					
 				</li>
 			</ul>
 			<ul class="navbar-nav ">
