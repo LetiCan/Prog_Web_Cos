@@ -49,12 +49,6 @@ function checkPrenotazione()
         alert("Impossibile inviare i dati");
         return false;
     }
-    
-    if( document.getElementById("lab").value === "" )
-    {
-        alert(" Impossibile inviare i dati");
-        return false;
-    }
     if( document.getElementById("datapre").value === "" )
     {
         alert(" Impossibile inviare i dati");
@@ -145,18 +139,18 @@ function openForm()
     document.getElementById("log").style.display = "block";
 }
 
-function aggiornaOpzioni()
+/*function aggiornaOpzioni()
 {
-    document.forms[0].prov.selectedIndex=0;
-    var selezionato = document.forms[0].prov.selectedIndex;
-    var campo = document.forms[0].prov.options;
+    //document.forms[0].prov.selectedIndex=0;
+    var selezionato = document.getElementById('prov').selectedIndex;
+    var campo = document.getElementById('prov').options;
     selezionaOpzioni(campo[selezionato].value);
 }
 
 
 function selezionaOpzioni(scelta) 
 {
-  var lab = document.forms[0].lab;
+  var lab = document.getElementById('lab');
   lab.options.length = 0;
   if (scelta == "Pescara") 
   {
@@ -190,4 +184,4 @@ function selezionaOpzioni(scelta)
 
   }
   
-}
+}*/
