@@ -11,7 +11,7 @@ class Utility
         $j=0;
         foreach($v as $w=>$w_value)// caso consonanti
         {
-            if(!in_array($w_value,$vocali) && ($j<=3) )
+            if(!in_array($w_value,$vocali) && ($j<3) )
             {
                 $v1[$j]=$w_value;
                 $j++;
@@ -35,7 +35,7 @@ class Utility
     private function Lettera_mese($num_mese)
     {
 
-        $mese=array("01"=>"A","02"=>"B","03"=>"C","04"=>"D","05"=>"E","06"=>"H","07"=>"L","08"=>"M","09"=>"P","10"=>"R","11"=>"S","12"=>"T");
+        $mese=array("A"=>"01","B"=>"02","C"=>"03","D"=>"04","E"=>"05","H"=>"06","L"=>"07","M"=>"08","P"=>"09","R"=>"10","S"=>"11","T"=>"12");
         $ms=array_search($num_mese,$mese);
         return $ms;
     }
@@ -60,7 +60,7 @@ class Utility
         $codcom="";
         $comune=strtoupper($comune);
         $provincia=strtoupper($provincia);
-        $file=fopen("codici_comuni.txt","r")or die("Impossibile aprire il file!");
+        $file=fopen("C:\Users\danue\public_html\PROG_WEB_COS\impo\codici_comuni.txt","r")or die("Impossibile aprire il file!");
         while(!feof($file))
         {
             $s=fgets($file);
@@ -85,6 +85,7 @@ class Utility
         $charcdf=str_split($cdf);
         for($i=0;$i<sizeof($charcdf);$i++)
         {
+            
             if($i%2==0)
             {
                 $somma=$somma+($charpari[$charcdf[$i]]);
@@ -93,25 +94,25 @@ class Utility
             {
                 $somma=$somma+($chardispari[$charcdf[$i]]);
             }
-        
         }
-        $somma=$somma%26;
+        $somma=$somma/26;
         $k=$charcontrollo[$somma];
-        return $cdf.$k;
+        $codice=$cdf.$k;
+        return $codice;
     }
 
     public function Check_cdf($nome,$cognome,$dta,$lgn,$sex)
     {
         $nm=$this->Nome_e_Cognome($nome);
         $cgn=$this->Nome_e_Cognome($cognome);
-        $d=str_replace("/","",$dta);
-        $anno=substr($d,4,4);
-        $nms=substr($d,2,2);
+        $d=str_replace("-","",$dta);
+        $anno=substr($d,2,2);
+        $nms=substr($d,4,2);
         $mese=$this->Lettera_mese($nms);
-        $g=substr($d,0,2);
+        $g=substr($d,6,2);
         $giorno=$this->giornoN($g,$sex);
         $codice=$this->cod_com($lgn['com'],$lgn['pro']);
-        $cdf=$nm.$cgn.$anno.$mese.$giorno.$codice;
+        $cdf=$cgn.$nm.$anno.$mese.$giorno.$codice;
         $codice_fiscale=$this->Assembla($cdf);
         return $codice_fiscale;
     }
