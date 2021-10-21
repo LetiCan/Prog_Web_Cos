@@ -16,17 +16,15 @@ class Prenotazione
     private $cod_prenotazione;
     private $prov;
     private $tipotamp;
-    private $lab;
     private $data_prenotazione;
     private $stato_conferma=false;
     private $utente;
     
-    public function __construct($dtp,$pr,$tt,$lb) 
+    public function __construct($dtp,$pr,$tt) 
     {
         $this->data_prenotazione=$dtp;
         $this->prov=$pr;
         $this->tipotamp=$tt;
-        $this->lab=$lb;
     }
     
     /*
@@ -46,12 +44,7 @@ class Prenotazione
     {
         return $this->tipotamp;
     }
-
-    public function getLab()
-    {
-        return $this->lab;
-    }
-    
+  
     public function getStato()
     {
         return $this->stato_conferma;
