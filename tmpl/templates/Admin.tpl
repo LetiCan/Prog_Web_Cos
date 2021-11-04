@@ -29,7 +29,6 @@
 			<td><b>Data di nascita</b></td>
 			<td><b>Luogo di nascita</b></td>
 			<td><b>Codice Fiscale</b></td>
-			<td><b>Tamponi effettuati</b></td>
 			</tr>
 		{/if}
 		<tr>
@@ -39,12 +38,11 @@
 		<td>{$a.datan}</td>
 		<td>{$a.ldn}</td>
 		<td>{$a.cdf}</td>
-		<td>{$a.tf}</td>
 		</tr>
 	{/foreach}
 	</table>
 
-	<button id="bac"  class="btn btn-primary" onclick="bacheca()">Bacheca</button>
+	<a href="tmpl/templates/Bacheca.tpl"><button id="bac"  class="btn btn-primary" >Bacheca</button></a>
 
 	<form method="POST" action="index.php">
 		<input type="submit" name="submit" value="Logout"></input>
