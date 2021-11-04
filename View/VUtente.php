@@ -35,9 +35,9 @@ class VUtente extends View
 
     public function getPrenotazione()
     {
-        if(isset($_POST['datapre'],$_POST['prov'],$_POST['tamp'],$_POST['id']))
+        if(isset($_POST['datapre'],$_POST['prov'],$_POST['tamp'],$_POST['idu']))
         {
-           $dtp=array('datapre'=>$_POST['datapre'],'prov'=>$_POST['prov'],'tamp'=>$_POST['tamp'],'id_utente'=>$_POST['id']);
+           $dtp=array('datapre'=>$_POST['datapre'],'prov'=>$_POST['prov'],'tamp'=>$_POST['tamp'],'id_utente'=>$_POST['idu']);
         }
         return $dtp;
     }
