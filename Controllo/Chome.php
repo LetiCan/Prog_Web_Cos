@@ -3,6 +3,8 @@ require_once 'View/VUtente.php';
 require_once 'View/Vhome.php';
 require_once 'View/VRegistrazione.php';
 require_once 'Foundation/Gestione/Gpreleva.php';
+require_once 'Foundation/Fconndb.php';
+require_once 'Foundation/FPrenotazione.php';
 require_once 'Clogin.php';
 class Chome
 {
@@ -50,6 +52,7 @@ class Chome
 
     public function infop()
     {
+        $fp=new FPrenotazione();
         $ur= Gpreleva::getIstanza('Clogin'); 
         $tmp=$ur->StoricoPaz();
         for($i=0;$i<sizeof($tmp);$i++)
@@ -59,8 +62,7 @@ class Chome
                     'cognome'=>$tmp[$i]->get_cognome(),
                     'datan'=>$tmp[$i]->get_datans(),
                     'ldn'=>$tmp[$i]->get_luogons(),
-                    'cdf'=>$tmp[$i]->get_cdf(),
-                    'tf'=>""); 
+                    'cdf'=>$tmp[$i]->get_cdf()); 
         }
         return $info;
     }
