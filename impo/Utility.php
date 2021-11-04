@@ -2,7 +2,48 @@
 //include 'codici_comuni.txt';
 class Utility
 {
-    private function Nome_e_Cognome($s)
+    private function Nome($s)
+    {
+        $vocali=array("A","E","I","O","U");
+        $s=strtoupper($s);
+        $s=str_replace(" ","",$s);
+        $v=str_split($s);
+        $j=0;
+        $k=0;
+        for($i=0;$i<sizeof($v);$i++)// caso con almeno 4 consonanti
+        {
+            
+            if(!in_array($v[$i],$vocali))
+            {
+                $j++;
+                $cons[$j]=$v[$i];
+            }	
+            else{
+                $k++;
+                $voc[$k]=$v[$i];
+            }
+            	
+        }
+        if($j>=4)
+        {
+            $r=$cons[1].$cons[3].$cons[4];
+        }
+        if($j==3)
+        {
+            $r=$cons[1].$cons[2].$cons[3];
+        }
+        if($j==2)
+        {
+            $r=$cons[1].$cons[2].$voc[1];
+        }
+        else
+        {
+            $r=$cons[1].$voc[1].$voc[2];
+        }
+        return $r;
+
+    }
+    private function Cognome($s)
     {
         $vocali=array("A","E","I","O","U");
         $s=strtoupper($s);
@@ -83,28 +124,32 @@ class Utility
         $chardispari=array("0"=>1,"1"=>0,"2"=>5,"3"=>7,"4"=>9,"5"=>13,"6"=>15,"7"=>17,"8"=>19,"9"=>21,"A"=>1,"B"=>0,"C"=>5,"D"=>7,"E"=>9,"F"=>13,"G"=>15,"H"=>17,"I"=>19,"J"=>21,"K"=>2,"L"=>4,"M"=>18,"N"=>20,"O"=>11,"P"=>3,"Q"=>6,"R"=>8,"S"=>12,"T"=>14,"U"=>16,"V"=>10,"W"=>22,"X"=>25,"Y"=>24,"Z"=>23);
         $charcontrollo=array(0=>"A",1=>"B",2=>"C",3=>"D",4=>"E",5=>"F",6=>"G",7=>"H",8=>"I",9=>"J",10=>"K",11=>"L",12=>"M",13=>"N",14=>"O",15=>"P",16=>"Q",17=>"R",18=>"S",19=>"T",20=>"U",21=>"V",22=>"W",23=>"X",24=>"Y",25=>"Z");
         $charcdf=str_split($cdf);
-        for($i=0;$i<sizeof($charcdf);$i++)
+        $vett=array(1=>$charcdf[0],2=>$charcdf[1],3=>$charcdf[2],4=>$charcdf[3],5=>$charcdf[4],6=>$charcdf[5],7=>$charcdf[6],8=>$charcdf[7],9=>$charcdf[8],10=>$charcdf[9],11=>$charcdf[10],12=>$charcdf[11],13=>$charcdf[12],14=>$charcdf[13],15=>$charcdf[14]);
+        for($i=1;$i<=sizeof($vett);$i++)
         {
-            
-            if($i%2==0)
+            echo $vett[$i];
+            if($i%2 == 0)
             {
-                $somma=$somma+($charpari[$charcdf[$i]]);
+                $somma=$somma+($charpari[$vett[$i]]);
             }
             else
             {
-                $somma=$somma+($chardispari[$charcdf[$i]]);
+                $somma=$somma+($chardispari[$vett[$i]]);
             }
-        }
-        $somma=$somma/26;
-        $k=$charcontrollo[$somma];
+        }      
+        $resto=$somma/26; 
+        $resto=floor($resto);
+        $mol=26*$resto;
+        $diff=abs($mol-$somma);
+        $k=$charcontrollo[$diff];
         $codice=$cdf.$k;
         return $codice;
     }
 
     public function Check_cdf($nome,$cognome,$dta,$lgn,$sex)
     {
-        $nm=$this->Nome_e_Cognome($nome);
-        $cgn=$this->Nome_e_Cognome($cognome);
+        $nm=$this->Nome($nome);
+        $cgn=$this->Cognome($cognome);
         $d=str_replace("-","",$dta);
         $anno=substr($d,2,2);
         $nms=substr($d,4,2);
