@@ -28,7 +28,7 @@
 	<table width='100%' >
 	<tr>
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
-	<td><button id="pren"  class="btn btn-primary"  onclick="fun1()">Prenotazione Tampone</button></td>
+	<td><button id="pren"  class="btn btn-primary"   data-toggle="collapse">Prenotazione Tampone</button></td>
 	<td>
         <form method="POST" action="Pdfgreenpass.php" class="form-inline" target="_blank">
             <input type="hidden" value="{$P.id}" name="id" ></input>
@@ -44,6 +44,42 @@
 
 <div class="container-fluid" id="content">
 
+</div>
+<div class="collapse" id="pre">		
+    <h1>Prenotazione Online</h1>
+    <br>
+	<h2><p align="center">Prenotazione tampone covid-19</p></h2>
+	<i><p align= "center">Indicazioni generali</p></i>
+	<p align= "center">Ti ricordiamo che per il tampone molecolare la prescrizione medica è necessaria in Lombardia e Campania. Per il tampone antigenico rapido la prescrizione
+                     medica è necessaria in Sardegna e Lombardia.
+                     É possibile prenotare il test salivare nei centri
+                     COS del Lazio scegliendo il servizio “Tampone molecolare
+                     e Salivare”
+    </p>
+    <br>	
+    <form method="POST" action="index.php" onsubmit="checkPrenotazione()">
+        <div class="container" bgcolor="#B0E0E6">
+            <input type="hidden" name="idu" id="id" value="{$P.id}"></input><br>
+            <label for="prov"> Povincia: </label>
+            <select name="prov" id="prov" onchange="aggiornaOpzioni()">
+                <option value="Pescara"> Pescara </option>
+                <option value="Aquila"> Aquila </option>
+                <option value="Chieti"> Chieti </option>
+                <option value="Teramo"> Teramo </option>
+            </select>
+            <br>
+            <label for="tipotmp" >Tipo Tampone: </label>
+            <select name="tamp" id="tamp">
+                <option value="testrapido">Tampone Rapido</option>
+                <option value="sierologico">Tampone Sierologico</option>
+            </select>
+            <br>
+            <label for="datapre" >Data prenotazione:</label>
+            <input type="date" name="datapre" id="datapre"></input>
+            <br>
+            <input type="submit" class="btn btn-success" name="submit" value="Invia"></input>
+        </div>   
+    </form>
 </div>
 <!-- informazioini del pazinete -->
 <div class="collapse" id='infopa'>
