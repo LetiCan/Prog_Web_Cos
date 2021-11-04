@@ -20,17 +20,21 @@
 			<form method="POST" action="index.php">
 				<div class="form-group">
 				<label for="nome">Nome:</label>
-				<input type="text" name="nome" id="nome" placeholder="Nome" ><br>
+				<input type="text" name="nome" id="nome" placeholder="Nome" >
+				<br>
 
-				<label for="cognome">cognome:</label>
-				<input type="text" name="cognome" id="cognome" placeholder="cognome" ><br>
+				<label for="cognome">Cognome:</label>
+				<input type="text" name="cognome" id="cognome" placeholder="cognome" >
+				<br>
 
 				<label for="datanascita">Data di Nascita:</label>
-				<input type="date" name="datanascita" id="dtn" ><br>
-
+				<input type="date" name="datanascita" id="dtn" >
+				<br>
 				
 				<label for="ldn">Comune di Nascita:</label>
-				<input type="text" name="ldn" id="ldn" placeholder="Comune di Nascita"><br>
+				<input type="text" name="ldn" id="ldn" placeholder="Comune di Nascita">
+				<br>
+
 				<label for="prov">Provincia:</label>
 				<select name="prov" id="prov">
 					<option value="Agrigento">AG</option>
@@ -138,7 +142,7 @@
 					<option value="Varese">VA</option>
 					<option value="Venezia">VE</option>
 					<option value="Verbano-Cusio-Ossola">VB</option>
-					<option value="Vercelli">VC/option>
+					<option value="Vercelli">VC</option>
 					<option value="Verona">VR</option>
 					<option value="Vibo Valentia">VV</option>
 					<option value="Vicenza">VI</option>
@@ -154,13 +158,16 @@
 				<br>
 
 				<label for="cdf">Codice fiscale:</label>
-				<input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16"><br>
+				<input type="text" name="cdf" id="cdf" placeholder="codice fiscale" maxlength="16">
+				<br>
 
 				<label for="uesr">Username:</label>
-				<input type="text" id="user" name="username" placeholder="username"><br>
+				<input type="text" id="user" name="username" placeholder="username">
+				<br>
 
 				<label for="psw">Password:</label>
-				<input type="password" id="pwd" name="pwd" placeholder="password" ><br>
+				<input type="password" id="pwd" name="pwd" placeholder="password" >
+				<br>
 
 				<p id="validazione">
 						<input class="btn btn-primary" type="submit" value="Registrati" name="submit" onclick="checkRegistrazione()">
