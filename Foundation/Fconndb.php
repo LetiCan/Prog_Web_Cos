@@ -242,6 +242,8 @@ class Fconndb
         return $Pasp;
     }
 
+   
+
     public function connclose() 
     {
        $this->db=null;
@@ -375,6 +377,19 @@ class Fconndb
 		$sdb->connclose();
         return $array_green;
 	}	
+     public function Conta_Prenotazioni($id_utente)
+    {
+        $sdb=$this->connessione();
+        $n=2;
+        $q="SELECT COUNT(fk_utente)".$this->tabella."WHERE fk_utente=:idu AND tipo=:n";
+        $this->query_result=$sdb->prepare($q);
+        $this->query_result->bindParam(':idu',$id_utente);
+        $this->query_result->bindParam(':n',$n);
+        $this->query_result->execute();
+        $row=$this->qresult->fetchAll();
+        $sdb=$this->connclose();
+        return $row;
+    }
 
     */
 }
