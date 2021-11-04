@@ -25,7 +25,7 @@
     <br>	
     <form method="POST" action="index.php" onsubmit="checkPrenotazione()">
         <div class="container" bgcolor="#B0E0E6">
-            <input type="hidden" name="id" id="id"></input><br>
+            <input type="hidden" name="id" id="id" value="{$}"></input><br>
             <label for="prov"> Povincia: </label>
             <select name="prov" id="prov" onchange="aggiornaOpzioni()">
                 <option value="Pescara"> Pescara </option>
