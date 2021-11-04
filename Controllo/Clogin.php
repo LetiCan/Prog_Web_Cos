@@ -115,9 +115,11 @@ class Clogin
     public function StoricoPaz()
     {
         $Fu= new Futente();
-        $a=$Fu->UtentiReg();
+        $a=$Fu->UtentiReg();  
         return $a;
     }
+
+    
 
     public function AvvisiBacheca()
     {
