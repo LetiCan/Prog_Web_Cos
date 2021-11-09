@@ -28,7 +28,7 @@
 	<table width='100%' >
 	<tr>
 	<td><button id="storico"  class="btn btn-primary" onclick="fun1()">Storico delle prenotazioni</button></td>
-	<td><button id="pren"  class="btn btn-primary"   data-toggle="collapse">Prenotazione Tampone</button></td>
+	<td><button id="pren"  class="btn btn-primary"  href="#pre" data-toggle="collapse">Prenotazione Tampone</button></td>
 	<td>
         <form method="POST" action="Pdfgreenpass.php" class="form-inline" target="_blank">
             <input type="hidden" value="{$P.id}" name="id" ></input>
